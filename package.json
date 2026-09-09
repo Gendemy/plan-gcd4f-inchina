@@ -1,0 +1,15 @@
+{
+  "name": "ke-hoach-gcd4f",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kế hoạch chuyến đi GCD4F Global Finals 2026 - Team Gendemy",
+  "scripts": {
+    "build": "python3 build.py",
+    "test": "node tests/render.js && node tests/photos.js && node tests/layout.js",
+    "test:offline": "node tests/offline.js",
+    "test:pdf": "node tests/pdf.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.62.1"
+  }
+}

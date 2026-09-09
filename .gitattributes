@@ -1,0 +1,4 @@
+# Chuẩn hoá xuống dòng để file không bị đổi toàn bộ khi chuyển giữa Windows và máy khác
+* text=auto eol=lf
+*.png binary
+*.pdf binary
