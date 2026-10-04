@@ -55,10 +55,22 @@ var UI = {
   mon2:["Tháng 11","November","11月"],
   tags: {
     free: ["Miễn phí","Free","免费"],
-    host: ["BNU chi trả","Covered by BNU","北师大承担"]
+    host: ["BNU chi trả","Covered by BNU","北师大承担"],
+    bnu:  ["Lịch BNU","BNU programme","北师大日程"]
   },
   min: ["phút","min","分钟"],
-  hr:  ["giờ","h","小时"]
+  hr:  ["giờ","h","小时"],
+  toc:   ["Mục lục","Contents","目录"],
+  theme: ["Sáng / Tối","Light / Dark","浅色 / 深色"]
+};
+
+/* ---------- nhãn ngắn cho sidebar và bottom bar ---------- */
+var NAV = {
+  overview:["Tổng quan","Overview","概览"],
+  itin:    ["Lịch trình","Itinerary","行程"],
+  book:    ["Đặt vé","Bookings","订票"],
+  budget:  ["Ngân sách","Budget","预算"],
+  prep:    ["Chuẩn bị","Prep","准备"]
 };
 
 /* ---------- section headings ---------- */

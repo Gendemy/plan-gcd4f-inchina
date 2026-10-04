@@ -1,0 +1,14 @@
+{
+  // Bấm F5 trong VS Code để chạy kế hoạch tại http://localhost:3030
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chạy kế hoạch (localhost:3030)",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/scripts/dev.js",
+      "env": { "PORT": "3030" },
+      "console": "integratedTerminal"
+    }
+  ]
+}

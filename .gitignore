@@ -1,21 +1,11 @@
-# Bản build để mở nhanh trên máy. Bản chính thức được commit là docs/index.html
-/Ke-hoach-GCD4F-Trung-Quoc.html
-
 # Tài liệu cuộc thi và giấy tờ cá nhân - không thuộc phần code.
-# Bỏ dòng này nếu muốn sao lưu luôn chúng vào repo riêng tư.
 *.pdf
 
 # Node
 node_modules/
 package-lock.json
 
-# Ảnh và PDF do test sinh ra
-tests/output/
-*.png
-!tests/fixtures/*.png
-
 # Linh tinh
-bundle.js
 .DS_Store
 Thumbs.db
 desktop.ini
