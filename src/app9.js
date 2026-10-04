@@ -43,6 +43,7 @@ function slotsHTML(arr){
   return out ? '<div class="slots">'+out+'</div>' : "";
 }
 
+function optNote(n, extra){ return n ? noteHTML(n, extra) : ""; }
 function noteHTML(n, extra){ return '<div class="note"'+(extra||"")+'>'+ic("info","nt")+'<span>'+T(n)+'</span></div>'; }
 
 function secHead(icon, title, extra, tone){
@@ -150,7 +151,6 @@ function render(){
       out += '</div>';
     });
     out += '</div>';
-    if(pf==="all"||pf==="ta") out += noteHTML(TRACKNOTE, ' style="margin-top:14px"');
     out += '</section>';
   }
 
@@ -179,7 +179,7 @@ function render(){
         '<span class="cn">'+(CITYCN[cur]||"")+'</span>'+
         '<span class="span">'+ic("pin")+T(UI.cityspan[cur])+'</span></div>'+
         heroHTML(cur)+ vec +
-        '<p class="city-intro">'+T(CITYINTRO[cur])+'</p>'+ buf +'</div>';
+        (CITYINTRO[cur] ? '<p class="city-intro">'+T(CITYINTRO[cur])+'</p>' : '')+ buf +'</div>';
     }
     buf = "";
   }
@@ -194,19 +194,22 @@ function render(){
   /* budget */
   if(pf==="all"||pf==="gb"||pf==="md"){
     out += '<section id="budget" data-spy="budget">'+secHead("wallet", T(SEC.budget), '<span class="eyebrow">1 CNY ≈ 3.950 ₫</span>')+
-      '<p class="sec-note">'+T(BUD.note)+'</p>';
+      '<p class="sec-note">'+T(BUD.note)+'</p>' + optNote(BUD.visa, ' style="margin-bottom:18px"');
     if(pf!=="md"){
-      out += tableHTML(BUD.t1head, BUD.t1, BUD.t1total) + noteHTML(BUD.n1,' style="margin-top:14px"') + noteHTML(BUD.n2);
+      out += tableHTML(BUD.t1head, BUD.t1, BUD.t1total) + optNote(BUD.n1,' style="margin-top:14px"') + optNote(BUD.n2);
       out += tableHTML(BUD.t2head, BUD.t2, BUD.t2total, ' style="margin-top:20px"');
-      out += '<p class="sec-note" style="margin-top:18px">'+T(BUD.concl)+'</p><div class="levers">';
-      BUD.levers.forEach(function(l){ out += '<div class="lever"><p>'+T(l[0])+'</p><span class="save">'+ic("down")+l[1]+'</span></div>'; });
-      out += '</div>';
+      out += '<p class="sec-note" style="margin-top:18px">'+T(BUD.concl)+'</p>';
+      if(BUD.levers){
+        out += '<div class="levers">';
+        BUD.levers.forEach(function(l){ out += '<div class="lever"><p>'+T(l[0])+'</p><span class="save">'+ic("down")+l[1]+'</span></div>'; });
+        out += '</div>';
+      }
     }
     if(pf!=="gb"){
       out += '<div class="subhead"><h3>'+T(BUD.mdHead)+'</h3><span class="eyebrow">'+T(BUD.mdEyebrow)+'</span></div>'+
         '<p class="sec-note">'+T(BUD.mdNote)+'</p>';
       var t3 = tableHTML(BUD.t3head, BUD.t3, BUD.t3total);
-      t3 = t3.replace('</tbody>','<tr><td class="muted">'+T(BUD.t3extra[0])+'</td><td class="num muted">'+BUD.t3extra[1]+'</td><td class="num muted">'+BUD.t3extra[2]+'</td></tr></tbody>');
+      if(BUD.t3extra) t3 = t3.replace('</tbody>','<tr><td class="muted">'+T(BUD.t3extra[0])+'</td><td class="num muted">'+BUD.t3extra[1]+'</td><td class="num muted">'+BUD.t3extra[2]+'</td></tr></tbody>');
       out += t3;
     }
     out += '</section>';
@@ -215,8 +218,8 @@ function render(){
   if(pf==="all"||pf==="ta"){
     var tid = (pf==="ta") ? "budget" : "budget-ta";
     out += '<section id="'+tid+'" data-spy="'+tid+'">'+secHead("wallet", T(SEC.budgetTA), '<span class="eyebrow">21–26/10</span>')+
-      '<p class="sec-note">'+T(BUD.taNote)+'</p>'+
-      tableHTML(BUD.t3head, BUD.t4, BUD.t4total) + noteHTML(BUD.n4,' style="margin-top:14px"') + '</section>';
+      '<p class="sec-note">'+T(BUD.taNote)+'</p>'+ (pf==="ta" ? optNote(BUD.visa, ' style="margin-bottom:18px"') : '') +
+      tableHTML(BUD.t3head, BUD.t4, BUD.t4total) + optNote(BUD.n4,' style="margin-top:14px"') + '</section>';
   }
 
   /* prep */
@@ -251,6 +254,33 @@ function toggleTheme(){
   buildBar();
 }
 
+/* Đóng/mở các nhóm trong sidebar, nhớ trạng thái cho lần mở sau */
+var uiState = {};
+try{ uiState = JSON.parse(localStorage.getItem("gcd4f-ui")||"{}") || {}; }catch(e){ uiState = {}; }
+function togHTML(icon, label){ return '<button type="button" class="side-label tog" data-tog="'+'">'+ic(icon)+'<span>'+label+'</span>'+ic("chevron","chev")+'</button>'; }
+function toggleGrp(key){
+  var el = document.querySelector('[data-grp="'+key+'"]');
+  if(!el) return;
+  var closed = el.classList.toggle("closed");
+  uiState[key] = !closed;
+  var b = el.querySelector('[data-tog]'); if(b) b.setAttribute("aria-expanded", String(!closed));
+  try{ localStorage.setItem("gcd4f-ui", JSON.stringify(uiState)); }catch(e){}
+}
+
+/* Nút lên đầu trang */
+function setupToTop(){
+  var b = document.getElementById("totop");
+  if(!b){
+    b = el("button", "totop", ic("arrowup"));
+    b.id = "totop"; b.type = "button";
+    b.onclick = function(){ window.scrollTo({top:0, behavior:"smooth"}); };
+    document.body.appendChild(b);
+    var onScroll = function(){ b.classList.toggle("show", window.scrollY > 600); };
+    window.addEventListener("scroll", onScroll, {passive:true}); onScroll();
+  }
+  b.title = T(UI.totop); b.setAttribute("aria-label", T(UI.totop));
+}
+
 function buildBar(){
   var side = document.getElementById("side");
   var langs = ["VI","EN","中文"];
@@ -266,28 +296,31 @@ function buildBar(){
     '<div class="m-actions"><button type="button" class="btn btn-icon" data-act="theme" title="'+T(UI.theme)+'" aria-label="'+T(UI.theme)+'">'+ic(themeIc)+'</button>'+
       '<button type="button" class="btn btn-icon" data-act="pdf" title="'+T(UI.printhint)+'" aria-label="'+T(UI.print)+'">'+ic("filedown")+'</button></div></div>';
 
-  h += '<div class="side-group"><span class="side-label">'+ic("users")+T(UI.who)+'</span><div class="people">';
+  h += '<div class="side-group grp'+(uiState.people===false?" closed":"")+'" data-grp="people">'+togHTML("users", T(UI.who))+'<div class="people grp-body">';
   people.forEach(function(p){ h += '<button type="button" data-pf="'+p[0]+'" class="'+(p[0]===pf?"on":"")+'">'+ic(p[0]==="all"?"users":"pin")+T(p[1])+'</button>'; });
   h += '</div></div>';
 
   /* mục lục dựng từ chính những gì đang hiện trên trang */
-  h += '<div class="side-group" style="flex:1"><span class="side-label">'+ic("route")+T(UI.toc)+'</span><nav class="side-nav">';
-  function link(id, icon, label){ return '<a href="#'+id+'" data-nav="'+id+'">'+ic(icon)+'<span>'+label+'</span></a>'; }
+  h += '<div class="side-group grp'+(uiState.toc===false?" closed":"")+'" data-grp="toc" style="flex:1">'+togHTML("route", T(UI.toc))+'<nav class="side-nav grp-body">';
+  function link(id, icon, label){ return '<a class="nl" href="#'+id+'" data-nav="'+id+'">'+ic(icon)+'<span>'+label+'</span></a>'; }
   h += link("overview","home",T(NAV.overview));
   if(document.getElementById("whogoes")) h += link("whogoes","users",T(SEC.whogoes));
   h += link("urgent","alert",T(SEC.urgent));
   h += link("booking","calendar",T(SEC.booking));
   [].forEach.call(document.querySelectorAll("#app .city"), function(c){
-    h += '<a href="#'+c.id+'" data-nav="'+c.id+'" style="--accent:var(--c-'+c.id+')"><span class="city-dot"></span><span>'+T(UI.cities[c.id])+'</span></a><div class="daychips">';
-    [].forEach.call(c.querySelectorAll(".day"), function(d){ h += '<a href="#'+d.id+'" data-nav="'+d.id+'">'+d.id.split("-")[2]+'</a>'; });
-    h += '</div>';
+    var open = uiState["c-"+c.id] === true;
+    h += '<div class="city-item'+(open?"":" closed")+'" data-grp="c-'+c.id+'"><div class="city-row">'+
+      '<a class="nl" href="#'+c.id+'" data-nav="'+c.id+'" style="--accent:var(--c-'+c.id+')"><span class="city-dot"></span><span>'+T(UI.cities[c.id])+'</span></a>'+
+      '<button type="button" class="chev-btn" data-tog="c-'+c.id+'" aria-label="'+T(UI.days)+'" aria-expanded="'+open+'">'+ic("chevron","chev")+'</button></div><div class="daychips">';
+    [].forEach.call(c.querySelectorAll(".day"), function(d){ h += '<a class="dc" href="#'+d.id+'" data-nav="'+d.id+'">'+d.id.split("-")[2]+'</a>'; });
+    h += '</div></div>';
   });
   if(document.getElementById("budget")) h += link("budget","wallet",T(SEC.budget));
   if(document.getElementById("budget-ta")) h += link("budget-ta","wallet",T(SEC.budgetTA));
   h += link("prep","luggage",T(SEC.prep));
   h += '</nav></div>';
 
-  h += '<div class="side-foot"><button type="button" class="btn btn-outline" data-act="theme">'+ic(themeIc)+T(UI.theme)+'</button>'+
+  h += '<div class="side-foot"><button type="button" class="btn btn-icon" data-act="theme" title="'+T(UI.theme)+'" aria-label="'+T(UI.theme)+'">'+ic(themeIc)+'</button>'+
     '<button type="button" class="btn btn-primary" data-act="pdf" title="'+T(UI.printhint)+'">'+ic("filedown")+T(UI.print)+'</button></div>';
 
   side.innerHTML = h;
@@ -303,11 +336,17 @@ function buildBar(){
   side.onclick = function(e){
     var b = e.target.closest("button");
     if(!b) return;
+    if(b.hasAttribute("data-tog")){ toggleGrp(b.getAttribute("data-tog")); return; }
     if(b.hasAttribute("data-lang")){ li = +b.getAttribute("data-lang"); save(); refresh(); }
     else if(b.hasAttribute("data-pf")){ pf = b.getAttribute("data-pf"); save(); refresh(); }
     else if(b.getAttribute("data-act")==="theme") toggleTheme();
     else if(b.getAttribute("data-act")==="pdf") exportPDF(b);
   };
+  /* nút tiêu đề nhóm cần biết nhóm của mình */
+  [].forEach.call(side.querySelectorAll(".grp"), function(g){
+    var t = g.querySelector(".tog"); if(t){ t.setAttribute("data-tog", g.getAttribute("data-grp")); t.setAttribute("aria-expanded", String(!g.classList.contains("closed"))); }
+  });
+  setupToTop();
   spy();
 }
 
@@ -321,14 +360,14 @@ function spy(){
     entries.forEach(function(en){
       if(!en.isIntersecting) return;
       var id = en.target.id, isDay = en.target.classList.contains("day");
-      var group = isDay ? '.daychips a' : '.side-nav > a, .bbar a';
+      var group = isDay ? '.daychips a' : '.side-nav a.nl, .bbar a';
       [].forEach.call(document.querySelectorAll(group), function(a){ a.classList.toggle("on", a.getAttribute("data-nav")===id); });
       if(!isDay && !en.target.classList.contains("city"))
         [].forEach.call(document.querySelectorAll('.daychips a'), function(a){ a.classList.remove("on"); });
       if(isDay){
         /* đang ở trong một ngày thì mục thành phố chứa nó sáng lên, và nút Lịch trình ở bottom bar cũng vậy */
         var city = id.split("-")[1];
-        [].forEach.call(document.querySelectorAll('.side-nav > a'), function(a){ a.classList.toggle("on", a.getAttribute("data-nav")===city); });
+        [].forEach.call(document.querySelectorAll('.side-nav a.nl'), function(a){ a.classList.toggle("on", a.getAttribute("data-nav")===city); });
         [].forEach.call(document.querySelectorAll('.bbar a'), function(a){ a.classList.toggle("on", a.hasAttribute("data-itin")); });
       }
     });

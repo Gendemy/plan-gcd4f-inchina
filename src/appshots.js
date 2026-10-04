@@ -35,21 +35,6 @@ var SHOTS = {
   "East Nanjing Road (40559723522).jpg",
   "Phố đi bộ Nam Kinh Đông Lộ, nối thẳng từ Bến Thượng Hải vào trung tâm","The East Nanjing Road pedestrian street, running from the Bund into the centre","南京东路步行街，从外滩直通市中心"),
 
- "Đại học Thanh Hoa": S(
-  "7/7a",
-  "West school gate of Tsinghua University, 2011042203.jpg",
-  "Cổng Tây Thanh Hoa - chỗ xếp hàng chụp ảnh mỗi ngày","Tsinghua's West Gate - where people queue for the photo daily","清华西门——每天都有人排队拍照的地方"),
-
- "Khu nghệ thuật 798": S(
-  "8/87",
-  "Space-gallery 798-art-district.jpg",
-  "Mái vòm Bauhaus của nhà máy cũ, nay là không gian triển lãm","The old factory's Bauhaus vaults, now exhibition space","老厂房的包豪斯拱顶，如今是展览空间"),
-
- "Bảo tàng Điện ảnh Trung Quốc": S(
-  "5/59",
-  "China National Film Museum.jpg",
-  "Khối hộp đen 38 nghìn m² do Rem Koolhaas thiết kế","The 38,000 m² black box by Rem Koolhaas","雷姆·库哈斯设计的3.8万平方米黑色方盒"),
-
  "Ngũ Đại Đạo": S(
   "1/13",
   "Five Great Avenues 21453-Tianjin (49063743276).jpg",
@@ -119,11 +104,6 @@ var SHOTS = {
   "Qianmen 14 april 2010.jpg",
   "Chính Dương Môn lên đèn ở đầu phố Tiền Môn","Zhengyangmen lit at the head of Qianmen Street","前门大街尽头亮灯的正阳门"),
 
- "Trường Thành Bát Đạt Lĩnh": S(
-  "5/57",
-  "Peking Grosse Mauer-20071019-RM-115708.jpg",
-  "Đoạn Bát Đạt Lĩnh chạy dọc sống núi","The Badaling section running along the ridge","沿山脊延伸的八达岭段"),
-
  "Cổng Tây Đại học Bắc Kinh": S(
   "1/14",
   "West Gate of Peking University HDR 4.JPG",
@@ -133,11 +113,6 @@ var SHOTS = {
   "7/7a",
   "West school gate of Tsinghua University, 2011042203.jpg",
   "Cổng Tây Thanh Hoa - chỗ xếp hàng chụp ảnh mỗi ngày","Tsinghua's West Gate - where people queue for the photo daily","清华西门——每天都有人排队拍照的地方"),
-
- "Viên Minh Viên": S(
-  "1/1b",
-  "Beijing yuanmingyuan IMG 2021.JPG",
-  "Nền đá chạm trổ của Đại Thuỷ Pháp, để nguyên từ năm 1860","The carved stonework of Dashuifa, untouched since 1860","大水法的雕花石构，1860年后保持原貌"),
 
  "Universal Beijing Resort": S(
   "4/47",

@@ -1,75 +1,182 @@
-/* ---------- budget ---------- */
+/* Ngân sách */
 var BUD = {
-  note:["<strong>Mọi khoản vé và phòng trong bảng này giờ đều là số thật trên phiếu</strong>, không còn dòng nào ước lượng. Mốc 15 triệu áp cho <strong>Gia Bảo và Quỳnh Mai</strong>; Mỹ Duyên không bị ràng buộc ngân sách nên bảng của cô ấy ở dưới chỉ để biết con số. Vé lượt đi 12.760.000 ₫ là giá cho cả bốn người, chia đều thành 3.190.000 ₫ mỗi người. Giá phòng cũng lấy từ phiếu đặt và chia theo số người thực ở.",
-    "<strong>Every flight and room figure in this table is now a real number off a receipt</strong>, with no estimated lines left. The 15m ceiling applies to <strong>Gia Bao and Quynh Mai</strong>; My Duyen is not budget-constrained, so her table is there to know the number. The outbound fare of 12,760,000 VND covers all four and divides into 3,190,000 each. Room prices come from the booking screens, divided by the number of people actually in the room.",
-    "<strong>本表中所有机票和住宿都已是单据上的真实金额</strong>，不再有估算行。1500万越南盾的上限适用于<strong>嘉宝和琼梅</strong>；美缘没有预算约束，她的表格只是为了知道数字。去程票款1276万越南盾是四人合计，均摊为每人319万。房价取自订单页面，按实际入住人数分摊。"],
-  t1head:[["Vé máy bay và khách sạn","Flights and hotels","机票与酒店"],["Chi tiết","Detail","明细"],["VND","VND","越南盾"]],
-  t1:[[["Vé lượt đi HAN đi PVG đi PEK, China Eastern","Outbound HAN to PVG to PEK, China Eastern","去程 河内-上海浦东-北京首都，东方航空"],["12.760.000 ÷ 4","12,760,000 ÷ 4","1276万 ÷ 4"],"3.190.000"],
-      [["Khách sạn Thượng Hải, Dihang Boutique","Shanghai, Dihang Boutique","上海，迪航酒店"],["487.164 ÷ 4","487,164 ÷ 4","487,164 ÷ 4"],"122.000"],
-      [["Khách sạn Bắc Kinh Thông Châu, 26–28/10","Beijing Tongzhou, 26–28 Oct","北京通州，10月26–28日"],["2.009.098 ÷ 3","2,009,098 ÷ 3","200.9万 ÷ 3"],"670.000"],
-      [["Vé về 28/10, CA883 Thủ Đô T3 đi Nội Bài","Return 28 Oct, CA883 Capital T3 to Noi Bai","10月28日回程，CA883 首都T3 飞内排"],["6.174.000 ÷ 2","6,174,000 ÷ 2","617.4万 ÷ 2"],"3.087.000"]],
-  t1total:[["Cộng","Subtotal","小计"],"-","7.069.000"],
-  n1:["<b>Cả hai chiều bay cộng lại chỉ 6,28 triệu một người</b> cho ba chặng và 15 tiếng ở Thượng Hải - rẻ hơn hẳn mọi phương án tách nhóm từng tính trước đây. Hai đêm khách sạn cộng lại chưa tới 800 nghìn, vì đêm Thượng Hải chia cho bốn người còn đêm Bắc Kinh chia cho ba. Một chi tiết đáng biết trong biên lai vé về: <em>giá vé chỉ 1.062.000 còn thuế và phí tới 5.180.000</em>, nên nếu có đợi thêm để tìm vé rẻ hơn thì cũng không rẻ được bao nhiêu - phần lớn tiền là thuế cố định.",
-   "<b>Both directions together come to just 6.28m per person</b> for three flights and fifteen hours in Shanghai - far cheaper than any of the split-group options costed earlier. The two hotel nights together come to under 800,000, because the Shanghai room splits four ways and the Beijing room three. One detail worth knowing from the return receipt: <em>the fare itself is only 1,062,000 while taxes and fees come to 5,180,000</em>, so waiting for a cheaper ticket would not have saved much - most of the money is fixed tax.",
-   "<b>两个方向的机票合计每人仅628万越南盾</b>，含三段航班和上海的十五小时——比此前算过的任何分头出发方案都便宜得多。两晚酒店加起来不到80万，因为上海那间四人分摊，北京那间三人分摊。回程单据上有一个值得注意的细节：<em>票价本身只有106.2万，而税费高达518万</em>，所以再等更便宜的票也省不了多少——大部分钱是固定税费。"],
-  n2:["<b>Ba điều cần kiểm khi chốt phòng:</b> loại phòng ghi rõ <em>1 giường đôi và 1 giường đơn</em> cho 3 người lớn, như phòng Bắc Kinh đã đặt; chính sách nhận khách ghi <em>“guests from all countries/regions are welcome”</em>; và khai đúng số khách khi đặt, đừng đặt 2 rồi dắt thêm người, vì lễ tân quét hộ chiếu từng người và phải khai báo với công an trong 24 giờ. Riêng phòng Thượng Hải đặt cho 2 người lớn mà sẽ có 4 người vào gửi đồ - nhắn trước cho khách sạn một câu.",
-   "<b>Three things to check when confirming rooms:</b> a room type stating <em>one double and one single</em> for 3 adults, as the Beijing booking already does; a policy line reading <em>“guests from all countries/regions are welcome”</em>; and declare the real number of guests - do not book for 2 and walk in with a third, because reception scans every passport and must report to the police within 24 hours. The Shanghai room is booked for 2 adults but 4 people will come in to leave bags - message the hotel about it beforehand.",
-   "<b>确认房间时要核对三点：</b>房型写明3位成人<em>一大床加一单床</em>，就像已订的北京那间；政策注明<em>“接待所有国家/地区客人”</em>；并如实申报入住人数——不要订2人再带第三人，因为前台会逐一扫描护照并须在24小时内向公安登记。上海那间订的是2位成人，但会有4人进来寄存行李——请提前联系酒店说明。"],
-  t2head:[["Ngoài vé và phòng","Outside flights and rooms","机票与住宿之外"],["CNY","CNY","元"],["VND","VND","越南盾"]],
-  t2:[[["Visa X2, tự nộp hồ sơ","X2 visa, filed in person","X2签证，自行递交"],"-","900.000"],
-      [["Đi lại ngày quá cảnh Thượng Hải: 4 cuốc Didi chia ba, metro","Shanghai layover transport: four Didi rides split three ways, metro","上海中转日交通：四段滴滴三人分摊、地铁"],"45","178.000"],
-      [["Đi lại Bắc Kinh: metro, tàu cao tốc Trường Thành, Didi ra sân bay T3 chia hai","Beijing transport: metro, Great Wall high-speed train, the airport Didi to T3 split two ways","北京交通：地铁、长城高铁、两人分摊去T3的滴滴"],"250","988.000"],
-      [["Vé tham quan: Trường Thành, Viên Minh Viên, Thiên Đàn, Cố Cung, Cảnh Sơn","Entry tickets: Great Wall, Old Summer Palace, Temple of Heaven, Forbidden City, Jingshan","门票：长城、圆明园、天坛、故宫、景山"],"161","636.000"],
-      [["Ăn uống 3 ngày tự túc (21, 26, 27/10) - không còn bữa sáng 28/10","Food, 3 self-funded days (21, 26, 27 Oct) - no 28 Oct breakfast any more","自费餐饮3天（10月21、26、27日）——不再有28日早餐"],"270","1.067.000"],
-      [["eSIM, gửi hành lý, dự phòng","eSIM, lockers, contingency","eSIM、寄存、备用"],"180","711.000"]],
-  t2total:[["Tổng ngoài vé và phòng","Total outside flights and rooms","机票与住宿之外合计"],"906","4.480.000"],
-  concl:["Cộng cả hai bảng là <strong>11.549.000 ₫</strong> cho Gia Bảo và Quỳnh Mai, tức <strong>dưới mốc 15 triệu với khoảng 3,45 triệu dự phòng</strong>. Vé và phòng đã chốt hết nên phần còn có thể trượt chỉ là ăn uống và đi lại, mà mức đó đã tính khá thoải mái. Ba cách dưới đây <strong>không cần dùng đến nữa</strong>, để đây cho trường hợp phát sinh:",
-   "The two tables come to <strong>11,549,000 VND</strong> for Gia Bao and Quynh Mai, which is <strong>under the 15m line with about 3.45m in reserve</strong>. Flights and rooms are all locked in, so the only figures that can still drift are food and transport, and those were costed generously. The three levers below are <strong>no longer needed</strong> and are kept here in case something comes up:",
-   "两张表合计嘉宝和琼梅每人<strong>1,154.9万越南盾</strong>，即<strong>低于1500万上限，还有约345万余量</strong>。机票和住宿都已锁定，还可能浮动的只有餐饮和交通，而这两项本就算得宽松。下面三项<strong>已经不需要动用</strong>，留在这里以备万一："],
-  levers:[
-   [["<strong>Hỏi khách sạn Thông Châu xem có hoàn được đêm 27/10 không.</strong> Phòng đặt hai đêm 26 và 27/10, nhưng vì CA883 cất cánh 00:10 nên đêm 27 hai bạn ở trên máy bay. Nếu phiếu ghi huỷ miễn phí thì có thể xin hoàn một đêm - tính theo suất chia ba là khoảng 335 nghìn mỗi người. Đổi lại là mất chỗ tắm rửa và gửi đồ buổi tối 27/10, nên cân nhắc.",
-     "<strong>Ask the Tongzhou hotel whether the night of 27 Oct can be refunded.</strong> The room covers both 26 and 27 Oct, but because CA883 leaves at 00:10 the two of them spend the 27th in the air. If the booking is free-cancellation, one night may be refundable - about 335,000 each at the three-way split. The cost is losing the shower and the luggage drop on the evening of the 27th, so weigh it up.",
-     "<strong>问通州的酒店10月27日那晚能否退。</strong>房间订了26日和27日两晚，但因为CA883在00:10起飞，27日那晚两人在飞机上。若订单可免费取消，或许能退一晚——按三人分摊约每人33.5万。代价是失去27日晚上洗澡和寄存行李的地方，请自行权衡。"],"-0,34 tr"],
-   [["<strong>Ăn quán bình dân và căng tin,</strong> sáng mua ở tiệm tiện lợi. 60 CNY một ngày thay vì 90.",
-     "<strong>Eat at cheap local places and canteens,</strong> breakfast from a convenience store. CNY 60 a day instead of 90.",
-     "<strong>吃小店和食堂，</strong>早餐在便利店买。每天60元而非90元。"],"-0,41 tr"],
-   [["<strong>Leo bộ Trường Thành thay vì đi cáp treo.</strong> Cáp treo Bát Đạt Lĩnh khoảng 100 CNY khứ hồi, và đoạn hướng bắc lên Hảo Hán Pha hoàn toàn đi bộ được.",
-     "<strong>Walk the Great Wall instead of taking the cable car.</strong> The Badaling cable car is about CNY 100 return, and the northern stretch up to Haohanpo is entirely walkable.",
-     "<strong>长城步行上，不坐缆车。</strong>八达岭缆车往返约100元，向北到好汉坡这一段完全可以走上去。"],"-0,40 tr"]],
-  mdHead:["Mỹ Duyên - để tham khảo","My Duyen - for reference","美缘——供参考"],
-  mdEyebrow:["Không ràng buộc ngân sách · 13 ngày","No budget ceiling · 13 days","无预算上限 · 13天"],
-  mdNote:["Con số của Mỹ Duyên cao hơn hẳn hai bạn kia vì ở lại thêm bốn ngày, và bốn đêm đó là khách sạn <em>một mình</em> chứ không chia với ai, cộng thêm vé Universal và vé Cửa sổ Thế giới. Liệt kê đầy đủ ở đây để biết con số chứ không phải để cắt giảm. Bốn khoản khách sạn cuối là ước lượng vì chưa đặt; các khoản còn lại là giá thật.",
-   "My Duyen's number is well above the other two because she stays four days longer, and those four nights are hotel rooms paid <em>alone</em> rather than split, plus the Universal and Window of the World tickets. Listed in full to know the number, not to cut it. The last four hotel lines are estimates, since they are not booked yet; the rest are real prices.",
-   "美缘的数字明显高于另外两人，因为她多留四天，而那四晚是<em>一个人</em>付房费而非分摊，再加上环球影城和世界之窗的门票。这里完整列出是为了知道数字，不是为了压减。最后四项住宿是估算，因为还没订；其余是实价。"],
-  t3head:[["Khoản","Item","项目"],["Chi tiết","Detail","明细"],["VND","VND","越南盾"]],
-  t3:[[["Vé lượt đi, chia 4 người","Outbound fare, split four ways","去程票款，四人均摊"],["12.760.000 ÷ 4","12,760,000 ÷ 4","1276万 ÷ 4"],"3.190.000"],
-      [["Vé lượt về 31/10 và 1/11, quá cảnh Thâm Quyến","Return 31 Oct and 1 Nov via Shenzhen","10月31日和11月1日回程，经深圳"],["CA2813 + ZH101","CA2813 + ZH101","CA2813 + ZH101"],"3.648.000"],
-      [["Visa X2","X2 visa","X2签证"],"-","900.000"],
-      [["Khách sạn Thượng Hải 21/10 và Bắc Kinh 26–28/10","Shanghai 21 Oct and Beijing 26–28 Oct","上海10月21日、北京10月26–28日"],["122.000 + 670.000","122,000 + 670,000","12.2万 + 67万"],"792.000"],
-      [["Khách sạn Bắc Kinh đêm 28/10, một mình","Beijing, night of 28 Oct, alone","北京10月28日一晚，独住"],"250–400","988.000<br>– 1.580.000"],
-      [["Khách sạn Thiên Tân 2 đêm 29 và 30/10, khu Ngũ Đại Đạo","Tianjin, 2 nights 29 and 30 Oct, Five Great Avenues","天津10月29、30日两晚，五大道一带"],"500–800","1.975.000<br>– 3.160.000"],
-      [["Khách sạn Thâm Quyến đêm 31/10, gần Bảo An","Shenzhen, night of 31 Oct, near Bao'an","深圳10月31日一晚，宝安附近"],"250–400","988.000<br>– 1.580.000"],
-      [["Vé Universal Beijing Resort ngày 26/10","Universal Beijing Resort, 26 Oct","北京环球影城，10月26日"],"418–528","1.651.000<br>– 2.086.000"],
-      [["Gửi vali và ăn uống trong công viên Universal","Locker and food inside Universal","环球影城内寄存与餐饮"],"240","949.000"],
-      [["Vé Cửa sổ Thế giới Thâm Quyến ngày 31/10","Window of the World Shenzhen, 31 Oct","深圳世界之窗，10月31日"],"220","869.000"],
-      [["Vé tham quan còn lại: Thiên Đàn, Cố Cung, Cảnh Sơn, Nhà Sứ, và một điểm sáng 29/10","Other tickets: Temple of Heaven, Forbidden City, Jingshan, Porcelain House and one stop on 29 Oct","其余门票：天坛、故宫、景山、瓷房子及10月29日上午一处"],"171","676.000"],
-      [["Tàu cao tốc Bắc Kinh Nam đi Thiên Tân ngày 29/10","Beijing South to Tianjin high-speed train, 29 Oct","10月29日北京南至天津高铁"],"55","217.000"],
-      [["Đi lại: Thượng Hải, Bắc Kinh, Thiên Tân, xe ra sân bay Tân Hải, Thâm Quyến","Transport: Shanghai, Beijing, Tianjin, the car to Binhai airport, Shenzhen","交通：上海、北京、天津、去滨海机场的车、深圳"],"520","2.054.000"],
-      [["Ăn uống các ngày tự túc: 21, 27, 28, 29, 30, 31/10 và sáng 1/11","Food on self-funded days: 21, 27, 28, 29, 30, 31 Oct and the morning of 1 Nov","自费餐饮：10月21、27、28、29、30、31日及11月1日早"],"585","2.311.000"],
-      [["eSIM 13 ngày, gửi hành lý, dự phòng","13-day eSIM, lockers, contingency","13天eSIM、寄存、备用"],"200","790.000"]],
-  t3total:[["Tổng","Total","合计"],"-","22,0 – 24,8 tr"],
-  t3extra:[["Cộng thêm nếu mua Express Pass ở Universal","Add if buying the Universal Express Pass","若在环球影城购买优速通另加"],"từ 900","+3.555.000"],
-  taNote:["Ngắn hơn nhiều vì BNU bao ăn ở từ 22 đến 25/10 và Tuấn Anh về ngay ngày 26/10. Ngoài vé máy bay và visa thì gần như không tốn gì. Vé về chưa đặt nên vẫn để khoảng.",
-   "Much shorter, because BNU covers board and lodging from 22 to 25 Oct and Tuan Anh flies home on 26 Oct. Beyond flights and the visa there is almost nothing. The return is not booked yet, so it stays a range.",
-   "短得多，因为北师大承担10月22–25日的食宿，俊英10月26日就回国。除机票和签证外几乎没有开销。回程尚未订票，仍保留区间。"],
-  t4:[[["Vé lượt đi, chia 4 người","Outbound fare, split four ways","去程票款，四人均摊"],["12.760.000 ÷ 4","12,760,000 ÷ 4","1276万 ÷ 4"],"3.190.000"],
-      [["Khách sạn Thượng Hải, Dihang Boutique","Shanghai, Dihang Boutique","上海，迪航酒店"],["487.164 ÷ 4","487,164 ÷ 4","487,164 ÷ 4"],"122.000"],
-      [["<strong>Vé về 26/10, Bắc Kinh đi Hà Nội</strong> <span class=\"muted\">(chưa đặt)</span>","<strong>Return 26 Oct, Beijing to Hanoi</strong> <span class=\"muted\">(not booked)</span>","<strong>10月26日回程，北京飞河内</strong> <span class=\"muted\">（未订）</span>"],["bay thẳng","direct","直飞"],"3.000.000<br>– 4.500.000"],
-      [["Visa X2, tự nộp hồ sơ","X2 visa, filed in person","X2签证，自行递交"],"-","900.000"],
-      [["Xương Bình ra sân bay Thủ Đô: metro 32 CNY hoặc taxi 150 CNY","Changping to Capital Airport: metro CNY 32 or taxi CNY 150","昌平至首都机场：地铁32元或打车150元"],"32–150","126.000<br>– 593.000"],
-      [["Ăn uống ngày 21/10 và sáng 26/10, dự phòng","Food on 21 Oct and the morning of 26 Oct, contingency","10月21日及26日早的餐饮、备用"],"200","790.000"]],
-  t4total:[["Tổng","Total","合计"],"-","8,1 – 10,1 tr"],
-  n4:["<b>Hai điều đáng chú ý trong bảng của Tuấn Anh.</b> Một, chi phí ăn ở gần như bằng không vì BNU bao trọn bốn ngày thi và bạn ấy không ở lại thêm ngày nào. Hai, khoản duy nhất còn dao động là vé về ngày 26/10 - nên bay từ sân bay Thủ Đô chứ không phải Đại Hưng, vì từ campus Xương Bình ra Thủ Đô chỉ mất khoảng một nửa quãng đường.",
-   "<b>Two things stand out in Tuan Anh's table.</b> One, board and lodging cost almost nothing because BNU covers all four competition days and he does not stay on. Two, the only figure still moving is the 26 Oct return - fly out of Capital rather than Daxing, since Capital is roughly half the distance from the Changping campus.",
-   "<b>俊英这张表有两点值得注意。</b>第一，食宿几乎不花钱，因为北师大包了四天比赛期间的食宿，他也没有多留。第二，唯一仍在浮动的是10月26日的回程——应从首都机场而非大兴起飞，因为从昌平校区到首都机场的距离大约只有一半。"]
+  note:[
+    "Vé và phòng của Bảo và Mai đều là giá thật trên phiếu. Mốc 15 triệu áp cho Gia Bảo và Quỳnh Mai.",
+    "Bao and Mai's flights and rooms are actual booked prices. The 15m ceiling applies to Gia Bao and Quynh Mai.",
+    "嘉宝和琼梅的机票和住宿均为实际订单价格。1500万上限适用于嘉宝和琼梅。"
+  ],
+  t1head:[["Vé máy bay và khách sạn", "Flights and hotels", "机票与酒店"], ["Chi tiết", "Detail", "明细"], ["VND", "VND", "越南盾"]],
+  t1:[
+    [
+      ["Vé lượt đi HAN đi PVG đi PEK, China Eastern", "Outbound HAN to PVG to PEK, China Eastern", "去程 河内-上海浦东-北京首都，东方航空"],
+      ["12.760.000 ÷ 4", "12,760,000 ÷ 4", "1276万 ÷ 4"],
+      "3.190.000"
+    ],
+    [["Khách sạn Thượng Hải, Dihang Boutique", "Shanghai, Dihang Boutique", "上海，迪航酒店"], ["487.164 ÷ 4", "487,164 ÷ 4", "487,164 ÷ 4"], "122.000"],
+    [
+      ["Khách sạn Bắc Kinh Thông Châu, 26–28/10", "Beijing Tongzhou, 26–28 Oct", "北京通州，10月26–28日"],
+      ["2.009.098 ÷ 3", "2,009,098 ÷ 3", "200.9万 ÷ 3"],
+      "670.000"
+    ],
+    [
+      ["Vé về 28/10, CA883 Thủ Đô T3 đi Nội Bài", "Return 28 Oct, CA883 Capital T3 to Noi Bai", "10月28日回程，CA883 首都T3 飞内排"],
+      ["6.174.000 ÷ 2", "6,174,000 ÷ 2", "617.4万 ÷ 2"],
+      "3.087.000"
+    ]
+  ],
+  t1total:[["Cộng", "Subtotal", "小计"], "-", "7.069.000"],
+  t2head:[["Ngoài vé và phòng", "Outside flights and rooms", "机票与住宿之外"], ["CNY", "CNY", "元"], ["VND", "VND", "越南盾"]],
+  t2:[
+    [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
+    [
+      [
+        "Đi lại ngày quá cảnh Thượng Hải: 4 cuốc Didi chia ba, metro",
+        "Shanghai layover transport: four Didi rides split three ways, metro",
+        "上海中转日交通：四段滴滴三人分摊、地铁"
+      ],
+      "45",
+      "178.000"
+    ],
+    [
+      [
+        "Đi lại Bắc Kinh: xe cả ngày 26/10 chia ba, metro, Didi ra sân bay T3 chia hai",
+        "Beijing transport: 26 Oct day car split three ways, metro, Didi to T3 split two ways",
+        "北京交通：10月26日包车三人分摊、地铁、滴滴去T3两人分摊"
+      ],
+      "420",
+      "1.659.000"
+    ],
+    [
+      [
+        "Vé tham quan: Tư Mã Đài + Cổ Bắc Thuỷ Trấn, cáp treo, Thiên Đàn, Cố Cung, Cảnh Sơn",
+        "Entry tickets: Simatai + Gubei, cable car, Temple of Heaven, Forbidden City, Jingshan",
+        "门票：司马台+古北水镇、缆车、天坛、故宫、景山"
+      ],
+      "406",
+      "1.604.000"
+    ],
+    [
+      [
+        "Ăn uống 3 ngày tự túc (21, 26, 27/10) - không còn bữa sáng 28/10",
+        "Food, 3 self-funded days (21, 26, 27 Oct) - no 28 Oct breakfast any more",
+        "自费餐饮3天（10月21、26、27日）——不再有28日早餐"
+      ],
+      "270",
+      "1.067.000"
+    ],
+    [["eSIM, gửi hành lý, dự phòng", "eSIM, lockers, contingency", "eSIM、寄存、备用"], "180", "711.000"]
+  ],
+  t2total:[["Tổng ngoài vé và phòng", "Total outside flights and rooms", "机票与住宿之外合计"], "1321", "6.398.000"],
+  concl:[
+    "Tổng hai bảng: <strong>13.467.000 ₫</strong> mỗi người (Gia Bảo, Quỳnh Mai), dưới mốc 15 triệu khoảng 1,53 triệu.",
+    "Both tables together: <strong>13,467,000 VND</strong> each (Gia Bao, Quynh Mai), about 1.53m under the 15m ceiling.",
+    "两表合计：每人<strong>1346.7万越南盾</strong>（嘉宝、琼梅），比1500万上限低约153万。"
+  ],
+  mdHead:["Mỹ Duyên - để tham khảo", "My Duyen - for reference", "美缘——供参考"],
+  mdEyebrow:["Không ràng buộc ngân sách · 13 ngày", "No budget ceiling · 13 days", "无预算上限 · 13天"],
+  mdNote:[
+    "Ở thêm bốn ngày, phòng một mình. Các khoản khách sạn từ đêm 28/10 là ước lượng vì chưa đặt.",
+    "Four extra days with single rooms. Hotels from the night of 28 Oct are estimates as they are not booked yet.",
+    "多留四天，单人住宿。10月28日晚起的酒店尚未预订，为估算。"
+  ],
+  t3head:[["Khoản", "Item", "项目"], ["Chi tiết", "Detail", "明细"], ["VND", "VND", "越南盾"]],
+  t3:[
+    [["Vé lượt đi, chia 4 người", "Outbound fare, split four ways", "去程票款，四人均摊"], ["12.760.000 ÷ 4", "12,760,000 ÷ 4", "1276万 ÷ 4"], "3.190.000"],
+    [
+      ["Vé lượt về 31/10 và 1/11, quá cảnh Thâm Quyến", "Return 31 Oct and 1 Nov via Shenzhen", "10月31日和11月1日回程，经深圳"],
+      ["CA2813 + ZH101", "CA2813 + ZH101", "CA2813 + ZH101"],
+      "3.648.000"
+    ],
+    [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
+    [
+      ["Khách sạn Thượng Hải 21/10 và Bắc Kinh 26–28/10", "Shanghai 21 Oct and Beijing 26–28 Oct", "上海10月21日、北京10月26–28日"],
+      ["122.000 + 670.000", "122,000 + 670,000", "12.2万 + 67万"],
+      "792.000"
+    ],
+    [
+      ["Gia hạn phòng Thông Châu đêm 28/10, một mình", "Tongzhou room extended for 28 Oct, alone", "通州房间续住10月28日，单人"],
+      "250–400",
+      "988.000<br>– 1.580.000"
+    ],
+    [
+      ["Khách sạn Thiên Tân 2 đêm 29 và 30/10, khu Ngũ Đại Đạo", "Tianjin, 2 nights 29 and 30 Oct, Five Great Avenues", "天津10月29、30日两晚，五大道一带"],
+      "500–800",
+      "1.975.000<br>– 3.160.000"
+    ],
+    [
+      ["Khách sạn Thâm Quyến đêm 31/10, gần Bảo An", "Shenzhen, night of 31 Oct, near Bao'an", "深圳10月31日一晚，宝安附近"],
+      "250–400",
+      "988.000<br>– 1.580.000"
+    ],
+    [["Vé Cổ Bắc Thuỷ Trấn ngày 26/10", "Gubei Water Town ticket, 26 Oct", "古北水镇门票，10月26日"], "150", "593.000"],
+    [["Xe cả ngày 26/10, chia ba", "26 Oct day car, split three ways", "10月26日包车，三人分摊"], "300", "1.185.000"],
+    [["Vé Universal Beijing Resort ngày 28/10", "Universal Beijing Resort ticket, 28 Oct", "北京环球影城门票，10月28日"], "418–528", "1.651.000<br>– 2.086.000"],
+    [["Ăn uống trong công viên Universal", "Food inside Universal", "环球影城园内餐饮"], "150", "593.000"],
+    [["Vé Cửa sổ Thế giới Thâm Quyến ngày 31/10", "Window of the World Shenzhen, 31 Oct", "深圳世界之窗，10月31日"], "220", "869.000"],
+    [
+      [
+        "Vé tham quan còn lại: Thiên Đàn, Cố Cung, Cảnh Sơn, Nhà Sứ, và một điểm sáng 29/10",
+        "Other tickets: Temple of Heaven, Forbidden City, Jingshan, Porcelain House and one stop on 29 Oct",
+        "其余门票：天坛、故宫、景山、瓷房子及10月29日上午一处"
+      ],
+      "171",
+      "676.000"
+    ],
+    [["Tàu cao tốc Bắc Kinh Nam đi Thiên Tân ngày 29/10", "Beijing South to Tianjin high-speed train, 29 Oct", "10月29日北京南至天津高铁"], "55", "217.000"],
+    [
+      [
+        "Đi lại: Thượng Hải, Bắc Kinh, Thiên Tân, xe ra sân bay Tân Hải, Thâm Quyến",
+        "Transport: Shanghai, Beijing, Tianjin, the car to Binhai airport, Shenzhen",
+        "交通：上海、北京、天津、去滨海机场的车、深圳"
+      ],
+      "400",
+      "1.580.000"
+    ],
+    [
+      [
+        "Ăn uống các ngày tự túc: 21, 27, 28, 29, 30, 31/10 và sáng 1/11",
+        "Food on self-funded days: 21, 27, 28, 29, 30, 31 Oct and the morning of 1 Nov",
+        "自费餐饮：10月21、27、28、29、30、31日及11月1日早"
+      ],
+      "585",
+      "2.311.000"
+    ],
+    [["eSIM 13 ngày, gửi hành lý, dự phòng", "13-day eSIM, lockers, contingency", "13天eSIM、寄存、备用"], "200", "790.000"]
+  ],
+  t3total:[["Tổng", "Total", "合计"], "-", "23,2 – 26,0 tr"],
+  taNote:[
+    "BNU bao ăn ở 22–25/10. Vé về chưa đặt nên để khoảng.",
+    "BNU covers board and lodging 22–25 Oct. The return is not booked, so it stays a range.",
+    "北师大承担10月22–25日食宿。回程未订，按区间估算。"
+  ],
+  t4:[
+    [["Vé lượt đi, chia 4 người", "Outbound fare, split four ways", "去程票款，四人均摊"], ["12.760.000 ÷ 4", "12,760,000 ÷ 4", "1276万 ÷ 4"], "3.190.000"],
+    [["Khách sạn Thượng Hải, Dihang Boutique", "Shanghai, Dihang Boutique", "上海，迪航酒店"], ["487.164 ÷ 4", "487,164 ÷ 4", "487,164 ÷ 4"], "122.000"],
+    [
+      [
+        "<strong>Vé về 26/10, Bắc Kinh đi Hà Nội</strong> <span class=\"muted\">(chưa đặt)</span>",
+        "<strong>Return 26 Oct, Beijing to Hanoi</strong> <span class=\"muted\">(not booked)</span>",
+        "<strong>10月26日回程，北京飞河内</strong> <span class=\"muted\">（未订）</span>"
+      ],
+      ["bay thẳng", "direct", "直飞"],
+      "3.000.000<br>– 4.500.000"
+    ],
+    [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
+    [
+      [
+        "Xương Bình ra sân bay Thủ Đô: metro 32 CNY hoặc taxi 150 CNY",
+        "Changping to Capital Airport: metro CNY 32 or taxi CNY 150",
+        "昌平至首都机场：地铁32元或打车150元"
+      ],
+      "32–150",
+      "126.000<br>– 593.000"
+    ],
+    [["Ăn uống ngày 21/10 và sáng 26/10, dự phòng", "Food on 21 Oct and the morning of 26 Oct, contingency", "10月21日及26日早的餐饮、备用"], "200", "790.000"]
+  ],
+  t4total:[["Tổng", "Total", "合计"], "-", "8,4 – 10,4 tr"],
+  visa:[
+    "<b>Visa X2 mỗi người:</b> phí dịch vụ 760.000 ₫ + phí Đại sứ quán 45 USD. Tiền thưởng <b>Gold Award</b> vòng Chung kết khu vực Đông Nam Á là 500 RM, đổi được 116 USD, chia đều 4 người (29 USD/người) để bù phí visa. Còn lại khoảng <b>1.179.000 ₫</b> mỗi người.",
+    "<b>X2 visa per person:</b> 760,000 VND service fee + USD 45 embassy fee. The <b>Gold Award</b> prize from the Southeast Asia regional final, RM 500, changed into USD 116 and split four ways (USD 29 each) to offset the visa. That leaves about <b>1,179,000 VND</b> each.",
+    "<b>每人X2签证：</b>服务费76万越南盾 + 使馆费45美元。东南亚区域决赛<b>金奖</b>奖金500林吉特，换成116美元，四人平分（每人29美元）抵签证费。每人实付约<b>117.9万越南盾</b>。"
+  ]
 };

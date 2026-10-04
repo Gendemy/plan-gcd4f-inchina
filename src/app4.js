@@ -1,114 +1,308 @@
-/* ================= BEIJING ================= */
+/* Bắc Kinh 21–25/10 - lịch chính thức của BNU */
 DAYS.push(
-{ city:"bj", n:"21", dow:"T4",
-  head:["Hạ cánh lúc gần nửa đêm, BNU đón tận sân bay","Landing close to midnight, BNU meets the group","将近午夜落地，北师大到机场接人"],
-  intro:["Ngày này bắt đầu ở Nội Bài lúc 02:20 và kết thúc ở campus Xương Bình lúc gần 01:00 sáng hôm sau. Phần cuối rất gọn vì <strong>BNU đã xác nhận đón cả bốn người ngay tại sân bay Thủ Đô và đưa thẳng về campus nhận phòng</strong> - không phải lo tàu cuối, không phải gọi xe lúc nửa đêm.",
-   "The day starts at Noi Bai at 02:20 and ends on the Changping campus close to 01:00 the next morning. The last stretch is simple, because <strong>BNU has confirmed it will collect all four at Capital Airport and drive them straight to campus to check in</strong> - no last trains to catch, no midnight car to book.",
-   "这一天从内排02:20开始，到次日将近凌晨1点在昌平校区结束。最后一段很省心，因为<strong>北师大已确认在首都机场接四人并直接送回校区办理入住</strong>——不用赶末班车，也不用半夜叫车。"],
+{
+  city:"bj",
+  n:"21",
+  dow:"T4",
+  head:["Hạ cánh lúc gần nửa đêm, BNU đón tận sân bay", "Landing close to midnight, BNU meets the group", "将近午夜落地，北师大到机场接人"],
   slots:[
-   {t:["23:50","23:50","23:50"], b:["Hạ cánh sân bay Thủ Đô, nhà ga T2","Landing at Capital Airport, Terminal 2","落地首都机场T2"],
-    d:["Chuyến nội địa từ Thượng Hải nên không phải làm thủ tục nhập cảnh lần nữa - việc đó đã xong ở Phố Đông sáng cùng ngày.",
-       "A domestic arrival from Shanghai, so there is no second immigration check - that was done at Pudong the same morning.",
-       "从上海来的国内航班，无需再次入境——入境手续当天早上已在浦东办完。"]},
-   {t:["23:50–00:25","23:50–00:25","23:50–00:25"], b:["Lấy hành lý ký gửi","Collect the checked bags","提取托运行李"], dur:["35 phút","35 min","35分钟"],
-    d:["Nhắn cho người đón của BNU ngay khi máy bay vừa lăn bánh vào bãi, đừng đợi ra tới sảnh. Điểm hẹn nên chốt trước bằng tiếng Trung: sảnh đến nhà ga T2, cửa ra số mấy.",
-       "Message BNU's driver the moment the aircraft reaches the stand, not when you reach the hall. Agree the meeting point in Chinese in advance: T2 arrivals hall, which exit number.",
-       "飞机一到廊桥就给北师大接机的人发消息，不要等出到大厅再发。会合点提前用中文约定好：T2到达大厅，哪个出口。"]},
-   {m:1, t:["50 phút","50 min","50分钟"], a:["Xe của BNU từ sân bay Thủ Đô về campus Xương Bình · khoảng 45 km · BNU lo, không mất tiền",
-    "BNU's car from Capital Airport to the Changping campus · about 45 km · arranged and paid by BNU",
-    "北师大的车从首都机场到昌平校区 · 约45公里 · 由北师大安排并承担"]},
-   {t:["≈ 01:20","≈ 01:20","约01:20"], b:["Nhận phòng ở campus Xương Bình","Check in on the Changping campus","在昌平校区办理入住"],
-    d:["Mang sẵn hộ chiếu và giấy tờ BNU gửi qua email trong túi xách tay, đừng để trong vali ký gửi. Xong là ngủ - hôm sau là ngày nghỉ, chương trình chính thức bắt đầu 9:30 sáng 23/10.",
-       "Keep the passport and BNU's emailed paperwork in the cabin bag, not the checked suitcase. Then sleep - tomorrow is a rest day; the official programme starts at 09:30 on 23 Oct.",
-       "把护照和北师大邮件里的材料放在随身包里，别放托运箱。然后就休息——第二天是休整日，正式日程从10月23日9:30开始。"]}
+    {
+      t:["23:50", "23:50", "23:50"],
+      b:["Hạ cánh sân bay Thủ Đô, nhà ga T2", "Landing at Capital Airport, Terminal 2", "落地首都机场T2"],
+      d:["Chuyến nội địa, không làm thủ tục nhập cảnh.", "Domestic arrival, no immigration.", "国内航班，无需入境手续。"]
+    },
+    {
+      t:["23:50–00:25", "23:50–00:25", "23:50–00:25"],
+      b:["Lấy hành lý ký gửi", "Collect the checked bags", "提取托运行李"],
+      dur:["35 phút", "35 min", "35分钟"],
+      d:["Nhắn người đón của BNU khi máy bay vừa hạ cánh.", "Message BNU's driver as soon as you land.", "落地后马上给北师大接机人发消息。"]
+    },
+    {
+      m:1,
+      t:["50 phút", "50 min", "50分钟"],
+      a:[
+        "Xe của BNU từ sân bay Thủ Đô về campus Xương Bình · khoảng 45 km · BNU lo, không mất tiền",
+        "BNU's car from Capital Airport to the Changping campus · about 45 km · arranged and paid by BNU",
+        "北师大的车从首都机场到昌平校区 · 约45公里 · 由北师大安排并承担"
+      ]
+    },
+    {
+      t:["≈ 01:20", "≈ 01:20", "约01:20"],
+      b:["Nhận phòng ở campus Xương Bình", "Check in on the Changping campus", "在昌平校区办理入住"],
+      d:["Để hộ chiếu và giấy tờ BNU trong túi xách tay.", "Keep the passport and BNU paperwork in your cabin bag.", "护照和北师大材料放在随身包里。"]
+    }
   ]
 },
 
-{ city:"bj", n:"22", dow:"T5",
-  head:["Ngày ổn định ở campus Xương Bình","Settling in at the Changping campus","在昌平校区安顿"], hosttag:1,
+{
+  city:"bj",
+  n:"22",
+  dow:"T5",
+  head:["Khu đại học Hải Điến · ngày tự do của cả đội", "The Haidian university district · a free day for the team", "海淀高校区 · 全队自由日"],
+  hosttag:1,
   slots:[
-   {t:["Cả ngày","All day","全天"], b:["Nghỉ bù, làm quen campus, chuẩn bị dự án","Rest, explore the campus, prepare the project","补觉、熟悉校园、准备项目"],
-    d:["Cả 4 người. Lịch BNU cập nhật không có hoạt động chính thức ngày 22/10: chương trình bắt đầu bằng <strong>lễ khai mạc lúc 9:30 sáng 23/10</strong>. Dùng ngày này để ngủ bù sau chuyến bay đêm, tìm trước hội trường khai mạc, và chạy thử phần trình bày dự án một lượt cho buổi mentoring ngày 24/10.",
-       "All four. BNU's updated schedule has no official activity on 22 Oct: the programme opens with the <strong>opening ceremony at 09:30 on 23 Oct</strong>. Use the day to catch up on sleep after the night flight, find the ceremony venue in advance, and run through the project pitch once ahead of the 24 Oct mentoring.",
-       "四人全体。北师大更新后的日程中10月22日没有正式活动：活动从<strong>10月23日9:30的开幕式</strong>开始。利用这一天补觉、提前找到开幕式会场，并为10月24日的辅导把项目展示完整演练一遍。"]},
-   {t:["Tối","Evening","晚上"], b:["Nghỉ sớm","Early night","早点休息"],
-    d:["Cả nhóm vừa qua một ngày dài: bay đêm từ Hà Nội, một ngày ở Thượng Hải, rồi bay tiếp và về tới phòng lúc 01:20. Tối nay đừng đi đâu, ăn ở căng tin hoặc quán mì gần cổng trường và ngủ sớm - sáng mai 9:30 khai mạc.",
-       "The whole group has just had a very long day: a red-eye from Hanoi, a day in Shanghai, a second flight and a 01:20 arrival. Stay in tonight, eat at the canteen or a noodle place by the gate and sleep early - the opening is at 09:30 tomorrow.",
-       "全队刚过了很长的一天：从河内的红眼航班、上海的一整天、再一段飞行，凌晨1:20才回房。今晚别外出，在食堂或校门口面馆吃饭并早点睡——明早9:30开幕。"]}
-  ]},
-
-{ city:"bj", n:"23", dow:"T6",
-  head:["Khai mạc · Diễn đàn Thanh niên · Công viên Olympic ban đêm","Opening · Youth Forum · Olympic Park at night","开幕式 · 青年论坛 · 夜游奥林匹克公园"], hosttag:1,
-  slots:[
-   {t:["09:30–09:50","09:30–09:50","09:30–09:50"], b:["Lễ khai mạc","Opening Ceremony","开幕式"], tag:"bnu", dur:["20 phút","20 min","20分钟"],
-    d:["Cả 4 người. Có mặt và vào chỗ trước 9:15.","All four. Be in your seats by 09:15.","四人全体。9:15前到场入座。"]},
-   {t:["09:50–18:30","09:50–18:30","09:50–18:30"], b:["Start Futures Youth Forum","Start Futures Youth Forum","Start Futures 青年论坛"], tag:"bnu", dur:["8 giờ 40 phút","8h40","8小时40分"],
-    d:["Fireside Chat và Keynote Sharing. Ăn trưa theo sắp xếp của BTC.","Fireside Chat and Keynote Sharing. Lunch as arranged by the organisers.","炉边谈话（Fireside Chat）与主题分享（Keynote Sharing）。午餐由主办方安排。"]},
-   {p:["ta"], t:["Tối","Evening","晚上"], b:["Nghỉ tại campus","Evening on campus","晚上留在校区"],
-    d:["Ăn tối ở căng tin và nghỉ sớm. Ba bạn kia vào trung tâm và về rất muộn, không cần theo.","Dinner at the canteen and an early night. The other three head downtown and get back late; no need to tag along.","在食堂吃晚饭，早点休息。另外三人进城且回来很晚，不必同行。"]},
-   {p:["gb","md"], m:1, t:["45 phút","45 min","45分钟"], a:['Sa Hà → tuyến Xương Bình → đổi tuyến 8 tại <span class="han">朱辛庄</span> → ga Olympic Green · 6 CNY',
-    'Shahe → Changping Line → change to Line 8 at <span class="han">朱辛庄</span> Zhuxinzhuang → Olympic Green · CNY 6',
-    '沙河 → 昌平线 → <span class="han">朱辛庄</span>换8号线 → 奥林匹克公园站 · 6元']},
-   {p:["gb","md"], t:["19:30–21:00","19:30–21:00","19:30–21:00"], b:["Công viên Olympic","Olympic Park","奥林匹克公园"], tag:"free", dur:["90 phút","90 min","90分钟"],
-    d:["Diễn đàn kết thúc 18:30 nên tới nơi khoảng 19:30. Tổ Chim và Thuỷ Lập Phương lên đèn buổi tối, quảng trường rộng, đi bộ thoải mái. Đây là điểm tối gần trường nhất và cũng dễ về nhất - tuyến 8 nối thẳng vào tuyến Xương Bình.",
-       "The forum ends at 18:30, so you arrive around 19:30. The Bird's Nest and Water Cube lit up, a wide plaza, easy walking. The closest evening outing to campus and the easiest return - Line 8 connects straight to the Changping Line.",
-       "论坛18:30结束，约19:30到达。鸟巢和水立方夜间亮灯，广场开阔，适合散步。这是离校区最近、返回最方便的夜间去处——8号线直通昌平线。"]},
-   {p:["gb","md"], m:1, t:["45 phút","45 min","45分钟"], a:["Về Sa Hà bằng đúng đường cũ","Back to Shahe the same way","原路返回沙河"]}
-  ],
-  notes:[["<b>Giờ tàu cuối:</b> tuyến Xương Bình từ Zhuxinzhuang về Sa Hà dừng chạy khoảng 23:00. Cứ đặt luật cho cả nhóm là <b>rời trung tâm trước 21:30</b>, và kiểm tra lại giờ thực tế trên app Amap trước khi đi. Lỡ chuyến cuối thì Didi từ trung tâm về Xương Bình mất khoảng 120–150 CNY.",
-   "<b>Last trains:</b> the Changping Line from Zhuxinzhuang to Shahe stops around 23:00. Make it a team rule to <b>leave the centre before 21:30</b>, and check the real times in Amap on the day. Missing it means a CNY 120–150 Didi back to Changping.",
-   "<b>末班车：</b>昌平线从朱辛庄回沙河约23:00停运。给全队定个规矩：<b>21:30前离开市区</b>，当天用高德查实际时间。错过末班车，从市区打滴滴回昌平约120–150元。"]]
+    {
+      t:["Sáng", "Morning", "上午"],
+      b:["Ngủ bù, ăn trưa ở căng tin", "Sleep in, lunch at the canteen", "补觉，食堂吃午饭"],
+      d:[
+        "Chương trình chính thức bắt đầu 9:30 sáng 23/10, hôm nay cả bốn người đều trống.",
+        "The official programme starts at 09:30 on 23 Oct; today is free for all four.",
+        "正式日程10月23日9:30开始，今天四人都有空。"
+      ]
+    },
+    {
+      m:1,
+      t:["40 phút", "40 min", "40分钟"],
+      a:[
+        "Sa Hà → tuyến Xương Bình → đổi tuyến 13 tại <span class=\"han\">西二旗</span> → ga <span class=\"han\">五道口</span> Ngũ Đạo Khẩu · 5 CNY",
+        "Shahe → Changping Line → Line 13 at <span class=\"han\">西二旗</span> → <span class=\"han\">五道口</span> Wudaokou · CNY 5",
+        "沙河 → 昌平线 → <span class=\"han\">西二旗</span>换13号线 → <span class=\"han\">五道口</span>站 · 5元"
+      ]
+    },
+    {
+      m:1,
+      t:["15 phút", "15 min", "15分钟"],
+      a:[
+        "Đi bộ hoặc xe đạp chung theo đường Thanh Hoa Tây · 1,5 km",
+        "Walk or take a shared bike along Tsinghua West Road · 1.5 km",
+        "步行或骑共享单车沿清华西路 · 1.5公里"
+      ]
+    },
+    {
+      t:["14:30–15:15", "14:30–15:15", "14:30–15:15"],
+      b:["Cổng Tây Đại học Thanh Hoa", "Tsinghua University West Gate", "清华大学西门"],
+      tag:"free",
+      dur:["45 phút", "45 min", "45分钟"],
+      d:[
+        "<span class=\"han\">清华大学西门</span> - chụp ảnh ngoài cổng, không cần đặt chỗ.",
+        "<span class=\"han\">清华大学西门</span> - photos from outside the gate, no booking needed.",
+        "<span class=\"han\">清华大学西门</span>——校门外拍照，无需预约。"
+      ]
+    },
+    { m:1, t:["10 phút", "10 min", "10分钟"], a:["Đi bộ xuống phía nam tới cổng Tây Bắc Đại", "Walk south to the PKU West Gate", "向南步行到北大西门"] },
+    {
+      t:["15:25–16:10", "15:25–16:10", "15:25–16:10"],
+      b:["Cổng Tây Đại học Bắc Kinh", "Peking University West Gate", "北京大学西门"],
+      tag:"free",
+      dur:["45 phút", "45 min", "45分钟"],
+      d:[
+        "<span class=\"han\">北京大学西门</span> - cổng mái ngói đỏ, đôi sư tử đá, chụp từ ngoài.",
+        "<span class=\"han\">北京大学西门</span> - red-tiled palace-style gate with stone lions, photos from outside.",
+        "<span class=\"han\">北京大学西门</span>——红瓦宫门、石狮，门外拍照。"
+      ]
+    },
+    { m:1, t:["20 phút", "20 min", "20分钟"], a:["Đi bộ hoặc xe đạp chung quay lại Ngũ Đạo Khẩu", "Walk or bike back to Wudaokou", "步行或骑车回五道口"] },
+    {
+      t:["16:30–18:30", "16:30–18:30", "16:30–18:30"],
+      b:["Phố sinh viên Ngũ Đạo Khẩu, ăn tối", "Wudaokou student quarter, dinner", "五道口学生街，晚餐"],
+      tag:"free",
+      dur:["120 phút", "120 min", "120分钟"],
+      d:[
+        "<span class=\"han\">五道口</span> - quán ăn, cà phê, hiệu sách sinh viên. Ăn tối ở đây.",
+        "<span class=\"han\">五道口</span> - student cafés, bookshops and cheap eats. Dinner here.",
+        "<span class=\"han\">五道口</span>——学生咖啡馆、书店和小吃。在这里吃晚饭。"
+      ]
+    },
+    { m:1, t:["40 phút", "40 min", "40分钟"], a:["Về Sa Hà bằng đúng đường cũ", "Back to Shahe the same way", "原路返回沙河"] },
+    {
+      t:["≈ 19:15", "≈ 19:15", "约19:15"],
+      b:["Về campus, chạy thử phần trình bày", "Back on campus, rehearse the pitch", "回校，演练项目展示"],
+      d:["Ngủ sớm, 9:30 sáng mai khai mạc.", "Early night; the opening is at 09:30 tomorrow.", "早点睡，明早9:30开幕。"]
+    }
+  ]
 },
 
-{ city:"bj", n:"24", dow:"T7",
-  head:["Mentoring cả ngày · Thập Sát Hải ban đêm","Mentoring all day · Shichahai at night","全天赛前辅导 · 夜游什刹海"], hosttag:1,
+{
+  city:"bj",
+  n:"23",
+  dow:"T6",
+  head:["Khai mạc · Diễn đàn Thanh niên · Công viên Olympic ban đêm", "Opening · Youth Forum · Olympic Park at night", "开幕式 · 青年论坛 · 夜游奥林匹克公园"],
+  hosttag:1,
   slots:[
-   {t:["09:00–19:00","09:00–19:00","09:00–19:00"], b:["Mentoring trước vòng thi","Pre-competition Mentoring","赛前辅导"], tag:"bnu", dur:["10 giờ","10h","10小时"],
-    d:["Ice-breaking Activity, Project Optimization và Advancement Mentoring. Ngày dài nhất của chương trình: mang sẵn laptop, sạc dự phòng và bản dự án mới nhất, ghi lại góp ý của mentor để sửa ngay trong tối nay hoặc sáng mai.",
-       "Ice-breaking Activity, Project Optimization and Advancement Mentoring. The longest day of the programme: bring laptops, power banks and the latest version of the project, and write down the mentors' feedback to act on tonight or tomorrow morning.",
-       "破冰活动（Ice-breaking）、项目优化（Project Optimization）与进阶辅导（Advancement Mentoring）。这是日程中最长的一天：带好笔记本电脑、充电宝和最新版项目，记下导师意见，当晚或次日上午就改。"]},
-   {p:["ta"], t:["Tối","Evening","晚上"], b:["Nghỉ tại campus","Evening on campus","晚上留在校区"],
-    d:["Ăn tối ở căng tin, nghỉ sớm cho ngày Roadshow.","Dinner at the canteen, early night before Roadshow day.","在食堂吃晚饭，早点休息，迎接路演日。"]},
-   {p:["gb","md"], m:1, t:["55 phút","55 min","55分钟"], a:['Sa Hà → tuyến Xương Bình → tuyến 8 tại Zhuxinzhuang → ga <span class="han">南锣鼓巷</span> Nanluoguxiang · 6 CNY',
-    'Shahe → Changping Line → Line 8 at Zhuxinzhuang → <span class="han">南锣鼓巷</span> Nanluoguxiang · CNY 6',
-    '沙河 → 昌平线 → 朱辛庄换8号线 → <span class="han">南锣鼓巷</span>站 · 6元']},
-   {p:["gb","md"], t:["20:00–21:20","20:00–21:20","20:00–21:20"], b:["Nam La Cổ Hạng & Thập Sát Hải","Nanluoguxiang & Shichahai","南锣鼓巷 & 什刹海"], tag:"free", dur:["80 phút","80 min","80分钟"],
-    d:["Mentoring kết thúc 19:00 nên buổi tối ngắn hơn: đi nhanh qua ngõ hutong Nam La Cổ Hạng, sang hồ Thập Sát Hải ăn tối và dạo ven hồ. Đèn lồng ven hồ, Tháp Chuông và Tháp Trống ngay gần đó. <strong>Buổi này tuỳ sức</strong>: nếu cả nhóm đã mệt sau 10 tiếng mentoring hoặc còn phải sửa dự án, cứ ăn ở campus và để dành sức cho Roadshow ngày mai.",
-       "Mentoring ends at 19:00, so the evening is shorter: a quick walk through the Nanluoguxiang hutongs, then on to Shichahai for dinner and a stroll by the lake. Lanterns along the water, the Bell and Drum Towers nearby. <strong>This one is optional</strong>: if the group is tired after ten hours of mentoring or still has project fixes to make, eat on campus and save your energy for tomorrow's Roadshow.",
-       "辅导19:00结束，所以晚上时间较短：快速走过南锣鼓巷胡同，再到什刹海吃晚饭、绕湖散步。湖边灯笼，钟鼓楼就在附近。<strong>这一项视体力而定</strong>：若十小时辅导后已很累或还要改项目，就在校区吃饭，把精力留给明天的路演。"]},
-   {p:["gb","md"], m:1, t:["55 phút","55 min","55分钟"], a:["Về Sa Hà - xuất phát muộn nhất 21:30","Back to Shahe - leave by 21:30 at the latest","返回沙河——最晚21:30出发"]}
-  ]},
-
-{ city:"bj", n:"25", dow:"CN",
-  head:["Roadshow · Bế mạc & trao giải · Tiền Môn ban đêm","Roadshow · Closing & awards · Qianmen at night","路演 · 闭幕颁奖 · 夜游前门"], hosttag:1,
-  slots:[
-   {t:["09:00–12:00","09:00–12:00","09:00–12:00"], b:["Mentoring trước vòng thi","Pre-competition Mentoring","赛前辅导"], tag:"bnu", dur:["3 giờ","3h","3小时"],
-    d:["Buổi góp ý cuối cùng trước khi lên Roadshow. Chốt bản trình bày trong buổi này, đừng sửa thêm sau giờ trưa.",
-       "The last round of feedback before the Roadshow. Lock the pitch in this session; no more changes after lunch.",
-       "路演前最后一轮辅导。在这一场定稿，午饭后不再修改。"]},
-   {t:["13:30–16:00","13:30–16:00","13:30–16:00"], b:["Đánh giá dự án (Roadshow)","Project Evaluation (Roadshow)","项目评审（路演）"], tag:"bnu", dur:["150 phút","150 min","150分钟"],
-    d:["Phần thi chính của đội. Tranh thủ giờ nghỉ trưa 12:00–13:30 để ăn nhẹ và chạy thử lần cuối, kiểm tra file trình chiếu trên máy của BTC nếu được.",
-       "The team's main event. Use the 12:00–13:30 lunch break for a light meal and one last run-through, and test the slides on the organisers' machine if you can.",
-       "这是全队的正式比赛环节。利用12:00–13:30午休简单吃点并最后演练一遍，可以的话在主办方电脑上测试演示文件。"]},
-   {t:["16:00–17:30","16:00–17:30","16:00–17:30"], b:["Tham quan campus & chụp ảnh","Campus Tour & Photo Session","参观校园与合影"], tag:"bnu", dur:["90 phút","90 min","90分钟"],
-    d:["Dịp chụp ảnh chung cả đội ở BNU - mặc đồng phục đội nếu có.","The chance for a full-team photo at BNU - wear team shirts if you have them.","在北师大拍全队合影的机会——有队服就穿上。"]},
-   {t:["17:30–18:30","17:30–18:30","17:30–18:30"], b:["Bế mạc & trao giải","Closing Ceremony & Awarding","闭幕式与颁奖"], tag:"bnu", dur:["60 phút","60 min","60分钟"],
-    d:["Cả 4 người. Kết thúc chương trình chính thức.","All four. The end of the official programme.","四人全体。正式日程结束。"]},
-   {p:["ta"], t:["Tối","Evening","晚上"], b:["Ăn tối cùng nhóm hoặc thu dọn hành lý","Dinner with the group, or packing","与大家晚餐或收拾行李"],
-    d:["Nếu còn sức thì đi cùng cả nhóm ra Tiền Môn ăn tối mừng kết thúc cuộc thi - bữa cuối của cả bốn người. Nếu không thì nghỉ ở campus và thu dọn hành lý cho chuyến bay ngày 26/10.",
-       "If you have the energy, join the group at Qianmen for the end-of-competition dinner - the last meal with all four. Otherwise rest on campus and pack for the 26 Oct flight.",
-       "有精力的话就和大家一起去前门吃庆功晚餐——四人在一起的最后一餐。否则就留在校区休息，为10月26日的航班收拾行李。"]},
-   {p:["gb","md"], m:1, t:["65 phút","65 min","65分钟"], a:['Sa Hà → tuyến Xương Bình → tuyến 8 tại Zhuxinzhuang → ga <span class="han">前门</span> Qianmen · 7 CNY',
-    'Shahe → Changping Line → Line 8 at Zhuxinzhuang → <span class="han">前门</span> Qianmen · CNY 7',
-    '沙河 → 昌平线 → 朱辛庄换8号线 → <span class="han">前门</span>站 · 7元']},
-   {p:["gb","md"], t:["19:40–21:15","19:40–21:15","19:40–21:15"], b:["Phố Tiền Môn & ngõ Đại Sách Lan","Qianmen Street & Dashilan","前门大街 & 大栅栏"], tag:"free", dur:["95 phút","95 min","95分钟"],
-    d:["Bế mạc xong lúc 18:30 nên tới nơi khoảng 19:40. Khoảng 60 phút ăn tối mừng kết thúc cuộc thi, 30 phút đi bộ. Phố đi bộ kiểu cũ có tàu điện leng keng, nhìn thẳng lên Chính Dương Môn và rìa Quảng trường Thiên An Môn lên đèn. Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức đều nằm trong khu này - một con vịt cho cả nhóm khoảng 75–100 CNY mỗi người. Đây cũng là bữa cuối cùng của cả bốn người trước khi Tuấn Anh về sáng hôm sau.",
-       "The closing ends at 18:30, so you arrive around 19:40. About 60 minutes for a celebration dinner and 30 minutes walking. An old-style pedestrian street with a clanging tram, looking straight up at Zhengyangmen and the lit edge of Tiananmen Square. Bianyifang or Quanjude roast duck are both here - one duck for the group is CNY 75–100 a head. It is also the last meal with all four together, since Tuan Anh flies home the next day.",
-       "闭幕式18:30结束，约19:40到达。约60分钟庆功晚餐，30分钟步行。仿古步行街有叮当作响的电车，正对正阳门和灯火中的天安门广场边缘。便宜坊和全聚德烤鸭都在这一带——全队一只鸭，人均75–100元。这也是四人在一起的最后一餐，因为俊英第二天就回国。"]},
-   {p:["gb","md"], m:1, t:["65 phút","65 min","65分钟"], a:["Về Sa Hà - xuất phát muộn nhất 21:15 vì đây là chặng xa nhất","Back to Shahe - leave by 21:15, this is the longest ride","返回沙河——最晚21:15出发，这是最远的一段"]}
+    {
+      t:["09:30–09:50", "09:30–09:50", "09:30–09:50"],
+      b:["Lễ khai mạc", "Opening Ceremony", "开幕式"],
+      tag:"bnu",
+      dur:["20 phút", "20 min", "20分钟"],
+      d:["Cả 4 người. Có mặt và vào chỗ trước 9:15.", "All four. Be in your seats by 09:15.", "四人全体。9:15前到场入座。"]
+    },
+    {
+      t:["09:50–18:30", "09:50–18:30", "09:50–18:30"],
+      b:["Start Futures Youth Forum", "Start Futures Youth Forum", "Start Futures 青年论坛"],
+      tag:"bnu",
+      dur:["8 giờ 40 phút", "8h40", "8小时40分"],
+      d:[
+        "Fireside Chat và Keynote Sharing. Ăn trưa theo sắp xếp của BTC.",
+        "Fireside Chat and Keynote Sharing. Lunch as arranged by the organisers.",
+        "炉边谈话（Fireside Chat）与主题分享（Keynote Sharing）。午餐由主办方安排。"
+      ]
+    },
+    {
+      p:["ta"],
+      t:["Tối", "Evening", "晚上"],
+      b:["Nghỉ tại campus", "Evening on campus", "晚上留在校区"],
+      d:["Ăn tối ở căng tin, nghỉ sớm.", "Canteen dinner, early night.", "在食堂吃晚饭，早点休息。"]
+    },
+    {
+      p:["gb", "md"],
+      m:1,
+      t:["45 phút", "45 min", "45分钟"],
+      a:[
+        "Sa Hà → tuyến Xương Bình → đổi tuyến 8 tại <span class=\"han\">朱辛庄</span> → ga Olympic Green · 6 CNY",
+        "Shahe → Changping Line → change to Line 8 at <span class=\"han\">朱辛庄</span> Zhuxinzhuang → Olympic Green · CNY 6",
+        "沙河 → 昌平线 → <span class=\"han\">朱辛庄</span>换8号线 → 奥林匹克公园站 · 6元"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      t:["19:30–21:00", "19:30–21:00", "19:30–21:00"],
+      b:["Công viên Olympic", "Olympic Park", "奥林匹克公园"],
+      tag:"free",
+      dur:["90 phút", "90 min", "90分钟"],
+      d:[
+        "Tổ Chim và Thuỷ Lập Phương lên đèn. Gần trường, dễ về.",
+        "The Bird's Nest and Water Cube lit up. Close to campus, easy to get back.",
+        "鸟巢和水立方亮灯。离学校近，回程方便。"
+      ]
+    },
+    { p:["gb", "md"], m:1, t:["45 phút", "45 min", "45分钟"], a:["Về Sa Hà bằng đúng đường cũ", "Back to Shahe the same way", "原路返回沙河"] }
   ],
-  notes:[["<b>Xác nhận với BTC:</b> ăn ở do BNU bao kết thúc vào tối 25/10 hay sáng 26/10. Trả lời khác nhau lệch mất một đêm khách sạn và có thể lệch cả bữa sáng của Tuấn Anh trước khi ra sân bay.",
-   "<b>Confirm with the organisers:</b> does BNU's board and lodging end on the evening of 25 Oct or the morning of 26 Oct? The answer is worth a hotel night, and possibly Tuan Anh's breakfast before the airport.",
-   "<b>向主办方确认：</b>北师大的食宿到10月25日晚结束还是10月26日早上？答案关系到一晚酒店，也可能关系到俊英去机场前的早餐。"]]
+  notes:[
+    [
+      "<b>Tàu cuối:</b> tuyến Xương Bình về Sa Hà dừng khoảng 23:00 - rời trung tâm trước 21:30. Lỡ tàu thì Didi về khoảng 120–150 CNY.",
+      "<b>Last train:</b> the Changping Line to Shahe stops around 23:00 - leave the centre before 21:30. Miss it and a Didi back is about CNY 120–150.",
+      "<b>末班车：</b>昌平线回沙河约23:00停运——21:30前离开市区。错过就打滴滴，约120–150元。"
+    ]
+  ]
+},
+
+{
+  city:"bj",
+  n:"24",
+  dow:"T7",
+  head:["Mentoring cả ngày · Thập Sát Hải ban đêm", "Mentoring all day · Shichahai at night", "全天赛前辅导 · 夜游什刹海"],
+  hosttag:1,
+  slots:[
+    {
+      t:["09:00–19:00", "09:00–19:00", "09:00–19:00"],
+      b:["Mentoring trước vòng thi", "Pre-competition Mentoring", "赛前辅导"],
+      tag:"bnu",
+      dur:["10 giờ", "10h", "10小时"],
+      d:["Mang laptop, sạc và bản dự án mới nhất.", "Bring laptops, chargers and the latest version of the project.", "带好电脑、充电器和最新版项目。"]
+    },
+    {
+      p:["ta"],
+      t:["Tối", "Evening", "晚上"],
+      b:["Nghỉ tại campus", "Evening on campus", "晚上留在校区"],
+      d:["Ăn tối ở căng tin, nghỉ sớm cho ngày Roadshow.", "Dinner at the canteen, early night before Roadshow day.", "在食堂吃晚饭，早点休息，迎接路演日。"]
+    },
+    {
+      p:["gb", "md"],
+      m:1,
+      t:["55 phút", "55 min", "55分钟"],
+      a:[
+        "Sa Hà → tuyến Xương Bình → tuyến 8 tại Zhuxinzhuang → ga <span class=\"han\">南锣鼓巷</span> Nanluoguxiang · 6 CNY",
+        "Shahe → Changping Line → Line 8 at Zhuxinzhuang → <span class=\"han\">南锣鼓巷</span> Nanluoguxiang · CNY 6",
+        "沙河 → 昌平线 → 朱辛庄换8号线 → <span class=\"han\">南锣鼓巷</span>站 · 6元"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      t:["20:00–21:20", "20:00–21:20", "20:00–21:20"],
+      b:["Nam La Cổ Hạng & Thập Sát Hải", "Nanluoguxiang & Shichahai", "南锣鼓巷 & 什刹海"],
+      tag:"free",
+      dur:["80 phút", "80 min", "80分钟"],
+      d:[
+        "Dạo ngõ hutong Nam La Cổ Hạng rồi ăn tối ven hồ Thập Sát Hải. Mệt thì ở lại campus.",
+        "Walk the Nanluoguxiang hutongs, then dinner by Shichahai lake. Stay on campus if too tired.",
+        "逛南锣鼓巷胡同，再到什刹海湖边吃晚饭。累了就留在学校。"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      m:1,
+      t:["55 phút", "55 min", "55分钟"],
+      a:["Về Sa Hà - xuất phát muộn nhất 21:30", "Back to Shahe - leave by 21:30 at the latest", "返回沙河——最晚21:30出发"]
+    }
+  ]
+},
+
+{
+  city:"bj",
+  n:"25",
+  dow:"CN",
+  head:["Roadshow · Bế mạc & trao giải · Tiền Môn ban đêm", "Roadshow · Closing & awards · Qianmen at night", "路演 · 闭幕颁奖 · 夜游前门"],
+  hosttag:1,
+  slots:[
+    {
+      t:["09:00–12:00", "09:00–12:00", "09:00–12:00"],
+      b:["Mentoring trước vòng thi", "Pre-competition Mentoring", "赛前辅导"],
+      tag:"bnu",
+      dur:["3 giờ", "3h", "3小时"],
+      d:["Chốt bản trình bày, không sửa thêm sau giờ trưa.", "Lock the pitch; no more changes after lunch.", "定稿，午饭后不再修改。"]
+    },
+    {
+      t:["13:30–16:00", "13:30–16:00", "13:30–16:00"],
+      b:["Đánh giá dự án (Roadshow)", "Project Evaluation (Roadshow)", "项目评审（路演）"],
+      tag:"bnu",
+      dur:["150 phút", "150 min", "150分钟"],
+      d:["Phần thi chính của đội.", "The team's main event.", "全队的正式比赛环节。"]
+    },
+    {
+      t:["16:00–17:30", "16:00–17:30", "16:00–17:30"],
+      b:["Tham quan campus & chụp ảnh", "Campus Tour & Photo Session", "参观校园与合影"],
+      tag:"bnu",
+      dur:["90 phút", "90 min", "90分钟"],
+      d:["Chụp ảnh cả đội.", "Team photos.", "全队合影。"]
+    },
+    {
+      t:["17:30–18:30", "17:30–18:30", "17:30–18:30"],
+      b:["Bế mạc & trao giải", "Closing Ceremony & Awarding", "闭幕式与颁奖"],
+      tag:"bnu",
+      dur:["60 phút", "60 min", "60分钟"]
+    },
+    {
+      p:["ta"],
+      t:["Tối", "Evening", "晚上"],
+      b:["Ăn tối cùng nhóm hoặc thu dọn hành lý", "Dinner with the group, or packing", "与大家晚餐或收拾行李"],
+      d:[
+        "Đi ăn tối cùng nhóm ở Tiền Môn, hoặc ở lại campus thu dọn hành lý.",
+        "Join the group for dinner at Qianmen, or stay on campus and pack.",
+        "和大家去前门吃晚饭，或留在学校收拾行李。"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      m:1,
+      t:["65 phút", "65 min", "65分钟"],
+      a:[
+        "Sa Hà → tuyến Xương Bình → tuyến 8 tại Zhuxinzhuang → ga <span class=\"han\">前门</span> Qianmen · 7 CNY",
+        "Shahe → Changping Line → Line 8 at Zhuxinzhuang → <span class=\"han\">前门</span> Qianmen · CNY 7",
+        "沙河 → 昌平线 → 朱辛庄换8号线 → <span class=\"han\">前门</span>站 · 7元"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      t:["19:40–21:15", "19:40–21:15", "19:40–21:15"],
+      b:["Phố Tiền Môn & ngõ Đại Sách Lan", "Qianmen Street & Dashilan", "前门大街 & 大栅栏"],
+      tag:"free",
+      dur:["95 phút", "95 min", "95分钟"],
+      d:[
+        "Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức (75–100 CNY/người) rồi dạo phố Tiền Môn. Bữa cuối của cả bốn người.",
+        "Roast duck at Bianyifang or Quanjude (CNY 75–100 a head), then a stroll down Qianmen Street. The last meal with all four.",
+        "在便宜坊或全聚德吃烤鸭（人均75–100元），再逛前门大街。四人的最后一餐。"
+      ]
+    },
+    {
+      p:["gb", "md"],
+      m:1,
+      t:["65 phút", "65 min", "65分钟"],
+      a:[
+        "Về Sa Hà - xuất phát muộn nhất 21:15 vì đây là chặng xa nhất",
+        "Back to Shahe - leave by 21:15, this is the longest ride",
+        "返回沙河——最晚21:15出发，这是最远的一段"
+      ]
+    }
+  ]
 }
 );

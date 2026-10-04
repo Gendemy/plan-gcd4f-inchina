@@ -1,104 +1,199 @@
-/* ---------- prep panels ---------- */
+/* Chuẩn bị, footer, liên kết */
 var PREP = [
- { ic:"wallet", h:["Thanh toán","Payments","支付"], li:[
-   ["Cài <b>Alipay</b> và <b>WeChat Pay</b>, liên kết thẻ Visa/Mastercard <em>khi còn ở Việt Nam</em> - bước xác thực cần OTP ngân hàng, làm ở Trung Quốc sẽ vất vả hơn.",
-    "Install <b>Alipay</b> and <b>WeChat Pay</b> and link a Visa/Mastercard <em>while still in Vietnam</em> - verification needs a bank OTP, which is harder from China.",
-    "<em>还在越南时</em>就安装<b>支付宝</b>和<b>微信支付</b>并绑定Visa/万事达卡——验证需要银行验证码，到中国再弄会麻烦得多。"],
-   ["Alipay có sẵn bản dịch tiếng Anh, đặt vé tàu, gọi Didi và mua vé tham quan trong app - thực tế đây là công cụ quan trọng nhất của cả chuyến.",
-    "Alipay has an English mode and handles train tickets, Didi and attraction tickets in-app - in practice it is the single most important tool of the trip.",
-    "支付宝有英文界面，可在App内订火车票、叫滴滴、买景点门票——实际上是全程最重要的工具。"],
-   ["Mang khoảng 500 CNY tiền mặt dự phòng, nhưng đừng trông chờ vào nó: nhiều quán ở Trung Quốc không nhận tiền mặt nữa.",
-    "Carry about CNY 500 in cash as backup, but do not rely on it: many places in China no longer take cash.",
-    "带约500元现金备用，但别指望它：中国很多店已不收现金。"]]},
- { ic:"wifi", h:["Internet","Internet","上网"], li:[
-   ["Google, Gmail, Facebook, Instagram, WhatsApp đều bị chặn trong nước.","Google, Gmail, Facebook, Instagram and WhatsApp are all blocked inside China.","谷歌、Gmail、脸书、Instagram、WhatsApp 在境内均被屏蔽。"],
-   ["Cách gọn nhất là mua <b>eSIM du lịch Trung Quốc</b> đi qua máy chủ Hồng Kông - không bị chặn, không cần VPN. Hoặc bật roaming Viettel/VinaPhone, cũng có tác dụng tương tự.",
-    "The cleanest fix is a <b>China travel eSIM</b> routed through Hong Kong - nothing blocked, no VPN needed. Roaming on a Vietnamese carrier does the same.",
-    "最省事的办法是买经香港出口的<b>中国旅行eSIM</b>——不被屏蔽，也不需要VPN。开通越南运营商漫游效果相同。"],
-   ["Nếu dùng SIM Trung Quốc thì phải cài VPN <em>trước</em> khi bay, vì tới nơi sẽ không tải được.",
-    "If you use a Chinese SIM, install a VPN <em>before</em> flying - you will not be able to download one on arrival.",
-    "若使用中国本地SIM卡，必须<em>出发前</em>装好VPN，到了当地下载不了。"],
-   ["Mỹ Duyên đi một mình từ trưa 28/10 nên gói eSIM phải phủ tới hết ngày 1/11, đừng mua gói 7 hay 10 ngày.",
-    "My Duyen travels alone from midday on 28 Oct, so her eSIM plan has to cover through 1 Nov - do not buy a 7 or 10-day package.",
-    "美缘从10月28日中午起独自出行，eSIM套餐要覆盖到11月1日——不要买7天或10天的。"]]},
- { ic:"phone", h:["App cần cài sẵn","Apps to install first","需提前安装的App"], li:[
-   ["<b>Amap</b> <span class=\"han\">高德地图</span> - bản đồ và chỉ đường metro chính xác nhất, có giao diện tiếng Anh. Google Maps vô dụng ở Trung Quốc. Mọi mốc thời gian di chuyển trong trang này nên kiểm tra lại bằng Amap ngay hôm đó.",
-    "<b>Amap</b> <span class=\"han\">高德地图</span> - the most accurate maps and metro directions, with an English interface. Google Maps is useless in China. Re-check every travel time on this page in Amap on the day.",
-    "<b>高德地图</b> - 最准确的地图和地铁导航，有英文界面。谷歌地图在中国无法使用。本页所有交通时间请当天用高德复核。"],
-   ["<b>12306</b> - vé tàu chính chủ, nhận hộ chiếu nước ngoài. Cần cho tàu Trường Thành ngày 26/10 và tàu Bắc Kinh đi Thiên Tân ngày 29/10.",
-    "<b>12306</b> - the official rail app; it accepts foreign passports. Needed for the Great Wall train on 26 Oct and the Beijing to Tianjin train on 29 Oct.",
-    "<b>12306</b> - 官方铁路购票App，可用外国护照。10月26日的长城列车和10月29日的京津城际都要用。"],
-   ["<b>Didi</b>, <b>Trip.com</b>, <b>WeChat</b>.","<b>Didi</b>, <b>Trip.com</b>, <b>WeChat</b>.","<b>滴滴</b>、<b>携程</b>、<b>微信</b>。"],
-   ["Một app dịch có chức năng dịch ảnh - dùng liên tục để đọc thực đơn.","A translation app with camera translation - you will use it constantly on menus.","带拍照翻译功能的翻译App——看菜单时会一直用到。"]]},
- { ic:"clip", h:["Giấy tờ","Documents","证件"], li:[
-   ["<b>Luôn mang hộ chiếu bản gốc.</b> Vé tham quan, vé tàu, nhận phòng khách sạn - tất cả đều quét hộ chiếu, không chấp nhận ảnh chụp.",
-    "<b>Always carry the original passport.</b> Attraction tickets, train tickets, hotel check-in - everything scans the passport; photos are not accepted.",
-    "<b>随身带护照原件。</b>景点门票、火车票、酒店入住都要扫描护照，照片无效。"],
-   ["Nhập cảnh Trung Quốc chỉ diễn ra <em>một lần duy nhất</em>, sáng 21/10 ở Phố Đông. Giữ kỹ tờ khai và dấu nhập cảnh cho tới lúc xuất cảnh.",
-    "Entry into China happens <em>only once</em>, on the morning of 21 Oct at Pudong. Keep the arrival card and entry stamp safe until you leave.",
-    "入境中国<em>只有一次</em>，10月21日上午在浦东。妥善保管入境卡和入境章直到离境。"],
-   ["Chụp ảnh và lưu bản mềm hộ chiếu, visa, vé máy bay, xác nhận khách sạn vào email của từng người.",
-    "Photograph and email each person a copy of their passport, visa, tickets and hotel confirmations.",
-    "把护照、签证、机票、酒店确认单拍照并发到各人邮箱备份。"],
-   ["<b>Visa X2: Gia Bảo (28/9), Tuấn Anh và Mỹ Duyên (30/9) đã có, Quỳnh Mai nhận 6/10.</b> Mang bản in DQ và Admission Notice của BNU trong hành lý xách tay - cần khi nhập cảnh ở Phố Đông và khi vào cổng campus Xương Bình. Kiểm tra <em>thời gian lưu trú ghi trên tem visa</em> của Mỹ Duyên có phủ tới 1/11.",
-    "<b>X2 visas: Gia Bao (28 Sept), Tuan Anh and My Duyen (30 Sept) are done, Quynh Mai collects on 6 Oct.</b> Carry printed copies of BNU's DQ and Admission Notice in hand luggage - you need them at immigration in Pudong and at the Changping campus gate. Check that <em>the stay on My Duyen's visa sticker</em> covers 1 Nov.",
-    "<b>X2签证：嘉宝（9月28日）、俊英和美缘（9月30日）已领取，琼梅10月6日领取。</b>把北师大的DQ和录取通知书打印件放在随身行李里——在浦东入境和进昌平校区门口都要用。核对美缘<em>签证页上的停留期</em>是否覆盖到11月1日。"]]},
- { ic:"luggage", h:["Hành lý","Packing","行李"], li:[
-   ["Chênh lệch nhiệt độ trong chuyến: Thượng Hải 15–23°C, Bắc Kinh 5–17°C, Thiên Tân 6–18°C, và với Mỹ Duyên thêm Thâm Quyến 22–29°C hai ngày cuối. Mặc nhiều lớp, một áo khoác gió mỏng là đủ cho Bắc Kinh và Thiên Tân cuối tháng 10.",
-    "Temperature range across the trip: Shanghai 15–23°C, Beijing 5–17°C, Tianjin 6–18°C, and for My Duyen, Shenzhen at 22–29°C for the last two days. Layer up; a light windbreaker is enough for Beijing and Tianjin in late October.",
-    "全程温差：上海15–23°C，北京5–17°C，天津6–18°C，美缘最后两天还有深圳22–29°C。分层穿衣；10月下旬的北京和天津有件薄风衣就够。"],
-   ["Giày đi bộ tốt. Ngày 26/10 leo Trường Thành rồi đi bộ hai cổng trường và Viên Minh Viên; ngày 27/10 là ngày nặng nhất, dễ đi bộ 18–20 km từ 6:15 tới gần 20:00.",
-    "Good walking shoes. 26 Oct is the Wall plus two university gates and the Old Summer Palace on foot; 27 Oct is the heaviest day, easily 18–20 km from 06:15 to nearly 20:00.",
-    "好走的鞋。10月26日爬长城再步行看两个校门和圆明园；10月27日最累，从6:15到将近20:00，很容易走18–20公里。"],
-   ["<b>Ngày 21/10 ở Thượng Hải chỉ có kiện xách tay.</b> Hành lý ký gửi đi thẳng Hà Nội tới Bắc Kinh, còn vali kéo thì gửi ở khách sạn Dihang cả ngày. Nên để sẵn trong túi xách tay: một lớp áo mỏng, sạc dự phòng, thuốc và đồ vệ sinh cá nhân cơ bản.",
-    "<b>21 Oct in Shanghai is carry-on only.</b> The checked bag runs straight from Hanoi to Beijing, and the wheeled case sits at the Dihang hotel all day. Keep in the cabin bag: one light layer, a power bank, medication and basic toiletries.",
-    "<b>10月21日在上海只带随身行李。</b>托运行李从河内直挂北京，拉杆箱整天寄存在迪航酒店。随身包里备好：一件薄外套、充电宝、药品和基本洗漱用品。"],
-   ["<b>Với Mỹ Duyên</b>: đêm 31/10 ở Thâm Quyến là lần duy nhất phải kéo vali ký gửi ra khỏi sân bay, vì hai chặng là hai vé rời nhau cách nhau qua đêm. Từ trưa 28/10 em ấy tự xách hai vali qua ba thành phố, nên đóng gói gọn hơn là đáng - và đồ mua ở Bắc Kinh nên gửi bớt về cùng Gia Bảo và Quỳnh Mai ngày 28/10 nếu vali đã chật.",
-    "<b>For My Duyen</b>: the night of 31 Oct in Shenzhen is the one time the checked suitcase leaves the airport, because the two legs are separate tickets an overnight apart. From midday on 28 Oct she carries both cases across three cities alone, so packing light pays - and anything bought in Beijing can go home with Gia Bao and Quynh Mai on 28 Oct if the case is already full.",
-    "<b>美缘请注意</b>：10月31日在深圳的这一晚，是唯一一次要把托运行李带出机场，因为两段航班是相隔一夜的独立机票。从10月28日中午起，她要独自带着两个箱子走三座城市，所以尽量精简；若箱子已满，在北京买的东西可以10月28日托嘉宝和琼梅带回。"],
-   ["<b>Chuyến về của Gia Bảo và Quỳnh Mai chỉ cho 5 kg xách tay.</b> CA883 ghi rõ 1 kiện ký gửi 23 kg và 1 kiện xách tay 5 kg, kích thước tối đa 55×40×20 cm - nhỏ hơn hẳn mức thường thấy 7–8 kg. Nghĩa là quà mua ở Bắc Kinh phải nhét vào vali ký gửi, và nên cân thử trước khi rời khách sạn tối 27/10 chứ đừng để tới quầy mới biết.",
-    "<b>Gia Bao and Quynh Mai's return allows only 5 kg of cabin baggage.</b> CA883 states one 23 kg checked bag and one 5 kg cabin bag, maximum 55×40×20 cm - noticeably tighter than the usual 7–8 kg. So souvenirs bought in Beijing have to go in the checked case, and it is worth weighing the bags before leaving the hotel on the evening of 27 Oct rather than finding out at the counter.",
-    "<b>嘉宝和琼梅的回程只允许5公斤随身行李。</b>CA883写明一件23公斤托运和一件5公斤随身，尺寸上限55×40×20厘米——明显比常见的7–8公斤更紧。所以在北京买的礼物都要装进托运箱，最好10月27日晚离开酒店前先称一下，别到柜台才发现。"],
-   ["Adapter ổ cắm đa năng, sạc dự phòng (mang xách tay, không được ký gửi).","A universal adapter and a power bank (hand luggage only - power banks cannot be checked).","万能转换插头和充电宝（只能随身，不可托运）。"],
-   ["Bắc Kinh cuối tháng 10 rất khô - mang son dưỡng và kem dưỡng ẩm.","Beijing is very dry in late October - bring lip balm and moisturiser.","10月下旬北京很干燥——带润唇膏和保湿霜。"]]},
- { ic:"help", h:["Bốn câu hỏi gửi BTC","Four questions for the organisers","给主办方的四个问题"], li:[
-   ["Danh sách đội đã đổi: Phan Chí Công không tham dự. Ba lịch về khác nhau: Trần Tuấn Anh 26/10, Gia Bảo và Quỳnh Mai 28/10, Mỹ Duyên 31/10 - cần cập nhật thế nào?",
-    "The roster changed: Phan Chi Cong is not attending. Three different return dates: Tran Tuan Anh on 26 Oct, Gia Bao and Quynh Mai on 28 Oct, My Duyen on 31 Oct - how should this be updated?",
-    "名单有变：潘志功不参加。三个不同的回程日期：陈俊英10月26日、嘉宝和琼梅10月28日、美缘10月31日——应如何更新？"],
-   ["Chuyến bay hạ cánh sân bay Thủ Đô lúc 23:50 ngày 21/10 - xin xác nhận lại điểm hẹn cụ thể ở sảnh đến nhà ga T2 và số điện thoại của người đón.",
-    "The flight lands at Capital Airport at 23:50 on 21 Oct - please confirm the exact meeting point in the T2 arrivals hall and the phone number of whoever is collecting us.",
-    "航班10月21日23:50落地首都机场——请确认T2到达大厅的具体会合点，以及接机人的电话。"],
-   ["Ăn ở do BNU chi trả kết thúc tối 25/10 hay sáng 26/10?","Does BNU's board and lodging end on the evening of 25 Oct or the morning of 26 Oct?","北师大的食宿到10月25日晚还是26日早结束？"],
-   ["Visa X2 đã cấp cho Gia Bảo (28/9), Tuấn Anh và Mỹ Duyên (30/9); Quỳnh Mai nhận ngày 6/10. Báo BTC khi cả bốn đã có visa để cập nhật hồ sơ đoàn.",
-    "X2 visas have been issued to Gia Bao (28 Sept), Tuan Anh and My Duyen (30 Sept); Quynh Mai collects on 6 Oct. Let the organisers know once all four have their visas so they can update the team file.",
-    "X2签证已签发给嘉宝（9月28日）、俊英和美缘（9月30日）；琼梅10月6日领取。四人都拿到签证后告知主办方，以便更新队伍资料。"],
-   ["Trong các đội dự thi có sinh viên Thanh Hoa hoặc Bắc Đại không? Nếu có thì hỏi thẳng bạn ấy về việc đăng ký cho khách vào trường - không được cũng không sao, lịch đã tính phương án chỉ chụp ảnh ở cổng ngoài.",
-    "Are there Tsinghua or PKU students among the competing teams? If so, ask them directly about registering guests for a campus visit - a no costs nothing, since the plan already works with photographs at the outer gates.",
-    "参赛队伍中有清华或北大的同学吗？若有，可直接问他们能否为访客登记入校——问不到也无妨，行程本就按只在校门外拍照来安排。"]]}
+  {
+    ic:"wallet",
+    h:["Thanh toán", "Payments", "支付"],
+    li:[
+      [
+        "Cài <b>Alipay</b> và <b>WeChat Pay</b>, liên kết thẻ Visa/Mastercard khi còn ở Việt Nam.",
+        "Set up <b>Alipay</b> and <b>WeChat Pay</b> with a Visa/Mastercard while still in Vietnam.",
+        "在越南时就装好<b>支付宝</b>和<b>微信支付</b>并绑定Visa/万事达卡。"
+      ],
+      ["Alipay đặt được vé tàu, Didi và vé tham quan.", "Alipay handles train tickets, Didi and sight tickets.", "支付宝可以订火车票、打滴滴、买门票。"],
+      ["Mang khoảng 500 CNY tiền mặt dự phòng.", "Carry about CNY 500 cash as backup.", "备约500元现金。"]
+    ]
+  },
+  {
+    ic:"wifi",
+    h:["Internet", "Internet", "上网"],
+    li:[
+      [
+        "Google, Facebook, Instagram, WhatsApp bị chặn ở Trung Quốc.",
+        "Google, Facebook, Instagram and WhatsApp are blocked in China.",
+        "谷歌、Facebook、Instagram、WhatsApp在中国被屏蔽。"
+      ],
+      [
+        "Dùng <b>eSIM du lịch</b> đi qua Hồng Kông (không cần VPN) hoặc roaming Viettel/VinaPhone.",
+        "Use a <b>travel eSIM</b> routed via Hong Kong (no VPN needed) or Viettel/VinaPhone roaming.",
+        "使用经香港的<b>旅行eSIM</b>（无需VPN）或越南运营商漫游。"
+      ],
+      ["Mỹ Duyên: gói eSIM phải phủ tới 1/11.", "My Duyen: the eSIM plan must run through 1 Nov.", "美缘：eSIM套餐要覆盖到11月1日。"]
+    ]
+  },
+  {
+    ic:"phone",
+    h:["App cần cài sẵn", "Apps to install first", "需提前安装的App"],
+    li:[
+      [
+        "<b>Amap <span class=\"han\">高德地图</span></b> - bản đồ và chỉ đường metro (Google Maps không dùng được).",
+        "<b>Amap <span class=\"han\">高德地图</span></b> - maps and metro directions (Google Maps does not work).",
+        "<b><span class=\"han\">高德地图</span></b>——地图和地铁导航（谷歌地图不可用）。"
+      ],
+      ["<b>12306</b> - vé tàu, nhận hộ chiếu.", "<b>12306</b> - train tickets, accepts passports.", "<b>12306</b>——火车票，支持护照。"],
+      ["Didi, Trip.com, WeChat, app dịch ảnh.", "Didi, Trip.com, WeChat, a photo-translation app.", "滴滴、携程、微信、拍照翻译App。"]
+    ]
+  },
+  {
+    ic:"clip",
+    h:["Giấy tờ", "Documents", "证件"],
+    li:[
+      [
+        "Luôn mang <b>hộ chiếu bản gốc</b>, ảnh chụp không được chấp nhận.",
+        "Always carry the <b>original passport</b>; photos are not accepted.",
+        "随身带<b>护照原件</b>，照片无效。"
+      ],
+      [
+        "Lưu bản mềm hộ chiếu, visa, vé máy bay, xác nhận khách sạn.",
+        "Keep digital copies of passport, visa, tickets and hotel confirmations.",
+        "保存护照、签证、机票、酒店确认单的电子版。"
+      ],
+      [
+        "Mang bản in DQ và Admission Notice của BNU trong túi xách tay.",
+        "Carry printed copies of BNU's DQ and Admission Notice in the cabin bag.",
+        "随身包里带北师大DQ和录取通知书的打印件。"
+      ]
+    ]
+  },
+  {
+    ic:"luggage",
+    h:["Hành lý", "Packing", "行李"],
+    li:[
+      [
+        "Thượng Hải 15–23°C, Bắc Kinh 5–17°C, Thiên Tân 6–18°C, Thâm Quyến 22–29°C. Mặc nhiều lớp, mang áo khoác gió.",
+        "Shanghai 15–23°C, Beijing 5–17°C, Tianjin 6–18°C, Shenzhen 22–29°C. Dress in layers, bring a windbreaker.",
+        "上海15–23°C，北京5–17°C，天津6–18°C，深圳22–29°C。分层穿衣，带件风衣。"
+      ],
+      ["Giày đi bộ tốt: ngày 27/10 dễ đi 18–20 km.", "Good walking shoes: 27 Oct is easily 18–20 km.", "好走的鞋：10月27日很容易走18–20公里。"],
+      [
+        "Ngày 21/10 chỉ dùng túi xách tay: áo mỏng, sạc dự phòng, đồ vệ sinh cá nhân.",
+        "On 21 Oct you only have the cabin bag: light layer, power bank, toiletries.",
+        "10月21日只有随身包：薄外套、充电宝、洗漱用品。"
+      ],
+      [
+        "CA883 của Bảo và Mai chỉ cho <b>5 kg xách tay</b> (55×40×20 cm).",
+        "Bao and Mai's CA883 allows only <b>5 kg cabin baggage</b> (55×40×20 cm).",
+        "嘉宝和琼梅的CA883<b>随身行李限5公斤</b>（55×40×20厘米）。"
+      ],
+      [
+        "Adapter đa năng, sạc dự phòng (xách tay), son dưỡng, kem dưỡng ẩm.",
+        "Universal adapter, power bank (cabin only), lip balm, moisturiser.",
+        "万能插头、充电宝（随身）、润唇膏、保湿霜。"
+      ]
+    ]
+  },
+  {
+    ic:"help",
+    h:["Câu hỏi gửi BTC", "Questions for the organisers", "给主办方的问题"],
+    li:[
+      [
+        "Danh sách đội đã đổi (Phan Chí Công không tham dự) và ba lịch về: Tuấn Anh 26/10, Bảo và Mai 28/10, Mỹ Duyên 31/10.",
+        "Updated roster (Phan Chi Cong not attending) and three return dates: Tuan Anh 26 Oct, Bao and Mai 28 Oct, My Duyen 31 Oct.",
+        "名单变更（潘志功不参加）和三个回程日期：俊英10月26日，嘉宝和琼梅10月28日，美缘10月31日。"
+      ],
+      [
+        "Điểm hẹn ở sảnh đến T2 lúc 23:50 ngày 21/10 và số điện thoại người đón.",
+        "Meeting point in the T2 arrivals hall at 23:50 on 21 Oct and the driver's phone number.",
+        "10月21日23:50在T2到达大厅的会合点和接机人电话。"
+      ],
+      [
+        "Ăn ở do BNU chi trả kết thúc tối 25/10 hay sáng 26/10?",
+        "Does BNU's board and lodging end on the evening of 25 Oct or the morning of 26 Oct?",
+        "北师大的食宿到10月25日晚还是26日早结束？"
+      ]
+    ]
+  }
 ];
 
-/* ---------- footer ---------- */
-var FOOT = ["Giá vé, giờ tàu và giờ bay tra cứu tháng 8/2026 - kiểm tra lại trước khi đi, các mốc giờ tàu cuối và giá vé ở Trung Quốc thay đổi theo mùa. Thời gian di chuyển là ước tính cho giờ thường, chưa tính tắc đường giờ cao điểm. Tỷ giá tham chiếu 1 CNY ≈ 3.950 ₫.",
- "Fares, train times and flight times checked in August 2026 - verify before travelling, as last-train times and ticket prices in China change with the season. Travel times are estimates for off-peak conditions. Reference rate: CNY 1 ≈ 3,950 VND.",
- "票价、列车与航班时刻查询于2026年8月——出行前请复核，中国的末班车时间和票价随季节变化。交通时间为非高峰估算。参考汇率：1元 ≈ 3,950 越南盾。"];
+var FOOT = [
+  "Giá vé và giờ tàu tra cứu tháng 8/2026, nên kiểm tra lại trước khi đi. Tỷ giá tham chiếu 1 CNY ≈ 3.950 ₫, 1 USD ≈ 26.170 ₫.",
+  "Prices and timetables checked in August 2026; recheck before you go. Reference rates: CNY 1 ≈ 3,950 VND, USD 1 ≈ 26,170 VND.",
+  "票价和时刻于2026年8月查询，出发前请再核对。参考汇率：1元≈3950越南盾，1美元≈26170越南盾。"
+];
+
 var LINKS = [
- ["https://english.beijing.gov.cn/studyinginbeijing/visaapplications/202306/t20230614_3134241.html",["Hướng dẫn chính thức về visa du học X1/X2 - Chính quyền Bắc Kinh","Official X1/X2 student visa guidance - Beijing Municipal Government","X1/X2学习签证官方指引——北京市政府"]],
- ["https://www.travelchinaguide.com/embassy/visa/student.htm",["Visa X2: thời hạn, số lần nhập cảnh, hồ sơ cần nộp","X2 visa: duration, entries, documents required","X2签证：期限、入境次数、所需材料"]],
- ["https://visana.vn/xin-visa-trung-quoc/",["Thủ tục nộp visa Trung Quốc tại Hà Nội","Applying for a Chinese visa in Hanoi","在河内申请中国签证的流程"]],
- ["https://www.flightsfrom.com/PEK-HAN",["Chuyến bay thẳng Bắc Kinh Thủ Đô – Hà Nội","Direct flights Beijing Capital – Hanoi","北京首都-河内直飞航班"]],
- ["https://www.travelchinaguide.com/cityguides/shanghai/transportation/pudong-airport.htm",["Sân bay quốc tế Phố Đông Thượng Hải - nhà ga và đường vào trung tâm","Shanghai Pudong International Airport - terminals and city links","上海浦东国际机场——航站楼与市区交通"]],
- ["https://www.travelchinaguide.com/attraction/shanghai/the-bund.htm",["Bến Thượng Hải và khu Rockbund đường Viên Minh Viên","The Bund and the Rockbund on Yuanmingyuan Road","外滩与圆明园路的外滩源"]],
- ["https://www.chinadiscovery.com/beijing/forbidden-city/how-to-book-tickets.html",["Cách đặt vé Cố Cung cho người nước ngoài","Booking Forbidden City tickets as a foreigner","外国人如何预订故宫门票"]],
- ["https://www.travelchinaguide.com/how-to-get-to-badaling-great-wall.htm",["Đường đi Trường Thành Bát Đạt Lĩnh","Getting to the Badaling Great Wall","前往八达岭长城的路线"]],
- ["https://www.travelchinaguide.com/temple-of-heaven-tickets-booking.htm",["Vé Thiên Đàn","Temple of Heaven tickets","天坛门票"]],
- ["https://www.travelchinaguide.com/attraction/beijing/798-art-zone.htm",["Khu nghệ thuật 798 - giờ mở cửa và cách đi","798 Art Zone - hours and how to get there","798艺术区——开放时间与交通"]],
- ["http://www.cnfm.org.cn/",["Bảo tàng Điện ảnh Trung Quốc - trang chính thức, đặt chỗ miễn phí","China National Film Museum - official site and free booking","中国电影博物馆——官网与免费预约"]],
- ["https://www.mvrdv.com/projects/234/tianjin-binhai-library",["Thư viện Tân Hải Thiên Tân - hồ sơ thiết kế của MVRDV","Tianjin Binhai Library - MVRDV's project page","天津滨海图书馆——MVRDV项目页"]],
- ["https://www.travelchinaguide.com/attraction/tianjin/five-great-avenue.htm",["Ngũ Đại Đạo - bản đồ năm con đường và các biệt thự","The Five Great Avenues - map of the five streets and the villas","五大道——五条马路与小洋楼地图"]],
- ["https://www.chinadiscovery.com/guangdong/shenzhen/window-of-the-world-shenzhen.html",["Cửa sổ Thế giới Thâm Quyến - giá vé, giờ mở cửa, show buổi tối","Window of the World Shenzhen - tickets, hours, evening shows","深圳世界之窗——票价、开放时间、夜间演出"]],
- ["https://www.tsinghua.edu.cn/en/Visitor/Visitor_Information/Individual_Visit.htm",["Quy định tham quan cá nhân - Đại học Thanh Hoa","Individual visit rules - Tsinghua University","个人参观规定——清华大学"]],
- ["https://newsen.pku.edu.cn/news_events/news/campus/13455.html",["Bắc Đại mở cửa trở lại cho khách tham quan","Peking University reopens its campus to visitors","北京大学恢复校园参观"]],
- ["https://www.travelchinaguide.com/cityguides/tianjin/transportation/beijing-tianjin.htm",["Tàu cao tốc liên thành Bắc Kinh – Thiên Tân","The Beijing – Tianjin intercity high-speed train","京津城际高铁"]],
- ["https://www.travelchinaguide.com/cityguides/tianjin/transportation/airport.htm",["Sân bay quốc tế Thiên Tân Tân Hải - đường ra sân bay","Tianjin Binhai International Airport - getting there","天津滨海国际机场——前往方式"]],
- ["https://aic-fe.bnu.edu.cn/gccce2023/jtzw/zwskxx/xskc/",["Đường tới campus Xương Bình, Đại học Sư phạm Bắc Kinh","Getting to BNU's Changping campus","前往北京师范大学昌平校区"]]
+  [
+    "https://english.beijing.gov.cn/studyinginbeijing/visaapplications/202306/t20230614_3134241.html",
+    [
+      "Hướng dẫn chính thức về visa du học X1/X2 - Chính quyền Bắc Kinh",
+      "Official X1/X2 student visa guidance - Beijing Municipal Government",
+      "X1/X2学习签证官方指引——北京市政府"
+    ]
+  ],
+  [
+    "https://www.travelchinaguide.com/embassy/visa/student.htm",
+    ["Visa X2: thời hạn, số lần nhập cảnh, hồ sơ cần nộp", "X2 visa: duration, entries, documents required", "X2签证：期限、入境次数、所需材料"]
+  ],
+  ["https://visana.vn/xin-visa-trung-quoc/", ["Thủ tục nộp visa Trung Quốc tại Hà Nội", "Applying for a Chinese visa in Hanoi", "在河内申请中国签证的流程"]],
+  ["https://www.flightsfrom.com/PEK-HAN", ["Chuyến bay thẳng Bắc Kinh Thủ Đô – Hà Nội", "Direct flights Beijing Capital – Hanoi", "北京首都-河内直飞航班"]],
+  [
+    "https://www.travelchinaguide.com/cityguides/shanghai/transportation/pudong-airport.htm",
+    [
+      "Sân bay quốc tế Phố Đông Thượng Hải - nhà ga và đường vào trung tâm",
+      "Shanghai Pudong International Airport - terminals and city links",
+      "上海浦东国际机场——航站楼与市区交通"
+    ]
+  ],
+  [
+    "https://www.travelchinaguide.com/attraction/shanghai/the-bund.htm",
+    ["Bến Thượng Hải và khu Rockbund đường Viên Minh Viên", "The Bund and the Rockbund on Yuanmingyuan Road", "外滩与圆明园路的外滩源"]
+  ],
+  [
+    "https://www.chinadiscovery.com/beijing/forbidden-city/how-to-book-tickets.html",
+    ["Cách đặt vé Cố Cung cho người nước ngoài", "Booking Forbidden City tickets as a foreigner", "外国人如何预订故宫门票"]
+  ],
+  [
+    "https://www.beijingtourism.org/simatai-great-wall-guide/",
+    [
+      "Trường Thành Tư Mã Đài và Cổ Bắc Thuỷ Trấn - vé, giờ mở cửa",
+      "Simatai Great Wall and Gubei Water Town - tickets and hours",
+      "司马台长城与古北水镇——门票与开放时间"
+    ]
+  ],
+  ["https://www.travelchinaguide.com/temple-of-heaven-tickets-booking.htm", ["Vé Thiên Đàn", "Temple of Heaven tickets", "天坛门票"]],
+  [
+    "https://www.mvrdv.com/projects/234/tianjin-binhai-library",
+    ["Thư viện Tân Hải Thiên Tân - hồ sơ thiết kế của MVRDV", "Tianjin Binhai Library - MVRDV's project page", "天津滨海图书馆——MVRDV项目页"]
+  ],
+  [
+    "https://www.travelchinaguide.com/attraction/tianjin/five-great-avenue.htm",
+    ["Ngũ Đại Đạo - bản đồ năm con đường và các biệt thự", "The Five Great Avenues - map of the five streets and the villas", "五大道——五条马路与小洋楼地图"]
+  ],
+  [
+    "https://www.chinadiscovery.com/guangdong/shenzhen/window-of-the-world-shenzhen.html",
+    [
+      "Cửa sổ Thế giới Thâm Quyến - giá vé, giờ mở cửa, show buổi tối",
+      "Window of the World Shenzhen - tickets, hours, evening shows",
+      "深圳世界之窗——票价、开放时间、夜间演出"
+    ]
+  ],
+  [
+    "https://www.tsinghua.edu.cn/en/Visitor/Visitor_Information/Individual_Visit.htm",
+    ["Quy định tham quan cá nhân - Đại học Thanh Hoa", "Individual visit rules - Tsinghua University", "个人参观规定——清华大学"]
+  ],
+  [
+    "https://newsen.pku.edu.cn/news_events/news/campus/13455.html",
+    ["Bắc Đại mở cửa trở lại cho khách tham quan", "Peking University reopens its campus to visitors", "北京大学恢复校园参观"]
+  ],
+  [
+    "https://www.travelchinaguide.com/cityguides/tianjin/transportation/beijing-tianjin.htm",
+    ["Tàu cao tốc liên thành Bắc Kinh – Thiên Tân", "The Beijing – Tianjin intercity high-speed train", "京津城际高铁"]
+  ],
+  [
+    "https://www.travelchinaguide.com/cityguides/tianjin/transportation/airport.htm",
+    ["Sân bay quốc tế Thiên Tân Tân Hải - đường ra sân bay", "Tianjin Binhai International Airport - getting there", "天津滨海国际机场——前往方式"]
+  ],
+  [
+    "https://aic-fe.bnu.edu.cn/gccce2023/jtzw/zwskxx/xskc/",
+    ["Đường tới campus Xương Bình, Đại học Sư phạm Bắc Kinh", "Getting to BNU's Changping campus", "前往北京师范大学昌平校区"]
+  ]
 ];

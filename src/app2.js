@@ -1,98 +1,273 @@
-/* ---------- tracks: who goes where ---------- */
+/* Ai đi đâu, việc gấp, lịch đặt vé */
 var TRACKS = [
- { cls:"a", p:null,
-   h:["Lượt đi - cả bốn người đi cùng nhau","The outbound leg - all four together","去程——四人同行"],
-   n:["20–21/10 · Hà Nội → Thượng Hải → Bắc Kinh","20–21 Oct · Hanoi → Shanghai → Beijing","10月20–21日 · 河内 → 上海 → 北京"],
-   b:[["<strong>02:20 ngày 21/10</strong> Nội Bài T2 đi Phố Đông T1 bằng China Eastern MU5076, Boeing 738, bay 3 giờ 15 phút, hạ cánh <strong>06:35</strong>. Quá cảnh <strong>15 tiếng</strong> ở Thượng Hải, không phải lấy và ký gửi lại hành lý. <strong>21:35</strong> Phố Đông T1 đi Thủ Đô T2 bằng MU5165, Airbus A320-212, hạ cánh Bắc Kinh <strong>23:50</strong>.",
-      "<strong>02:20 on 21 Oct</strong> Noi Bai T2 to Pudong T1 on China Eastern MU5076, a Boeing 738, 3h15 in the air, landing at <strong>06:35</strong>. A <strong>15-hour</strong> layover in Shanghai with no baggage reclaim or recheck. <strong>21:35</strong> Pudong T1 to Capital T2 on MU5165, an Airbus A320-212, landing in Beijing at <strong>23:50</strong>.",
-      "<strong>10月21日02:20</strong>内排T2飞浦东T1，东航MU5076，波音738，飞行3小时15分，<strong>06:35</strong>落地。在上海<strong>中转15小时</strong>，无需提取和重新托运行李。<strong>21:35</strong>浦东T1飞首都T2，MU5165，空客A320-212，<strong>23:50</strong>抵达北京。"],
-     ["Tổng tiền vé lượt đi cho cả 4 người là <strong>12.760.000 ₫</strong>, tức khoảng <strong>3.190.000 ₫ mỗi người</strong>. Mã đặt chỗ 1669110572407145.",
-      "The outbound fare for all four is <strong>12,760,000 VND</strong>, about <strong>3,190,000 VND each</strong>. Booking reference 1669110572407145.",
-      "四人去程票款合计<strong>1276万越南盾</strong>，约每人<strong>319万越南盾</strong>。订单号 1669110572407145。"],
-     ["15 tiếng ở Thượng Hải là phần thưởng chứ không phải hình phạt: nhóm đã đặt một phòng ở <strong>Dihang Boutique Hotel</strong> cạnh sân bay Phố Đông để gửi đồ và cho Tuấn Anh ngủ bù, khách sạn có xe đón trả tận sân bay. Ba người còn lại đi một vòng thành phố rồi quay về đón trước chuyến bay tối. <strong>BNU đã xác nhận đón cả bốn người tại sân bay Thủ Đô và đưa thẳng về campus Xương Bình nhận phòng.</strong>",
-      "The 15 hours in Shanghai are a bonus rather than a penalty: the group has booked a room at the <strong>Dihang Boutique Hotel</strong> next to Pudong airport to store bags and let Tuan Anh sleep, and the hotel runs a free airport shuttle. The other three loop through the city and come back for him before the evening flight. <strong>BNU has confirmed it will meet all four at Capital Airport and drive them straight to the Changping campus to check in.</strong>",
-      "上海的15小时是奖励而非负担：团队已在浦东机场旁的<strong>迪航酒店</strong>订了一间房用于寄存行李并让俊英补觉，酒店提供免费机场接送。另外三人进城绕一圈，晚班机前回来接他。<strong>北师大已确认在首都机场接四人，并直接送到昌平校区办理入住。</strong>"]] },
- { cls:"b", p:["ta"],
-   h:["Tuấn Anh - về ngày 26/10","Tuan Anh - home on 26 Oct","俊英——10月26日回国"],
-   n:["21–26/10 · 6 ngày","21–26 Oct · 6 days","10月21–26日 · 6天"],
-   b:[["Ở BNU suốt kỳ thi rồi bay thẳng Bắc Kinh về Hà Nội ngày 26/10, đúng hôm cả đội tách ra. Không đi Thượng Hải lần thứ hai, không đi Thiên Tân.",
-      "Stays at BNU through the competition, then flies direct Beijing to Hanoi on 26 Oct, the day the team splits. No second stop in Shanghai, no Tianjin.",
-      "比赛期间住北师大，10月26日从北京直飞河内，正是全队分开那天。不再经上海，也不去天津。"],
-     ["<strong>Nên bay từ sân bay Thủ Đô (PEK), không phải Đại Hưng.</strong> PEK cách campus Xương Bình khoảng 45 phút taxi, còn Đại Hưng mất gần 80 phút và gấp đôi tiền xe. Ngày 26/10 ba bạn kia rời BNU lúc 7:30, nên cứ đi cùng chuyến ra ga rồi tách.",
-      "<strong>Fly out of Capital Airport (PEK), not Daxing.</strong> PEK is about 45 minutes by taxi from the Changping campus; Daxing is nearly 80 minutes and twice the fare. On 26 Oct the other three leave BNU at 07:30, so travel to the station together and split there.",
-      "<strong>应从首都机场（PEK）起飞，不要大兴。</strong>首都机场距昌平校区打车约45分钟；大兴近80分钟，车费翻倍。10月26日另外三人7:30离开北师大，可以一起走到车站再分开。"]] },
- { cls:"a", p:["gb"],
-   h:["Gia Bảo & Quỳnh Mai - về ngày 28/10","Gia Bao & Quynh Mai - home on 28 Oct","嘉宝 & 琼梅——10月28日回国"],
-   n:["21–28/10 · 8 ngày · vé đã đặt","21–28 Oct · 8 days · ticket booked","10月21–28日 · 8天 · 机票已订"],
-   b:[["Sau cuộc thi còn hai ngày ở Bắc Kinh: ngày 26/10 đi Trường Thành và khu đại học Hải Điến, ngày 27/10 là ngày trọn vẹn cho trục trung tâm gồm Thiên Đàn, Thiên An Môn, Cố Cung, Cảnh Sơn và Vương Phủ Tỉnh. Sáng 28/10 ra sân bay.",
-      "Two days in Beijing after the competition: 26 Oct for the Great Wall and the Haidian university district, 27 Oct as the one full day on the central axis - Temple of Heaven, Tiananmen, the Forbidden City, Jingshan and Wangfujing. The airport run is on the morning of 28 Oct.",
-      "比赛后在北京还有两天：10月26日去长城和海淀高校区，10月27日是中轴线唯一的完整一天——天坛、天安门、故宫、景山和王府井。10月28日上午去机场。"],
-     ["<strong>Vé về đã đặt: Air China CA883</strong>, cất cánh <strong>00:10 ngày 28/10</strong> từ sân bay Thủ Đô <strong>nhà ga T3</strong>, hạ cánh Nội Bài T2 lúc <strong>03:15</strong> cùng sáng. Bay thẳng, không quá cảnh. Tổng tiền hai vé <strong>6.174.000 ₫</strong>, tức <strong>3.087.000 ₫ mỗi người</strong>. Mã đặt chỗ Trip.com 1688901859853505, mã hãng MYCREC, hạng phổ thông, mỗi người 1 kiện ký gửi 23 kg và 1 kiện xách tay 5 kg.",
-      "<strong>The return is booked: Air China CA883</strong>, leaving at <strong>00:10 on 28 Oct</strong> from Capital Airport <strong>Terminal 3</strong> and landing at Noi Bai T2 at <strong>03:15</strong> the same morning. Direct, no connection. The two tickets together cost <strong>6,174,000 VND</strong>, that is <strong>3,087,000 VND each</strong>. Trip.com booking 1688901859853505, airline reference MYCREC, economy, one 23 kg checked bag and one 5 kg cabin bag each.",
-      "<strong>回程已订：国航CA883</strong>，<strong>10月28日00:10</strong>从首都机场<strong>T3</strong>起飞，当天上午<strong>03:15</strong>抵达内排T2。直飞，无中转。两张票合计<strong>617.4万越南盾</strong>，即<strong>每人308.7万越南盾</strong>。携程订单号1688901859853505，航司编号MYCREC，经济舱，每人一件23公斤托运和一件5公斤随身。"],
-     ["Giờ bay 00:10 có một hệ quả dễ bị bỏ qua: <strong>đêm 27 sang 28/10 là ở trên máy bay, không phải ở khách sạn</strong>. Nghĩa là ngày 27/10 vừa là ngày trục trung tâm vừa là ngày ra sân bay - 20:00 đã phải rời Thông Châu - và <strong>đêm 27/10 trong phiếu đặt phòng thực tế không dùng để ngủ</strong>. Kèm theo đó là việc cần có xe đón ở Nội Bài lúc 3 giờ sáng.",
-      "The 00:10 departure has one consequence that is easy to miss: <strong>the night of 27 into 28 Oct is spent on the plane, not in a hotel</strong>. So 27 Oct is both the central-axis day and the airport day - out of Tongzhou by 20:00 - and <strong>the 27 Oct night on the booking is never actually slept in</strong>. It also means arranging a ride from Noi Bai at three in the morning.",
-      "00:10这个起飞时间有一个容易忽略的后果：<strong>10月27日夜转28日是在飞机上过的，不是在酒店</strong>。也就是说10月27日既是中轴线之日，也是去机场之日——20:00就要离开通州——而<strong>订单上10月27日那一晚实际上并没有住</strong>。此外还要安排凌晨三点在内排的接车。"]] },
- { cls:"b", p:["md"],
-   h:["Mỹ Duyên - về ngày 31/10 qua Thâm Quyến","My Duyen - home on 31 Oct via Shenzhen","美缘——10月31日经深圳回国"],
-   n:["21/10 – 1/11 · 13 ngày","21 Oct – 1 Nov · 13 days","10月21日–11月1日 · 13天"],
-   b:[["Ở lại thêm bốn ngày sau khi hai bạn kia về. Vé về <strong>cất cánh từ Thiên Tân chứ không phải Bắc Kinh</strong>: 31/10 lúc 07:55 từ Thiên Tân Tân Hải T2 đi Bảo An Thâm Quyến bằng Air China CA2813, hạ cánh 11:35. Quá cảnh qua đêm ở Thâm Quyến, rồi 1/11 lúc 08:30 bay ZH101 về Nội Bài lúc 09:40. Tổng tiền vé <strong>3.648.000 ₫</strong>.",
-      "Stays four days longer than the other two. Her return <strong>departs from Tianjin, not Beijing</strong>: 31 Oct at 07:55 from Tianjin Binhai T2 to Shenzhen Bao'an on Air China CA2813, landing 11:35. An overnight connection in Shenzhen, then 1 Nov at 08:30 on ZH101 into Noi Bai at 09:40. Total fare <strong>3,648,000 VND</strong>.",
-      "比另外两人多留四天。回程<strong>从天津起飞而不是北京</strong>：10月31日07:55从天津滨海T2飞深圳宝安，国航CA2813，11:35落地。在深圳过夜中转，11月1日08:30乘ZH101，09:40抵达内排。票款合计<strong>364.8万越南盾</strong>。"],
-     ["Bốn ngày cuối đi theo lộ trình Mỹ Duyên tự lập. <strong>28/10 ở Bắc Kinh</strong>: Thanh Hoa, khu nghệ thuật 798, Bảo tàng Điện ảnh Trung Quốc. <strong>29/10 sang Thiên Tân</strong> bằng tàu cao tốc 33 phút, chiều đi Ngũ Đại Đạo, Giải Phóng Bắc Lộ và khu phố kiểu Ý. <strong>30/10 trọn ngày ở Thiên Tân</strong>: Thư viện Tân Hải và Nhà Sứ. <strong>31/10 bay xuống Thâm Quyến</strong>, cả buổi chiều và tối ở Cửa sổ Thế giới, đúng dịp Halloween.",
-      "The last four days follow My Duyen's own plan. <strong>28 Oct in Beijing</strong>: Tsinghua, the 798 Art Zone, the China National Film Museum. <strong>29 Oct to Tianjin</strong> on the 33-minute high-speed train, with the Five Great Avenues, Jiefang North Road and the Italian quarter in the afternoon. <strong>30 Oct is a full Tianjin day</strong>: the Binhai Library and the Porcelain House. <strong>31 Oct flies down to Shenzhen</strong>, with the whole afternoon and evening at Window of the World, on Halloween itself.",
-      "最后四天按美缘自己的计划走。<strong>10月28日在北京</strong>：清华、798艺术区、中国电影博物馆。<strong>10月29日乘33分钟高铁到天津</strong>，下午五大道、解放北路和意式风情区。<strong>10月30日在天津待一整天</strong>：滨海图书馆和瓷房子。<strong>10月31日南下深圳</strong>，整个下午和晚上都在世界之窗，正逢万圣夜。"],
-     ["Hai điều bắt buộc phải xử lý. Một, <strong>phải ngủ ở Thiên Tân hai đêm 29 và 30/10</strong> - chuyến tàu cao tốc sớm nhất từ Bắc Kinh sang Thiên Tân cũng không kịp cho chuyến bay 07:55, nên không có phương án nào đi từ Bắc Kinh trong buổi sáng. Hai, <strong>chặng Thâm Quyến qua đêm phải lấy hành lý ra và ký gửi lại sáng hôm sau</strong>, khác hẳn chặng quá cảnh Thượng Hải lượt đi.",
-      "Two things that have to be handled. One, <strong>two nights in Tianjin, 29 and 30 Oct</strong> - even the first high-speed train from Beijing is too late for an 07:55 departure, so no morning option from Beijing works. Two, <strong>the overnight Shenzhen connection means reclaiming the checked bag and rechecking it the next morning</strong>, unlike the Shanghai layover on the way out.",
-      "有两件事必须处理。第一，<strong>10月29日和30日两晚都要住在天津</strong>——即便是从北京出发的首班高铁也赶不上07:55的航班，所以从北京出发的早班方案没有一个来得及。第二，<strong>深圳过夜中转须取出托运行李并于次日上午重新托运</strong>，与去程上海中转完全不同。"]] }
+  {
+    cls:"a",
+    p:null,
+    h:["Lượt đi - cả bốn người đi cùng nhau", "The outbound leg - all four together", "去程——四人同行"],
+    n:["20–21/10 · Hà Nội → Thượng Hải → Bắc Kinh", "20–21 Oct · Hanoi → Shanghai → Beijing", "10月20–21日 · 河内 → 上海 → 北京"],
+    b:[
+      [
+        "<strong>21/10, 02:20</strong> Nội Bài T2 → Phố Đông T1 · MU5076, hạ cánh 06:35. <strong>21:35</strong> Phố Đông T1 → Thủ Đô T2 · MU5165, hạ cánh 23:50.",
+        "<strong>21 Oct, 02:20</strong> Noi Bai T2 → Pudong T1 · MU5076, lands 06:35. <strong>21:35</strong> Pudong T1 → Capital T2 · MU5165, lands 23:50.",
+        "<strong>10月21日02:20</strong> 内排T2 → 浦东T1 · MU5076，06:35落地。<strong>21:35</strong> 浦东T1 → 首都T2 · MU5165，23:50落地。"
+      ],
+      [
+        "Quá cảnh 15 tiếng ở Thượng Hải, gửi đồ ở Dihang Boutique Hotel. BNU đón tại sân bay Thủ Đô.",
+        "15-hour layover in Shanghai, bags at the Dihang Boutique Hotel. BNU meets the group at Capital Airport.",
+        "在上海中转15小时，行李寄存在迪航酒店。北师大在首都机场接机。"
+      ],
+      [
+        "Vé 4 người <strong>12.760.000 ₫</strong> (3.190.000 ₫/người) · mã đặt chỗ 1669110572407145.",
+        "Fares for four <strong>12,760,000 VND</strong> (3,190,000 each) · booking 1669110572407145.",
+        "四人票款<strong>1276万越南盾</strong>（每人319万）· 订单号1669110572407145。"
+      ]
+    ]
+  },
+  {
+    cls:"b",
+    p:["ta"],
+    h:["Tuấn Anh - về ngày 26/10", "Tuan Anh - home on 26 Oct", "俊英——10月26日回国"],
+    n:["21–26/10 · 6 ngày", "21–26 Oct · 6 days", "10月21–26日 · 6天"],
+    b:[
+      [
+        "Ở BNU suốt kỳ thi, bay thẳng từ sân bay Thủ Đô (PEK) về Hà Nội ngày 26/10. Vé chưa đặt: VN513 hoặc CA741, cất cánh khoảng trưa.",
+        "At BNU for the competition, then direct from Capital Airport (PEK) to Hanoi on 26 Oct. Not booked yet: VN513 or CA741, leaving around midday.",
+        "比赛期间住北师大，10月26日从首都机场（PEK）直飞河内。尚未订票：VN513或CA741，约中午起飞。"
+      ]
+    ]
+  },
+  {
+    cls:"a",
+    p:["gb"],
+    h:["Gia Bảo & Quỳnh Mai - về ngày 28/10", "Gia Bao & Quynh Mai - home on 28 Oct", "嘉宝 & 琼梅——10月28日回国"],
+    n:["21–28/10 · 8 ngày · vé đã đặt", "21–28 Oct · 8 days · ticket booked", "10月21–28日 · 8天 · 机票已订"],
+    b:[
+      [
+        "22/10 khu đại học Hải Điến cùng cả đội. 26/10 Trường Thành Tư Mã Đài và Cổ Bắc Thuỷ Trấn. 27/10 Thiên Đàn, Thiên An Môn, Cố Cung, Cảnh Sơn, Vương Phủ Tỉnh.",
+        "22 Oct the Haidian university district with the team. 26 Oct Simatai Great Wall and Gubei Water Town. 27 Oct Temple of Heaven, Tiananmen, Forbidden City, Jingshan, Wangfujing.",
+        "10月22日与全队逛海淀高校区。10月26日司马台长城和古北水镇。10月27日天坛、天安门、故宫、景山、王府井。"
+      ],
+      [
+        "Vé về <strong>Air China CA883</strong>: 00:10 ngày 28/10, Thủ Đô T3 → Nội Bài T2, hạ cánh 03:15. <strong>6.174.000 ₫</strong> cho 2 người · Trip.com 1688901859853505 · mã hãng MYCREC.",
+        "Return on <strong>Air China CA883</strong>: 00:10 on 28 Oct, Capital T3 → Noi Bai T2, lands 03:15. <strong>6,174,000 VND</strong> for two · Trip.com 1688901859853505 · airline ref MYCREC.",
+        "回程<strong>国航CA883</strong>：10月28日00:10，首都T3 → 内排T2，03:15落地。两人<strong>617.4万越南盾</strong> · 携程1688901859853505 · 航司编号MYCREC。"
+      ]
+    ]
+  },
+  {
+    cls:"b",
+    p:["md"],
+    h:["Mỹ Duyên - về ngày 31/10 qua Thâm Quyến", "My Duyen - home on 31 Oct via Shenzhen", "美缘——10月31日经深圳回国"],
+    n:["21/10 – 1/11 · 13 ngày", "21 Oct – 1 Nov · 13 days", "10月21日–11月1日 · 13天"],
+    b:[
+      [
+        "Vé về: <strong>31/10 07:55</strong> Thiên Tân Tân Hải T2 → Bảo An Thâm Quyến (CA2813), qua đêm, <strong>1/11 08:30</strong> → Nội Bài 09:40 (ZH101). <strong>3.648.000 ₫</strong>.",
+        "Return: <strong>31 Oct 07:55</strong> Tianjin Binhai T2 → Shenzhen Bao'an (CA2813), overnight, <strong>1 Nov 08:30</strong> → Noi Bai 09:40 (ZH101). <strong>3,648,000 VND</strong>.",
+        "回程：<strong>10月31日07:55</strong> 天津滨海T2 → 深圳宝安（CA2813），过夜，<strong>11月1日08:30</strong> → 内排09:40（ZH101）。<strong>364.8万越南盾</strong>。"
+      ],
+      [
+        "26/10 Cổ Bắc Thuỷ Trấn cùng Bảo và Mai. 28/10 Universal Beijing Resort. 29–30/10 Thiên Tân. 31/10 Thâm Quyến, Cửa sổ Thế giới dịp Halloween.",
+        "26 Oct Gubei Water Town with Bao and Mai. 28 Oct Universal Beijing Resort. 29–30 Oct Tianjin. 31 Oct Shenzhen, Window of the World at Halloween.",
+        "10月26日与嘉宝、琼梅去古北水镇。10月28日北京环球度假区。10月29–30日天津。10月31日深圳，万圣节的世界之窗。"
+      ]
+    ]
+  }
 ];
-var TRACKNOTE = ["<b>Chuyến bay thẳng Bắc Kinh về Hà Nội cho Tuấn Anh ngày 26/10:</b> Vietnam Airlines VN513 và Air China CA741 đều bay hằng ngày từ sân bay Thủ Đô, khoảng 3 giờ 45 phút. Cả hai đều cất cánh vào khoảng giữa trưa tới đầu giờ chiều, nên buổi sáng 26/10 chỉ vừa đủ để đi từ Xương Bình ra sân bay - tra giá và giờ thật rồi chốt sớm, vì đây là vé duy nhất của Tuấn Anh chưa đặt.",
- "<b>Direct Beijing to Hanoi flights for Tuan Anh on 26 Oct:</b> Vietnam Airlines VN513 and Air China CA741 both run daily from Capital Airport, about 3h45. Both leave around midday or early afternoon, so the morning of 26 Oct only just covers the run from Changping to the airport - check live times and prices and book early, as this is Tuan Anh's one outstanding ticket.",
- "<b>俊英10月26日的北京直飞河内航班：</b>越南航空VN513和中国国航CA741每日从首都机场起飞，约3小时45分。两班都在中午前后或下午早些时候起飞，所以10月26日上午刚好够从昌平赶到机场——请查实时时刻与票价并尽早订票，这是俊英唯一未订的机票。"];
 
-/* ---------- urgent cards ---------- */
 var URGENT = [
- { n:"01", ic:"warn", h:["Xin khách sạn Thượng Hải cho nhận phòng sớm","Ask the Shanghai hotel for early check-in","请上海的酒店同意提前入住"],
-   b:["Phiếu đặt phòng Dihang ghi nhận phòng sau 13:00 ngày 21/10, nhưng cả ngày quá cảnh dựa vào việc gửi đồ và cho Tuấn Anh vào phòng từ khoảng 08:30 - sớm hơn bốn tiếng rưỡi. Nhắn cho khách sạn ngay tuần này, hỏi luôn giờ xe đưa đón sân bay ở hai khung 07:50 sáng và 17:50 chiều.",
-      "The Dihang booking states check-in after 13:00 on 21 Oct, but the whole layover depends on dropping bags and getting Tuan Anh into the room from about 08:30 - four and a half hours earlier. Message the hotel this week and confirm the airport shuttle times at 07:50 and 17:50 while you are at it.",
-      "迪航的订单写明10月21日13:00后入住，但整个中转日的前提是约8:30就寄存行李并让俊英进房——早了四个半小时。本周就联系酒店，顺便确认早上7:50和下午17:50两个时段的机场接驳车。"] },
- { n:"02", ic:"ticket", h:["Đặt vé về ngày 26/10 cho Tuấn Anh","Book Tuan Anh's 26 Oct return","订俊英10月26日的回程"],
-   b:["Sau khi Bảo và Mai đã chốt CA883 thì đây là vé duy nhất của cả nhóm còn chưa đặt. Vietnam Airlines VN513 và Air China CA741 đều bay thẳng sân bay Thủ Đô về Nội Bài, cất cánh khoảng giữa trưa tới đầu giờ chiều. Chốt sớm rồi trừ ngược ra giờ rời campus Xương Bình.",
-      "With Bao and Mai now on CA883, this is the group's only remaining unbooked ticket. Vietnam Airlines VN513 and Air China CA741 both fly direct from Capital Airport to Noi Bai, leaving around midday to early afternoon. Book it, then work the campus departure time backwards from it.",
-      "嘉宝和琼梅已定CA883，这就是全队唯一还没订的机票。越南航空VN513和国航CA741都从首都机场直飞内排，起飞时间约在中午至下午早些时候。尽早订好，再倒推离开昌平校区的时间。"] },
- { n:"03", ic:"clip", h:["Visa X2: 3/4 người đã có, Quỳnh Mai nhận ngày 6/10","X2 visas: 3 of 4 in hand, Quynh Mai collects on 6 Oct","X2签证：四人中三人已拿到，琼梅10月6日领取"],
-   b:["<strong>Gia Bảo</strong> nhận visa ngày <strong>28/9</strong>, <strong>Tuấn Anh</strong> và <strong>Mỹ Duyên</strong> ngày <strong>30/9</strong>. <strong>Quỳnh Mai</strong> nhận ngày <strong>6/10</strong>. Cầm visa là kiểm tra ngay họ tên, số hộ chiếu, <strong>thời hạn và thời gian lưu trú</strong> ghi trên tem: Mỹ Duyên ở tới sáng 1/11 nên phải phủ ít nhất tới ngày đó. Có sai sót thì báo trung tâm visa ngay, vẫn còn hơn hai tuần trước ngày bay.",
-      "<strong>Gia Bao</strong> collected the visa on <strong>28 Sept</strong>, <strong>Tuan Anh</strong> and <strong>My Duyen</strong> on <strong>30 Sept</strong>. <strong>Quynh Mai</strong> collects on <strong>6 Oct</strong>. When you get the visa, check the name, passport number, <strong>validity and duration of stay</strong> on the sticker straight away: My Duyen stays until the morning of 1 Nov, so it must cover at least that date. Report any mistake to the visa centre at once; there are still more than two weeks before the flight.",
-      "<strong>嘉宝</strong>已于<strong>9月28日</strong>领取签证，<strong>俊英</strong>和<strong>美缘</strong>于<strong>9月30日</strong>领取。<strong>琼梅</strong>将于<strong>10月6日</strong>领取。拿到签证后立即核对签证页上的姓名、护照号、<strong>有效期和停留期</strong>：美缘要待到11月1日上午，停留期至少要覆盖到那天。如有错误马上联系签证中心，距出发还有两周多。"] },
- { n:"04", ic:"bed", h:["Chỗ ở cho Mỹ Duyên ba đêm cuối","Three more nights for My Duyen","美缘最后三晚的住宿"],
-   b:["Phòng ở Thông Châu chỉ tới sáng 28/10. Còn thiếu <strong>bốn đêm</strong>: 28/10 ở Bắc Kinh, 29 và 30/10 <em>ở Thiên Tân</em> khu Hoà Bình quanh Ngũ Đại Đạo, và 31/10 ở Thâm Quyến gần sân bay Bảo An. Hai đêm Thiên Tân là bắt buộc vì chuyến bay 07:55 sáng 31/10 cất cánh từ Thiên Tân Tân Hải, không phải Bắc Kinh. Đặt cả bốn cùng lúc và chọn loại huỷ miễn phí.",
-      "The Tongzhou room only runs to the morning of 28 Oct. <strong>Four nights</strong> are still missing: 28 Oct in Beijing, 29 and 30 Oct <em>in Tianjin</em>, in Heping around the Five Great Avenues, and 31 Oct in Shenzhen near Bao'an airport. The two Tianjin nights are mandatory because the 07:55 flight on 31 Oct leaves from Tianjin Binhai, not Beijing. Book all four at once with free cancellation.",
-      "通州的房间只到10月28日上午。还缺<strong>四晚</strong>：10月28日在北京，10月29、30日<em>在天津</em>和平区五大道一带，10月31日在深圳宝安机场附近。天津那两晚是必须的，因为10月31日07:55的航班从天津滨海起飞，不是北京。四晚一次订完，并选可免费取消。"] }
+  {
+    n:"01",
+    ic:"ticket",
+    h:["Đặt vé về ngày 26/10 cho Tuấn Anh", "Book Tuan Anh's 26 Oct return", "订俊英10月26日的回程"],
+    b:[
+      "Vé duy nhất còn chưa đặt. VN513 hoặc CA741 bay thẳng Thủ Đô → Nội Bài, cất cánh khoảng trưa.",
+      "The only ticket still unbooked. VN513 or CA741 fly direct Capital → Noi Bai around midday.",
+      "唯一还没订的机票。VN513或CA741从首都直飞内排，约中午起飞。"
+    ]
+  },
+  {
+    n:"02",
+    ic:"clip",
+    h:["Visa: còn Quỳnh Mai nhận ngày 6/10", "Visas: Quynh Mai collects on 6 Oct", "签证：琼梅10月6日领取"],
+    b:[
+      "Gia Bảo, Tuấn Anh, Mỹ Duyên đã có visa. Cầm visa là kiểm tra họ tên, số hộ chiếu và thời gian lưu trú (Mỹ Duyên cần tới 1/11).",
+      "Gia Bao, Tuan Anh and My Duyen have theirs. Check the name, passport number and length of stay on collection (My Duyen needs through 1 Nov).",
+      "嘉宝、俊英、美缘已拿到签证。领取时核对姓名、护照号和停留期（美缘需覆盖到11月1日）。"
+    ]
+  },
+  {
+    n:"03",
+    ic:"bed",
+    h:["Chỗ ở cho Mỹ Duyên bốn đêm cuối", "Four more nights for My Duyen", "美缘最后四晚的住宿"],
+    b:[
+      "Đêm 28/10: gia hạn phòng Thông Châu (gần Universal). 29–30/10 ở Thiên Tân (khu Hoà Bình), 31/10 ở Thâm Quyến gần sân bay Bảo An. Chọn loại huỷ miễn phí.",
+      "28 Oct: extend the Tongzhou room (near Universal). 29–30 Oct in Tianjin (Heping), 31 Oct in Shenzhen near Bao'an airport. Take free cancellation.",
+      "10月28日：通州房间续住一晚（靠近环球影城）。10月29–30日天津（和平区），10月31日深圳宝安机场附近。选可免费取消。"
+    ]
+  }
 ];
 
-/* ---------- booking calendar ---------- */
-var BOOKHEAD = [["Việc cần làm","What to book","事项"],["Kênh","Where","渠道"],["Thời điểm","When","时间"]];
+var BOOKHEAD = [["Việc cần làm", "What to book", "事项"], ["Kênh", "Where", "渠道"], ["Thời điểm", "When", "时间"]];
 var BOOKING = [
- { p:null, a:["<strong>Nhắn khách sạn Dihang</strong>: nhận phòng 08:30 ngày 21/10 và giờ xe đưa đón sân bay","<strong>Message the Dihang hotel</strong>: check-in at 08:30 on 21 Oct and the shuttle times","<strong>联系迪航酒店</strong>：10月21日8:30入住及接驳车时刻"], b:["Trip.com hoặc gọi thẳng khách sạn","Trip.com or call the hotel directly","携程或直接致电酒店"], c:["Ngay","Now","立即"] },
- { p:["gb"], a:["Vé về 28/10 · <strong>đã đặt: CA883, 00:10 ngày 28/10, T3 · 6.174.000 ₫ / 2 người</strong>","28 Oct return · <strong>booked: CA883, 00:10 on 28 Oct, T3 · VND 6,174,000 for 2</strong>","10月28日回程 · <strong>已订：CA883，10月28日00:10，T3 · 617.4万越南盾/2人</strong>"], b:["Trip.com 1688901859853505","Trip.com 1688901859853505","携程 1688901859853505"], c:["Xong","Done","已完成"] },
- { p:["gb"], a:["Đặt xe đón ở Nội Bài lúc <strong>03:15 sáng 28/10</strong>","Arrange a ride from Noi Bai at <strong>03:15 on 28 Oct</strong>","安排<strong>10月28日凌晨03:15</strong>在内排的接车"], b:["Người nhà hoặc app gọi xe","Family or a ride app","家人或打车App"], c:["Trước 25/10","Before 25 Oct","10月25日前"] },
- { p:["ta"], a:["<strong>Vé về 26/10</strong>, Bắc Kinh Thủ Đô đi Hà Nội, 1 vé","<strong>26 Oct return</strong>, Beijing Capital to Hanoi, 1 ticket","<strong>10月26日回程</strong>，北京首都飞河内，1张"], b:["Trip.com / hãng bay","Trip.com / airline","携程 / 航司"], c:["Ngay","Now","立即"] },
- { p:null, a:["Báo BNU danh sách đội đã đổi và ba lịch về khác nhau","Send BNU the updated roster and the three return dates","向北师大提交更新名单和三个回程日期"], b:['Email <span class="mono">d4fe@bnu.edu.cn</span>','Email <span class="mono">d4fe@bnu.edu.cn</span>','邮件 <span class="mono">d4fe@bnu.edu.cn</span>'], c:["Ngay","Now","立即"] },
- { p:null, a:["Visa X2 cho cả 4 người · <strong>đã có: Gia Bảo 28/9, Tuấn Anh & Mỹ Duyên 30/9</strong> · Quỳnh Mai nhận 6/10","X2 visas for all four · <strong>in hand: Gia Bao 28 Sept, Tuan Anh & My Duyen 30 Sept</strong> · Quynh Mai collects 6 Oct","四人X2签证 · <strong>已领取：嘉宝9月28日，俊英和美缘9月30日</strong> · 琼梅10月6日领取"], b:["Trung tâm visa TQ, Hà Nội","Chinese visa centre, Hanoi","河内中国签证中心"], c:["Còn Quỳnh Mai · 6/10","Quynh Mai left · 6 Oct","剩琼梅 · 10月6日"] },
- { p:["md"], a:["Khách sạn Bắc Kinh <strong>đêm 28/10</strong>, một mình - gia hạn ở Thông Châu hoặc chuyển vào trung tâm","Beijing hotel, <strong>night of 28 Oct</strong>, single - extend in Tongzhou or move into the centre","北京酒店<strong>10月28日一晚</strong>，单人——通州续住或搬进市区"], b:["Trip.com","Trip.com","携程"], c:["Đầu tháng 10","Early Oct","10月初"] },
- { p:["md"], a:["Khách sạn <strong>Thiên Tân 2 đêm 29 và 30/10</strong>, khu Hoà Bình quanh Ngũ Đại Đạo","Hotel in <strong>Tianjin, 2 nights 29 and 30 Oct</strong>, Heping around the Five Great Avenues","<strong>天津10月29、30日两晚</strong>，和平区五大道一带"], b:["Trip.com","Trip.com","携程"], c:["Đầu tháng 10","Early Oct","10月初"] },
- { p:["md"], a:["Khách sạn <strong>Thâm Quyến đêm 31/10</strong>, gần sân bay Bảo An, có xe đưa đón","Hotel in <strong>Shenzhen, night of 31 Oct</strong>, near Bao'an airport, with a shuttle","<strong>深圳10月31日一晚</strong>，宝安机场附近，有接送车"], b:["Trip.com","Trip.com","携程"], c:["Đầu tháng 10","Early Oct","10月初"] },
- { p:["gb"], a:["Vé tàu cao tốc Thanh Hà đi Bát Đạt Lĩnh, khứ hồi, <strong>2 vé</strong>","High-speed train Qinghe to Badaling, return, <strong>2 tickets</strong>","清河至八达岭高铁往返，<strong>2张</strong>"], b:["App 12306 hoặc Trip.com","12306 app or Trip.com","12306 或携程"], c:["≈ 11/10","≈ 11 Oct","约10月11日"] },
- { p:["md"], a:["Vé Universal Beijing Resort ngày 26/10","Universal Beijing Resort ticket, 26 Oct","北京环球影城门票，10月26日"], b:["App Universal Beijing Resort","Universal Beijing Resort app","北京环球度假区App"], c:["Đầu tháng 10","Early Oct","10月初"] },
- { p:["gb"], a:["Vé vào Trường Thành Bát Đạt Lĩnh, <strong>2 vé</strong> (mở trước 10 ngày)","Badaling Great Wall entry, <strong>2 tickets</strong> (opens 10 days ahead)","八达岭长城门票<strong>2张</strong>（提前10天开放）"], b:["WeChat / Trip.com","WeChat / Trip.com","微信 / 携程"], c:["16/10","16 Oct","10月16日"] },
- { p:null, a:["Vé Cố Cung <strong>ngày 27/10, khung sáng</strong>, 3 vé - mở bán 20:00 giờ Bắc Kinh","Forbidden City, <strong>27 Oct, morning slot</strong>, 3 tickets - released 20:00 Beijing time","故宫<strong>10月27日上午场</strong>，3张——北京时间20:00放票"], b:['<span class="mono">bookingticket.dpm.org.cn</span>','<span class="mono">bookingticket.dpm.org.cn</span>','<span class="mono">bookingticket.dpm.org.cn</span>'], c:["20/10","20 Oct","10月20日"] },
- { p:null, a:["Vé Thiên Đàn ngày 27/10, 3 vé","Temple of Heaven, 27 Oct, 3 tickets","天坛10月27日，3张"], b:["WeChat / Trip.com","WeChat / Trip.com","微信 / 携程"], c:["20/10","20 Oct","10月20日"] },
- { p:null, a:["Đặt chỗ Quảng trường Thiên An Môn ngày 27/10 (miễn phí, bắt buộc)","Tiananmen Square reservation for 27 Oct (free, mandatory)","天安门广场10月27日预约（免费，必须）"], b:["WeChat mini-program","WeChat mini-program","微信小程序"], c:["20–26/10","20–26 Oct","10月20–26日"] },
- { p:["md"], a:["Đặt chỗ <strong>Bảo tàng Điện ảnh Trung Quốc</strong> ngày 28/10 (miễn phí, bắt buộc)","<strong>China National Film Museum</strong> reservation for 28 Oct (free, mandatory)","<strong>中国电影博物馆</strong>10月28日预约（免费，必须）"], b:["WeChat mini-program","WeChat mini-program","微信小程序"], c:["21/10","21 Oct","10月21日"] },
- { p:["md"], a:["Vé tàu cao tốc <strong>Bắc Kinh Nam đi Thiên Tân</strong>, chuyến ≈13:00 ngày 29/10","High-speed train <strong>Beijing South to Tianjin</strong>, ≈13:00 on 29 Oct","<strong>北京南至天津</strong>高铁，10月29日约13:00"], b:["App 12306","12306 app","12306 App"], c:["≈ 15/10","≈ 15 Oct","约10月15日"] },
- { p:["md"], a:["Đặt chỗ <strong>Thư viện Tân Hải Thiên Tân</strong> ngày 30/10 (miễn phí)","<strong>Tianjin Binhai Library</strong> reservation for 30 Oct (free)","<strong>天津滨海图书馆</strong>10月30日预约（免费）"], b:["WeChat mini-program","WeChat mini-program","微信小程序"], c:["Trước 7 ngày","7 days ahead","提前7天"] },
- { p:["md"], a:["Vé <strong>Cửa sổ Thế giới Thâm Quyến</strong> ngày 31/10, và tra lịch sự kiện Halloween","<strong>Window of the World Shenzhen</strong> for 31 Oct, and check the Halloween event schedule","<strong>深圳世界之窗</strong>10月31日门票，并查万圣夜活动安排"], b:["Trip.com / WeChat mini-program","Trip.com / WeChat mini-program","携程 / 微信小程序"], c:["Trước 3 ngày","3 days ahead","提前3天"] }
+  {
+    p:["gb"],
+    a:[
+      "Đặt xe đón ở Nội Bài lúc <strong>03:15 sáng 28/10</strong>",
+      "Arrange a ride from Noi Bai at <strong>03:15 on 28 Oct</strong>",
+      "安排<strong>10月28日凌晨03:15</strong>在内排的接车"
+    ],
+    b:["Người nhà hoặc app gọi xe", "Family or a ride app", "家人或打车App"],
+    c:["Trước 25/10", "Before 25 Oct", "10月25日前"]
+  },
+  {
+    p:["ta"],
+    a:[
+      "<strong>Vé về 26/10</strong>, Bắc Kinh Thủ Đô đi Hà Nội, 1 vé",
+      "<strong>26 Oct return</strong>, Beijing Capital to Hanoi, 1 ticket",
+      "<strong>10月26日回程</strong>，北京首都飞河内，1张"
+    ],
+    b:["Trip.com / hãng bay", "Trip.com / airline", "携程 / 航司"],
+    c:["Ngay", "Now", "立即"]
+  },
+  {
+    p:null,
+    a:["Báo BNU danh sách đội đã đổi và ba lịch về khác nhau", "Send BNU the updated roster and the three return dates", "向北师大提交更新名单和三个回程日期"],
+    b:[
+      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
+      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
+      "邮件 <span class=\"mono\">d4fe@bnu.edu.cn</span>"
+    ],
+    c:["Ngay", "Now", "立即"]
+  },
+  {
+    p:null,
+    a:["Visa X2 của Quỳnh Mai", "Quynh Mai's X2 visa", "琼梅的X2签证"],
+    b:["Trung tâm visa TQ, Hà Nội", "Chinese visa centre, Hanoi", "河内中国签证中心"],
+    c:["6/10", "6 Oct", "10月6日"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Gia hạn phòng Thông Châu <strong>đêm 28/10</strong> cho Mỹ Duyên",
+      "Extend the Tongzhou room for <strong>28 Oct</strong> for My Duyen",
+      "通州房间为美缘<strong>续住10月28日</strong>"
+    ],
+    b:["Khách sạn / Trip.com", "Hotel / Trip.com", "酒店 / 携程"],
+    c:["Đầu tháng 10", "Early Oct", "10月初"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Khách sạn <strong>Thiên Tân 2 đêm 29 và 30/10</strong>, khu Hoà Bình quanh Ngũ Đại Đạo",
+      "Hotel in <strong>Tianjin, 2 nights 29 and 30 Oct</strong>, Heping around the Five Great Avenues",
+      "<strong>天津10月29、30日两晚</strong>，和平区五大道一带"
+    ],
+    b:["Trip.com", "Trip.com", "携程"],
+    c:["Đầu tháng 10", "Early Oct", "10月初"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Khách sạn <strong>Thâm Quyến đêm 31/10</strong>, gần sân bay Bảo An, có xe đưa đón",
+      "Hotel in <strong>Shenzhen, night of 31 Oct</strong>, near Bao'an airport, with a shuttle",
+      "<strong>深圳10月31日一晚</strong>，宝安机场附近，有接送车"
+    ],
+    b:["Trip.com", "Trip.com", "携程"],
+    c:["Đầu tháng 10", "Early Oct", "10月初"]
+  },
+  {
+    p:["gb", "md"],
+    a:[
+      "Thuê <strong>xe 7 chỗ cả ngày 26/10</strong>: BNU → Cổ Bắc Thuỷ Trấn → Thông Châu",
+      "<strong>7-seater for the day on 26 Oct</strong>: BNU → Gubei → Tongzhou",
+      "<strong>10月26日7座包车</strong>：北师大 → 古北水镇 → 通州"
+    ],
+    b:["Trip.com (包车)", "Trip.com (包车)", "携程包车"],
+    c:["Trước 19/10", "By 19 Oct", "10月19日前"]
+  },
+  {
+    p:["gb", "md"],
+    a:[
+      "Vé <strong>Cổ Bắc Thuỷ Trấn 26/10</strong>: Bảo, Mai vé kèm Tư Mã Đài (190 CNY), Duyên vé thị trấn (150 CNY)",
+      "<strong>Gubei Water Town, 26 Oct</strong>: Bao and Mai with Simatai (CNY 190), Duyen town only (CNY 150)",
+      "<strong>古北水镇10月26日</strong>：嘉宝、琼梅含司马台（190元），美缘古镇票（150元）"
+    ],
+    b:["Trip.com / mini-program 古北水镇", "Trip.com / 古北水镇 mini-program", "携程 / 古北水镇小程序"],
+    c:["Trước 1 tuần", "A week ahead", "提前一周"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Vé Universal Beijing Resort ngày <strong>28/10</strong>",
+      "Universal Beijing Resort ticket, <strong>28 Oct</strong>",
+      "北京环球影城门票，<strong>10月28日</strong>"
+    ],
+    b:["App Universal Beijing Resort", "Universal Beijing Resort app", "北京环球度假区App"],
+    c:["Đầu tháng 10", "Early Oct", "10月初"]
+  },
+  {
+    p:null,
+    a:[
+      "Vé Cố Cung <strong>ngày 27/10, khung sáng</strong>, 3 vé - mở bán 20:00 giờ Bắc Kinh",
+      "Forbidden City, <strong>27 Oct, morning slot</strong>, 3 tickets - released 20:00 Beijing time",
+      "故宫<strong>10月27日上午场</strong>，3张——北京时间20:00放票"
+    ],
+    b:[
+      "<span class=\"mono\">bookingticket.dpm.org.cn</span>",
+      "<span class=\"mono\">bookingticket.dpm.org.cn</span>",
+      "<span class=\"mono\">bookingticket.dpm.org.cn</span>"
+    ],
+    c:["20/10", "20 Oct", "10月20日"]
+  },
+  {
+    p:null,
+    a:["Vé Thiên Đàn ngày 27/10, 3 vé", "Temple of Heaven, 27 Oct, 3 tickets", "天坛10月27日，3张"],
+    b:["WeChat / Trip.com", "WeChat / Trip.com", "微信 / 携程"],
+    c:["20/10", "20 Oct", "10月20日"]
+  },
+  {
+    p:null,
+    a:[
+      "Đặt chỗ Quảng trường Thiên An Môn ngày 27/10 (miễn phí, bắt buộc)",
+      "Tiananmen Square reservation for 27 Oct (free, mandatory)",
+      "天安门广场10月27日预约（免费，必须）"
+    ],
+    b:["WeChat mini-program", "WeChat mini-program", "微信小程序"],
+    c:["20–26/10", "20–26 Oct", "10月20–26日"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Vé tàu cao tốc <strong>Bắc Kinh Nam đi Thiên Tân</strong>, chuyến ≈13:00 ngày 29/10",
+      "High-speed train <strong>Beijing South to Tianjin</strong>, ≈13:00 on 29 Oct",
+      "<strong>北京南至天津</strong>高铁，10月29日约13:00"
+    ],
+    b:["App 12306", "12306 app", "12306 App"],
+    c:["≈ 15/10", "≈ 15 Oct", "约10月15日"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Đặt chỗ <strong>Thư viện Tân Hải Thiên Tân</strong> ngày 30/10 (miễn phí)",
+      "<strong>Tianjin Binhai Library</strong> reservation for 30 Oct (free)",
+      "<strong>天津滨海图书馆</strong>10月30日预约（免费）"
+    ],
+    b:["WeChat mini-program", "WeChat mini-program", "微信小程序"],
+    c:["Trước 7 ngày", "7 days ahead", "提前7天"]
+  },
+  {
+    p:["md"],
+    a:[
+      "Vé <strong>Cửa sổ Thế giới Thâm Quyến</strong> ngày 31/10, và tra lịch sự kiện Halloween",
+      "<strong>Window of the World Shenzhen</strong> for 31 Oct, and check the Halloween event schedule",
+      "<strong>深圳世界之窗</strong>10月31日门票，并查万圣夜活动安排"
+    ],
+    b:["Trip.com / WeChat mini-program", "Trip.com / WeChat mini-program", "携程 / 微信小程序"],
+    c:["Trước 3 ngày", "3 days ahead", "提前3天"]
+  }
 ];
-var BOOKNOTE = ["<b>Một tin tốt so với kế hoạch cũ:</b> vé Cố Cung ngày 27/10 mở bán lúc 20:00 giờ Bắc Kinh ngày 20/10, tức 19:00 giờ Việt Nam - lúc đó cả nhóm vẫn đang ở Hà Nội, còn mạng và còn thời gian, vì chuyến bay tới 02:20 sáng 21/10 mới cất cánh. Không cần nhờ ai đặt hộ nữa. Đặt luôn vé Thiên Đàn và suất Thiên An Môn trong cùng buổi tối đó cho gọn. Nếu hết vé Cố Cung ngày 27/10 thì không còn ngày nào thay thế được, vì 26/10 là thứ hai Cố Cung đóng cửa và 28/10 phải ra sân bay - lúc đó phải chấp nhận bỏ Cố Cung.",
- "<b>One improvement over the old plan:</b> Forbidden City tickets for 27 Oct go on sale at 20:00 Beijing time on 20 Oct, which is 19:00 in Vietnam - the group is still in Hanoi then, online and unhurried, since the flight does not leave until 02:20 on 21 Oct. Nobody needs to book on your behalf any more. Book the Temple of Heaven and the Tiananmen slot the same evening. If 27 Oct sells out there is no alternative date, because 26 Oct is a Monday when the Forbidden City is closed and 28 Oct is the airport run - at that point the Forbidden City has to be given up.",
- "<b>比旧计划好的一点：</b>10月27日的故宫门票于10月20日北京时间20:00放票，即越南时间19:00——那时全队还在河内，有网络也不赶时间，因为航班要到10月21日02:20才起飞。不必再请人代订。天坛门票和天安门预约也在同一晚一并办好。若27日售罄则没有替代日期，因为26日周一故宫闭馆，28日要去机场——那时只能放弃故宫。"];
+var BOOKNOTE = [
+  "Vé Cố Cung 27/10 mở bán 20:00 giờ Bắc Kinh ngày 20/10 (19:00 giờ Việt Nam). Đặt luôn vé Thiên Đàn và suất Thiên An Môn trong cùng buổi tối.",
+  "Forbidden City tickets for 27 Oct go on sale at 20:00 Beijing time on 20 Oct (19:00 in Vietnam). Book the Temple of Heaven and Tiananmen the same evening.",
+  "10月27日故宫门票于10月20日北京时间20:00放票（越南时间19:00）。当晚一并订好天坛和天安门预约。"
+];

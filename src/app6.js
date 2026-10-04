@@ -1,380 +1,664 @@
+/* Bắc Kinh 27–28/10, Thiên Tân 29–30/10, Thâm Quyến 31/10–1/11 */
 DAYS.push(
-{ city:"bj", n:"27", dow:"T3", icon:"g-palace", p:["gb","md"],
-  head:["Ngày duy nhất cho trục trung tâm","The only full day for the central axis","中轴线唯一的完整一天"],
-  intro:["<strong>Vé về của Gia Bảo và Quỳnh Mai cất cánh 00:10 đêm nay</strong>, tức là đêm 27 sang 28/10, nên hôm nay vừa là ngày trọn vẹn cuối cùng ở Bắc Kinh vừa là ngày ra sân bay. Cả Thiên Đàn lẫn Cố Cung phải nằm gọn trong đó, khởi hành 6:15, và tới 20:00 là lên xe đi sân bay Thủ Đô. Đây là ngày dài nhất cả chuyến: từ lúc dậy tới lúc hạ cánh Nội Bài là gần 22 tiếng. Mỹ Duyên đi cùng cả ngày rồi chia tay hai bạn ở khách sạn buổi tối.",
-   "<strong>Gia Bao and Quynh Mai's flight home leaves at 00:10 tonight</strong>, that is the night of 27 into 28 Oct, so today is both their last full day in Beijing and their airport day. The Temple of Heaven and the Forbidden City both have to fit inside it, out at 06:15, and by 20:00 they are in the car to Capital Airport. The longest day of the trip: close to 22 hours from waking up to landing at Noi Bai. My Duyen is with them all day and says goodbye at the hotel in the evening.",
-   "<strong>嘉宝和琼梅的回程航班今晚00:10起飞</strong>，也就是10月27日夜转28日，所以今天既是在北京的最后一个完整日，也是去机场的日子。天坛和故宫都要塞进这一天，6:15出发，20:00就要上车去首都机场。这是全程最长的一天：从起床到落地内排将近22小时。美缘全天同行，晚上在酒店与两人道别。"],
+{
+  city:"bj",
+  n:"27",
+  dow:"T3",
+  icon:"g-palace",
+  p:["gb", "md"],
+  head:["Ngày duy nhất cho trục trung tâm", "The only full day for the central axis", "中轴线唯一的完整一天"],
   slots:[
-   {t:["06:15","06:15","06:15"], b:["Rời khách sạn Thông Châu","Leave the Tongzhou hotel","离开通州酒店"],
-    d:["Ăn sáng ở tiệm tiện lợi gần ga hoặc mua mang theo. Dậy sớm để đổi lấy Thiên Đàn lúc công viên đẹp nhất.",
-       "Breakfast from the convenience store by the station, or buy it to take along. The early start buys the Temple of Heaven at its best hour.",
-       "在站边便利店吃早餐或买了带走。早起是为了在天坛最好的时段到达。"]},
-   {m:1, t:["65 phút","65 min","65分钟"], a:['Tuyến 1 từ ga <span class="han">梨园</span> Lê Viên → đổi tuyến 10 tại <span class="han">国贸</span> → đổi tuyến 5 tại <span class="han">宋家庄</span> → ga <span class="han">天坛东门</span> · 6 CNY',
-    'Line 1 from <span class="han">梨园</span> Liyuan → change to Line 10 at <span class="han">国贸</span> Guomao → change to Line 5 at <span class="han">宋家庄</span> Songjiazhuang → <span class="han">天坛东门</span> Tiantandongmen · CNY 6',
-    '1号线从<span class="han">梨园</span>站 → <span class="han">国贸</span>换10号线 → <span class="han">宋家庄</span>换5号线 → <span class="han">天坛东门</span>站 · 6元']},
-   {t:["07:25–09:10","07:25–09:10","07:25–09:10"], b:["Thiên Đàn","Temple of Heaven","天坛"], tag:"pay", tagx:["15–34 CNY","CNY 15–34","15–34元"], dur:["105 phút","105 min","105分钟"],
-    d:["Công viên mở từ 6:00, và buổi sáng chính là lý do phải dậy sớm: chỗ này đầy người Bắc Kinh tập thái cực quyền, múa kiếm, hát kinh kịch, chơi cờ, sinh động hơn hẳn phần kiến trúc. Chia 40 phút cho khu công viên, 65 phút cho Kỳ Niên Điện và Hoàn Khâu Đàn. Vé công viên 15 CNY, vé liên hợp gồm các điện 34 CNY; <strong>người 18–25 tuổi được nửa giá</strong>, chỉ cần hộ chiếu.",
-       "The park opens at 06:00, and the morning is exactly why the early start is worth it: it fills with Beijingers doing tai chi, sword forms, Peking opera and chess, livelier than the architecture. Give 40 minutes to the park and 65 to the Hall of Prayer for Good Harvests and the Circular Mound Altar. Park entry is CNY 15, the through ticket including the halls is CNY 34; <strong>18–25 year-olds pay half</strong>, passport is enough.",
-       "公园6:00开门，而早起的意义正在于此：这里满是打太极、练剑、唱京剧、下棋的北京人，比建筑更生动。公园区40分钟，祈年殿和圜丘65分钟。公园门票15元，含各殿的联票34元；<strong>18–25岁半价</strong>，凭护照即可。"]},
-   {m:1, t:["25 phút","25 min","25分钟"], a:['Tuyến 5 → đổi tuyến 2 tại <span class="han">崇文门</span> → ga <span class="han">前门</span> → đi bộ lên quảng trường · 3 CNY',
-    'Line 5 → change to Line 2 at <span class="han">崇文门</span> Chongwenmen → <span class="han">前门</span> Qianmen → walk up into the square · CNY 3',
-    '5号线 → <span class="han">崇文门</span>换2号线 → <span class="han">前门</span>站 → 步行进入广场 · 3元']},
-   {t:["09:35–10:10","09:35–10:10","09:35–10:10"], b:["Quảng trường Thiên An Môn","Tiananmen Square","天安门广场"], tag:"free", tagx:["Miễn phí, phải đặt chỗ","Free, reservation required","免费，需预约"], dur:["35 phút","35 min","35分钟"],
-    d:["Đặt trước qua mini-program trên WeChat, mang hộ chiếu bản gốc. An ninh kiểm tra kỹ, tính cả xếp hàng thì 35 phút là vừa đủ để đi hết quảng trường và chụp ảnh Thiên An Môn.",
-       "Book through the WeChat mini-program and bring the original passport. Security is thorough; 35 minutes covers the queue, a walk across the square and the photograph of the gate.",
-       "通过微信小程序预约，带上护照原件。安检严格，35分钟够排队、走完广场并拍下天安门。"]},
-   {m:1, t:["10 phút","10 min","10分钟"], a:["Đi bộ qua Đoan Môn tới cổng Ngọ Môn - cổng vào duy nhất của Cố Cung","Walk through Duanmen to the Meridian Gate - the Forbidden City's only entrance","经端门步行至午门——故宫唯一入口"]},
-   {t:["10:20–14:20","10:20–14:20","10:20–14:20"], b:["Cố Cung - Tử Cấm Thành","The Forbidden City","故宫"], tag:"pay", tagx:["60 CNY","CNY 60","60元"], dur:["240 phút","240 min","240分钟"],
-    d:["Vào cổng Ngọ Môn phía nam, ra cổng Thần Vũ Môn phía bắc - đi một chiều, không quay lại được. Chia thời gian: 120 phút trục giữa với ba đại điện, 60 phút khu phía đông gồm Trân Bảo Quán và Chung Biểu Quán, mỗi nơi thêm 10 CNY và vắng hơn nhiều, 60 phút còn lại cho vườn ngự uyển phía bắc. Mang đúng hộ chiếu đã dùng để đặt vé. Vé vào theo khung giờ, chọn khung sáng khi đặt.",
-       "In at the Meridian Gate in the south, out at Shenwumen in the north - one way, no going back. Split it: 120 minutes on the central axis and the three great halls, 60 minutes in the eastern section with the Treasure Gallery and the Clock Gallery, CNY 10 each and far quieter, and 60 minutes for the imperial garden at the north end. Bring the exact passport used to book. Entry is by time slot; pick the morning slot when booking.",
-       "南面午门进，北面神武门出——单向通行，不能折返。时间分配：中轴线三大殿120分钟，东路珍宝馆和钟表馆60分钟（各加10元，人少得多），北端御花园60分钟。带上订票时用的那本护照。门票分时段，预订时选上午场。"]},
-   {t:["14:25–15:15","14:25–15:15","14:25–15:15"], b:["Ăn trưa muộn gần cổng bắc Cố Cung","A late lunch near the north gate","在故宫北门附近晚午餐"], dur:["50 phút","50 min","50分钟"],
-    d:["Hôm nay ăn trưa muộn là không tránh được. Mang theo đồ ăn vặt cho quãng sáng.",
-       "A late lunch is unavoidable today. Carry snacks for the morning stretch.",
-       "今天午饭必然很晚。上午的时段记得带点零食。"]},
-   {m:1, t:["5 phút","5 min","5分钟"], a:["Đi bộ từ cổng Thần Vũ Môn băng qua đường sang cổng nam công viên Cảnh Sơn","Walk from Shenwumen across the road to Jingshan's south gate","从神武门穿过马路到景山公园南门"]},
-   {t:["15:15–16:30","15:15–16:30","15:15–16:30"], b:["Công viên Cảnh Sơn","Jingshan Park","景山公园"], tag:"pay", tagx:["2 CNY","CNY 2","2元"], dur:["75 phút","75 min","75分钟"],
-    d:["Leo 10 phút lên Vạn Xuân Đình trên đỉnh đồi, ở trên đó 30 phút, còn lại dạo xuống. Từ đỉnh nhìn xuống toàn bộ Tử Cấm Thành trải dài mái ngói vàng, thẳng trục xuống Thiên An Môn. Bức ảnh đáng giá nhất Bắc Kinh, và tốn 2 tệ. Giữa chiều nắng xiên là lúc đẹp nhất.",
-       "Ten minutes up to the Wanchun Pavilion, thirty at the top, the rest strolling down. From up there the whole Forbidden City lies below in yellow tile, straight down the axis to Tiananmen. The best photograph in Beijing, and it costs 2 yuan. Mid-afternoon raking light is the best time for it.",
-       "步行10分钟登上万春亭，山顶待30分钟，其余慢慢下山。从上往下整座紫禁城金瓦铺展，沿中轴直通天安门。北京最值的一张照片，只要2元。下午斜射的光线最好。"]},
-   {m:1, t:["25 phút","25 min","25分钟"], a:['Tuyến 6 từ ga <span class="han">北海北</span> → đổi tuyến 8 tại Nam La Cổ Hạng → ga <span class="han">王府井</span> · 3 CNY',
-    'Line 6 from <span class="han">北海北</span> Beihai North → change to Line 8 at Nanluoguxiang → <span class="han">王府井</span> Wangfujing · CNY 3',
-    '6号线从<span class="han">北海北</span> → 南锣鼓巷换8号线 → <span class="han">王府井</span>站 · 3元']},
-   {t:["17:00–18:15","17:00–18:15","17:00–18:15"], b:["Phố Vương Phủ Tỉnh - ăn tối và mua quà","Wangfujing - dinner and souvenirs","王府井——晚餐与买礼物"], dur:["75 phút","75 min","75分钟"],
-    d:["<strong>Với Gia Bảo và Quỳnh Mai thì đây là dịp mua quà cuối cùng ở Trung Quốc</strong>: trà, con dấu khắc tên, đồ lưu niệm bảo tàng. Ăn tối luôn ở đây, vì về tới khách sạn là bắt đầu thu dọn. Lưu ý về hành lý: chuyến CA883 chỉ cho <strong>5 kg xách tay</strong>, nên mọi thứ mua hôm nay phải nhét được vào vali ký gửi 23 kg.",
-       "<strong>For Gia Bao and Quynh Mai this is the last chance to buy souvenirs in China</strong>: tea, a carved name seal, museum souvenirs. Have dinner here too, because getting back to the hotel means starting to pack. One baggage note: CA883 allows only <strong>5 kg of cabin baggage</strong>, so anything bought today has to fit in the 23 kg checked case.",
-       "<strong>对嘉宝和琼梅来说，这是在中国买礼物的最后机会</strong>：茶叶、刻名印章、博物馆纪念品。晚饭也在这里吃，因为回到酒店就要开始收拾。行李提醒：CA883只允许<strong>5公斤随身行李</strong>，所以今天买的东西都得装进23公斤的托运箱。"]},
-   {m:1, t:["55 phút","55 min","55分钟"], a:['Tuyến 1 đi thẳng từ Vương Phủ Tỉnh về ga <span class="han">梨园</span> Lê Viên · 6 CNY',
-    'Line 1 straight from Wangfujing back to <span class="han">梨园</span> Liyuan · CNY 6',
-    '1号线从王府井直达<span class="han">梨园</span>站 · 6元']},
-   {t:["19:15–20:00","19:15–20:00","19:15–20:00"], b:["Về khách sạn, tắm rửa, đóng vali, trả phòng","Back at the hotel: shower, pack, check out","回酒店：洗澡、收拾行李、退房"], dur:["45 phút","45 min","45分钟"],
-    d:["Phòng đã trả tiền tới sáng 28/10 nên cứ dùng thoải mái 45 phút này - tắm một lần trước chuyến bay đêm là đáng giá hơn nhiều so với việc tới sân bay sớm thêm nửa tiếng. Mỹ Duyên ở lại phòng, chia tay hai bạn ở đây.",
-       "The room is paid for until the morning of 28 Oct, so use these 45 minutes properly - a shower before a red-eye is worth far more than half an hour extra at the airport. My Duyen stays in the room and says goodbye here.",
-       "房间已付到10月28日上午，所以这45分钟尽管用——红眼航班前洗个澡，比早到机场半小时值得多。美缘留在房间，在这里与两人道别。"]},
-   {p:["gb"], m:1, t:["55 phút","55 min","55分钟"], a:["Didi từ Lê Viên ra sân bay Thủ Đô nhà ga T3 · 40 km · 130–170 CNY cả xe · đặt xe từ chiều, đừng đi metro vì có vali và phải đổi tàu hai lần",
-    "Didi from Liyuan to Capital Airport Terminal 3 · 40 km · CNY 130–170 for the car · pre-book it in the afternoon; the metro means two changes with suitcases",
-    "从梨园打滴滴到首都机场T3 · 40公里 · 整车130–170元 · 下午就预约好；坐地铁要拖着箱子换两次线"]},
-   {p:["gb"], t:["21:00","21:00","21:00"], b:["Có mặt ở sân bay Thủ Đô nhà ga T3","At Capital Airport Terminal 3","抵达首都机场T3"], dur:["sớm 3,2 giờ","3h10 early","提前3小时10分"],
-    d:["<strong>Nhà ga T3, không phải T2</strong> - lượt đi hạ cánh ở T2 nên rất dễ nhớ nhầm. Air China làm thủ tục ở T3, mang hộ chiếu và tờ khai xuất cảnh. Ăn nhẹ và sạc đầy pin ở đây, vì tới Hà Nội là 3 giờ sáng.",
-       "<strong>Terminal 3, not T2</strong> - the outbound landed at T2, so this is easy to get wrong. Air China checks in at T3; bring the passport and departure card. Eat something and charge everything here, because Hanoi is at three in the morning.",
-       "<strong>是T3，不是T2</strong>——去程降落在T2，很容易记错。国航在T3值机，带好护照和出境卡。在这里吃点东西、把电充满，因为到河内已是凌晨三点。"]},
-   {p:["gb"], t:["00:10 → 03:15","00:10 → 03:15","00:10 → 03:15"], b:["Thủ Đô T3 → Nội Bài T2 · Air China CA883","Capital T3 → Noi Bai T2 · Air China CA883","首都T3 → 内排T2 · 国航CA883"], dur:["4 giờ 5","4h05","4小时5分"],
-    d:["Cất cánh 00:10 ngày 28/10, bay khoảng 3 giờ 5 phút, trừ 1 tiếng chênh múi giờ, hạ cánh Nội Bài <strong>03:15 sáng 28/10</strong>. Mã đặt chỗ Trip.com 1688901859853505, mã hãng MYCREC. Vé hạng phổ thông, mỗi người 1 kiện ký gửi 23 kg và 1 kiện xách tay 5 kg.",
-       "Airborne at 00:10 on 28 Oct, about 3h05 in the air, less the one-hour time difference, landing at Noi Bai at <strong>03:15 on the morning of 28 Oct</strong>. Trip.com booking 1688901859853505, airline reference MYCREC. Economy, one 23 kg checked bag and one 5 kg cabin bag each.",
-       "10月28日00:10起飞，飞行约3小时5分，减去1小时时差，<strong>10月28日凌晨03:15</strong>抵达内排。携程订单号1688901859853505，航司编号MYCREC。经济舱，每人一件23公斤托运和一件5公斤随身。"]},
-   {p:["md"], t:["20:00","20:00","20:00"], b:["Mỹ Duyên ở lại phòng một mình","My Duyen alone in the room","美缘独自留在房间"],
-    d:["Từ lúc này là bốn ngày đi một mình. Nghỉ sớm: mai phải rời khách sạn lúc 7:55 để kịp Thanh Hoa lúc 9:00.",
-       "From here it is four days on her own. An early night: tomorrow means leaving at 07:55 to reach Tsinghua by 09:00.",
-       "从这一刻起是独自的四天。早点休息：明天7:55就要出门，才能9:00到清华。"]}
+    {
+      t:["06:15", "06:15", "06:15"],
+      b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
+      d:["Mua đồ ăn sáng mang theo.", "Grab breakfast to go.", "买早餐路上吃。"]
+    },
+    {
+      m:1,
+      t:["65 phút", "65 min", "65分钟"],
+      a:[
+        "Tuyến 1 từ ga <span class=\"han\">梨园</span> Lê Viên → đổi tuyến 10 tại <span class=\"han\">国贸</span> → đổi tuyến 5 tại <span class=\"han\">宋家庄</span> → ga <span class=\"han\">天坛东门</span> · 6 CNY",
+        "Line 1 from <span class=\"han\">梨园</span> Liyuan → change to Line 10 at <span class=\"han\">国贸</span> Guomao → change to Line 5 at <span class=\"han\">宋家庄</span> Songjiazhuang → <span class=\"han\">天坛东门</span> Tiantandongmen · CNY 6",
+        "1号线从<span class=\"han\">梨园</span>站 → <span class=\"han\">国贸</span>换10号线 → <span class=\"han\">宋家庄</span>换5号线 → <span class=\"han\">天坛东门</span>站 · 6元"
+      ]
+    },
+    {
+      t:["07:25–09:10", "07:25–09:10", "07:25–09:10"],
+      b:["Thiên Đàn", "Temple of Heaven", "天坛"],
+      tag:"pay",
+      tagx:["15–34 CNY", "CNY 15–34", "15–34元"],
+      dur:["105 phút", "105 min", "105分钟"],
+      d:[
+        "Buổi sáng có người dân tập thái cực quyền, hát kinh kịch. Vé liên hợp 34 CNY, 18–25 tuổi nửa giá.",
+        "Mornings are full of locals doing tai chi and singing opera. Combined ticket CNY 34, half price for ages 18–25.",
+        "早上有市民打太极、唱京剧。联票34元，18–25岁半价。"
+      ]
+    },
+    {
+      m:1,
+      t:["25 phút", "25 min", "25分钟"],
+      a:[
+        "Tuyến 5 → đổi tuyến 2 tại <span class=\"han\">崇文门</span> → ga <span class=\"han\">前门</span> → đi bộ lên quảng trường · 3 CNY",
+        "Line 5 → change to Line 2 at <span class=\"han\">崇文门</span> Chongwenmen → <span class=\"han\">前门</span> Qianmen → walk up into the square · CNY 3",
+        "5号线 → <span class=\"han\">崇文门</span>换2号线 → <span class=\"han\">前门</span>站 → 步行进入广场 · 3元"
+      ]
+    },
+    {
+      t:["09:35–10:10", "09:35–10:10", "09:35–10:10"],
+      b:["Quảng trường Thiên An Môn", "Tiananmen Square", "天安门广场"],
+      tag:"free",
+      tagx:["Miễn phí, phải đặt chỗ", "Free, reservation required", "免费，需预约"],
+      dur:["35 phút", "35 min", "35分钟"],
+      d:["Đặt trước qua WeChat, mang hộ chiếu bản gốc.", "Book ahead on WeChat, bring the original passport.", "提前在微信预约，带护照原件。"]
+    },
+    {
+      m:1,
+      t:["10 phút", "10 min", "10分钟"],
+      a:[
+        "Đi bộ qua Đoan Môn tới cổng Ngọ Môn - cổng vào duy nhất của Cố Cung",
+        "Walk through Duanmen to the Meridian Gate - the Forbidden City's only entrance",
+        "经端门步行至午门——故宫唯一入口"
+      ]
+    },
+    {
+      t:["10:20–14:20", "10:20–14:20", "10:20–14:20"],
+      b:["Cố Cung - Tử Cấm Thành", "The Forbidden City", "故宫"],
+      tag:"pay",
+      tagx:["60 CNY", "CNY 60", "60元"],
+      dur:["240 phút", "240 min", "240分钟"],
+      d:[
+        "Vào Ngọ Môn, ra Thần Vũ Môn, đi một chiều. Trục giữa 120 phút, Trân Bảo Quán và Chung Biểu Quán 60 phút (thêm 10 CNY mỗi nơi), ngự uyển 60 phút.",
+        "In at the Meridian Gate, out at the Gate of Divine Might, one way only. Central axis 120 min, Treasure and Clock Galleries 60 min (CNY 10 each), Imperial Garden 60 min.",
+        "午门进、神武门出，单向通行。中轴线120分钟，珍宝馆和钟表馆60分钟（各加10元），御花园60分钟。"
+      ]
+    },
+    {
+      t:["14:25–15:15", "14:25–15:15", "14:25–15:15"],
+      b:["Ăn trưa muộn gần cổng bắc Cố Cung", "A late lunch near the north gate", "在故宫北门附近晚午餐"],
+      dur:["50 phút", "50 min", "50分钟"],
+      d:["Mang đồ ăn vặt cho buổi sáng.", "Bring snacks for the morning.", "上午带些零食。"]
+    },
+    {
+      m:1,
+      t:["5 phút", "5 min", "5分钟"],
+      a:[
+        "Đi bộ từ cổng Thần Vũ Môn băng qua đường sang cổng nam công viên Cảnh Sơn",
+        "Walk from Shenwumen across the road to Jingshan's south gate",
+        "从神武门穿过马路到景山公园南门"
+      ]
+    },
+    {
+      t:["15:15–16:30", "15:15–16:30", "15:15–16:30"],
+      b:["Công viên Cảnh Sơn", "Jingshan Park", "景山公园"],
+      tag:"pay",
+      tagx:["2 CNY", "CNY 2", "2元"],
+      dur:["75 phút", "75 min", "75分钟"],
+      d:[
+        "Lên Vạn Xuân Đình ngắm toàn cảnh Tử Cấm Thành. Vé 2 CNY.",
+        "Climb to Wanchun Pavilion for the view over the Forbidden City. CNY 2.",
+        "登万春亭俯瞰紫禁城全景。门票2元。"
+      ]
+    },
+    {
+      m:1,
+      t:["25 phút", "25 min", "25分钟"],
+      a:[
+        "Tuyến 6 từ ga <span class=\"han\">北海北</span> → đổi tuyến 8 tại Nam La Cổ Hạng → ga <span class=\"han\">王府井</span> · 3 CNY",
+        "Line 6 from <span class=\"han\">北海北</span> Beihai North → change to Line 8 at Nanluoguxiang → <span class=\"han\">王府井</span> Wangfujing · CNY 3",
+        "6号线从<span class=\"han\">北海北</span> → 南锣鼓巷换8号线 → <span class=\"han\">王府井</span>站 · 3元"
+      ]
+    },
+    {
+      t:["17:00–18:15", "17:00–18:15", "17:00–18:15"],
+      b:["Phố Vương Phủ Tỉnh - ăn tối và mua quà", "Wangfujing - dinner and souvenirs", "王府井——晚餐与买礼物"],
+      dur:["75 phút", "75 min", "75分钟"],
+      d:[
+        "Ăn tối, mua quà. CA883 chỉ cho 5 kg xách tay, quà phải vào vali ký gửi.",
+        "Dinner and souvenirs. CA883 allows only 5 kg of cabin baggage, so gifts go in the checked case.",
+        "晚饭、买礼物。CA883随身行李只限5公斤，礼物要放托运箱。"
+      ]
+    },
+    {
+      m:1,
+      t:["55 phút", "55 min", "55分钟"],
+      a:[
+        "Tuyến 1 đi thẳng từ Vương Phủ Tỉnh về ga <span class=\"han\">梨园</span> Lê Viên · 6 CNY",
+        "Line 1 straight from Wangfujing back to <span class=\"han\">梨园</span> Liyuan · CNY 6",
+        "1号线从王府井直达<span class=\"han\">梨园</span>站 · 6元"
+      ]
+    },
+    {
+      t:["19:15–20:00", "19:15–20:00", "19:15–20:00"],
+      b:["Về khách sạn, tắm rửa, đóng vali, trả phòng", "Back at the hotel: shower, pack, check out", "回酒店：洗澡、收拾行李、退房"],
+      dur:["45 phút", "45 min", "45分钟"],
+      d:["Tắm rửa trước chuyến bay đêm. Mỹ Duyên ở lại phòng.", "Shower before the night flight. My Duyen keeps the room.", "夜航前洗个澡。美缘留在房间。"]
+    },
+    {
+      p:["gb"],
+      m:1,
+      t:["55 phút", "55 min", "55分钟"],
+      a:[
+        "Didi từ Lê Viên ra sân bay Thủ Đô T3 · 40 km · 130–170 CNY cả xe",
+        "Didi from Liyuan to Capital Airport T3 · 40 km · CNY 130–170 per car",
+        "滴滴从梨园到首都机场T3 · 40公里 · 整车130–170元"
+      ]
+    },
+    {
+      p:["gb"],
+      t:["21:00", "21:00", "21:00"],
+      b:["Có mặt ở sân bay Thủ Đô nhà ga T3", "At Capital Airport Terminal 3", "抵达首都机场T3"],
+      dur:["sớm 3,2 giờ", "3h10 early", "提前3小时10分"],
+      d:["Nhà ga T3, không phải T2.", "Terminal 3, not T2.", "T3航站楼，不是T2。"]
+    },
+    {
+      p:["gb"],
+      t:["00:10 → 03:15", "00:10 → 03:15", "00:10 → 03:15"],
+      b:["Thủ Đô T3 → Nội Bài T2 · Air China CA883", "Capital T3 → Noi Bai T2 · Air China CA883", "首都T3 → 内排T2 · 国航CA883"],
+      dur:["4 giờ 5", "4h05", "4小时5分"],
+      d:[
+        "Mã đặt chỗ Trip.com 1688901859853505, mã hãng MYCREC. 23 kg ký gửi, 5 kg xách tay.",
+        "Trip.com booking 1688901859853505, airline reference MYCREC. 23 kg checked, 5 kg cabin.",
+        "携程订单号1688901859853505，航司编号MYCREC。托运23公斤，随身5公斤。"
+      ]
+    },
+    {
+      p:["md"],
+      t:["20:00", "20:00", "20:00"],
+      b:["Mỹ Duyên ở lại phòng một mình", "My Duyen alone in the room", "美缘独自留在房间"],
+      d:["Sáng mai đi Universal, rời khách sạn lúc 8:20.", "Universal tomorrow; out of the hotel at 08:20.", "明天去环球影城，8:20离开酒店。"]
+    }
   ],
-  callouts:[
-   { p:["gb"],
-     h:["Chuyến bay 00:10 làm ngày 27/10 dài gần 22 tiếng","The 00:10 flight makes 27 Oct nearly 22 hours long","00:10的航班让10月27日长达近22小时"],
-     b:[["Dậy 5:45, rời khách sạn 6:15, đi bộ 18–20 km, lên xe ra sân bay lúc 20:00, cất cánh 00:10 và hạ cánh Nội Bài 03:15. Cộng lại là <strong>gần 22 tiếng không được ngủ tử tế</strong>, trong đó có cả Trường Thành hôm trước nữa. Lịch trên đây vẫn chạy được, nhưng nên biết trước là nó nặng.",
-       "Up at 05:45, out at 06:15, 18–20 km on foot, in the car at 20:00, wheels up at 00:10 and on the ground in Hanoi at 03:15. That is <strong>nearly 22 hours without proper sleep</strong>, on top of the Great Wall the day before. The schedule above works, but it is worth knowing how heavy it is.",
-       "5:45起床，6:15出门，步行18–20公里，20:00上车，00:10起飞，03:15落地河内。加起来是<strong>近22小时没有好好睡觉</strong>，而前一天还爬了长城。上面的安排行得通，但要先知道它有多累。"],
-      ["Có một cách đổi nhẹ đi mà không mất gì lớn: <strong>bỏ Thiên Đàn buổi sáng</strong> và rời khách sạn lúc 8:00 thay vì 6:15. Ngủ thêm được gần hai tiếng, và Cố Cung khung sáng vẫn vào kịp vì chỉ cần có mặt ở Ngọ Môn trước 11:00. Cái mất là buổi sáng Thiên Đàn với người Bắc Kinh tập thái cực quyền và hát kinh kịch - phần sinh động nhất của chỗ đó.",
-       "There is one easy trade: <strong>drop the Temple of Heaven in the morning</strong> and leave at 08:00 instead of 06:15. That buys nearly two hours of sleep, and the morning Forbidden City slot still works, since you only need to be at the Meridian Gate before 11:00. What you lose is the Temple of Heaven at its best hour, full of Beijingers doing tai chi and Peking opera.",
-       "有一个不难的取舍：<strong>去掉上午的天坛</strong>，8:00而不是6:15出门。能多睡将近两小时，故宫的上午场也还赶得上，因为只需在11:00前到午门。失去的是天坛最好的那个时段，满是打太极、唱京剧的北京人。"]],
-     fix:["<strong>Hai việc cần làm trước:</strong> đặt sẵn xe đón ở Nội Bài lúc 03:15 sáng 28/10 - giờ đó taxi sân bay vẫn có nhưng giá cao và hay phải chờ, nhắn người nhà trước thì nhẹ hơn nhiều. Và <strong>hỏi khách sạn Thông Châu xem có hoàn được đêm 27/10 không</strong>: phòng đặt 26–28/10 nhưng thực tế hai bạn chỉ dùng phòng đó tới 20:00 ngày 27, không ngủ đêm đó. Nếu phiếu ghi huỷ miễn phí thì có thể giữ nguyên để lấy chỗ tắm rửa và gửi đồ - vẫn đáng - nhưng cũng nên biết là có hỏi được.",
-      "<strong>Two things to arrange in advance:</strong> a ride from Noi Bai at 03:15 on 28 Oct - airport taxis do run at that hour, but they cost more and often mean waiting, so asking family beforehand is far easier. And <strong>ask the Tongzhou hotel whether the night of 27 Oct can be refunded</strong>: the room is booked 26–28 Oct, but in practice the two of them only use it until 20:00 on the 27th and never sleep there that night. If the booking is free-cancellation it may still be worth keeping for the shower and the luggage, but it is worth asking.",
-      "<strong>有两件事要提前安排：</strong>10月28日凌晨03:15在内排的接车——那个时间机场出租车还有，但价格较高且常要等，提前跟家里说好会轻松得多。以及<strong>问通州的酒店10月27日那晚能否退</strong>：房间订的是10月26–28日，但实际上两人只用到27日20:00，那一晚并没有住。若订单可免费取消，留着用来洗澡和寄存行李也值得，但至少该问一问。"]
-   }
-  ],
-  notes:[["<b>Đã bỏ công viên Bắc Hải khỏi ngày này.</b> Lịch cũ có Bắc Hải giữa Cảnh Sơn và Vương Phủ Tỉnh, nhưng khi Thiên Đàn phải dồn vào buổi sáng thì không còn chỗ. Nếu thấy Thiên Đàn buổi sáng quá sớm thì đổi ngược lại: bỏ Thiên Đàn, rời khách sạn lúc 7:30, và chèn Bắc Hải vào 16:45–18:00. Chọn một trong hai, không nhét được cả ba. Riêng Mỹ Duyên thì không mất gì, vì Bắc Hải đã nằm trong lịch ngày 29/10 của em ấy.",
-   "<b>Beihai Park has been dropped from this day.</b> The earlier schedule had it between Jingshan and Wangfujing, but once the Temple of Heaven has to go in the morning there is no room. If the early start feels too brutal, swap back: drop the Temple of Heaven, leave the hotel at 07:30, and slot Beihai in at 16:45–18:00. Pick one of the two; all three do not fit. My Duyen loses nothing either way, since Beihai is already in her 29 Oct schedule.",
-   "<b>本日已去掉北海公园。</b>原先安排在景山和王府井之间，但天坛必须放在上午后就没有空间了。若觉得早起太辛苦，可反向调整：去掉天坛，7:30离开酒店，把北海放进16:45–18:00。两者选其一，三个塞不下。美缘不受影响，北海已排进她10月29日的行程。"],
-  ["<b>Nếu bạn người Bắc Kinh lái xe đưa đi hôm nay:</b> chặng Thông Châu tới Thiên Đàn còn khoảng 45 phút thay vì 65, nên có thể dậy muộn hơn 20 phút. Ba điều nên dặn trước. Một, <b>Cố Cung đi một chiều</b>: vào cổng Ngọ Môn phía nam, ra cổng Thần Vũ Môn phía bắc, nên thả ở phía nam rồi hẹn đón ở phía bắc gần Cảnh Sơn, đừng chờ ở chỗ thả. Hai, quanh Thiên An Môn và Cố Cung cấm dừng đỗ rất chặt, chỉ thả người rồi đi ngay. Ba, Bắc Kinh có <b>hạn chế theo số cuối biển số</b> trong phạm vi đường vành đai 5, các ngày trong tuần từ 7:00 đến 20:00; hôm nay là thứ ba, nhờ bạn ấy kiểm tra biển số của mình có bị cấm hôm đó không.",
-   "<b>If your Beijing friend drives today:</b> Tongzhou to the Temple of Heaven drops to about 45 minutes instead of 65, so you can start 20 minutes later. Three things to tell the driver in advance. One, <b>the Forbidden City is one-way</b>: in at the Meridian Gate in the south, out at Shenwumen in the north, so drop off at the south and arrange pickup at the north near Jingshan, not where you were dropped. Two, stopping and parking around Tiananmen and the Forbidden City is tightly restricted, so drop and drive on. Three, Beijing runs a <b>licence-plate restriction by last digit</b> inside the 5th Ring Road on weekdays from 07:00 to 20:00; today is a Tuesday, so ask your friend to check whether their plate is banned that day.",
-   "<b>如果北京的朋友今天开车：</b>通州到天坛约45分钟而非65分钟，可以晚起20分钟。有三点要提前告诉司机。第一，<b>故宫单向参观</b>：南面午门进，北面神武门出，所以在南边下车，约在北边景山附近接，不要在下车处等。第二，天安门和故宫周边严禁停车，放下人就走。第三，北京五环内工作日7:00至20:00实行<b>尾号限行</b>；今天是周二，请朋友确认自己的车牌当天是否限行。"]]
+  intro:[
+    "Bảo và Mai bay 00:10 đêm nay, nên đây vừa là ngày trục trung tâm vừa là ngày ra sân bay. Mỹ Duyên đi cùng cả ngày.",
+    "Bao and Mai fly at 00:10 tonight, so this is both the central-axis day and the airport day. My Duyen comes along all day.",
+    "嘉宝和琼梅今晚00:10起飞，所以今天既是中轴线之日也是去机场之日。美缘全天同行。"
+  ]
 },
 
-{ city:"bj", n:"28", dow:"T4",
-  head:["Mỹ Duyên bắt đầu đi một mình","My Duyen starts out on her own","美缘开始独自行动"],
-  intro:["Gia Bảo và Quỳnh Mai đã cất cánh từ 00:10 đêm qua và hạ cánh Nội Bài lúc 03:15 sáng nay, nên từ hôm nay Bắc Kinh chỉ còn Mỹ Duyên. Ngày tự đi đầu tiên: một vòng văn hoá, nghệ thuật và điện ảnh ở phía bắc rồi phía đông thành phố.",
-   "Gia Bao and Quynh Mai took off at 00:10 last night and landed at Noi Bai at 03:15 this morning, so from today Beijing is My Duyen alone. Her first self-guided day: a loop of campus, art and cinema across the north and then the east of the city.",
-   "嘉宝和琼梅昨夜00:10起飞，今晨03:15落地内排，所以从今天起北京只剩美缘一人。她自由行的第一天：从城北到城东的校园、艺术与电影。"],
+{
+  city:"bj",
+  n:"28",
+  dow:"T4",
+  head:["Mỹ Duyên: một ngày ở Universal", "My Duyen: a day at Universal", "美缘：环球影城一日"],
   slots:[
-   {p:["gb"], t:["03:15","03:15","03:15"], b:["Gia Bảo và Quỳnh Mai hạ cánh Nội Bài T2","Gia Bao and Quynh Mai land at Noi Bai T2","嘉宝和琼梅落地内排T2"],
-    d:["Kết thúc chuyến đi 8 ngày. Nhớ đặt xe đón từ trước và nhắn cho Mỹ Duyên một câu khi về tới nhà - em ấy còn bốn ngày nữa ở Trung Quốc và đang đi một mình.",
-       "The end of an eight-day trip. Have a ride arranged in advance, and message My Duyen once you are home - she has four more days in China and is travelling alone.",
-       "为期八天的行程结束。提前安排好接车，到家后给美缘发个消息——她在中国还有四天，而且是一个人。"]}
+    {
+      p:["gb"],
+      t:["03:15", "03:15", "03:15"],
+      b:["Gia Bảo và Quỳnh Mai hạ cánh Nội Bài T2", "Gia Bao and Quynh Mai land at Noi Bai T2", "嘉宝和琼梅落地内排T2"],
+      d:["Nhắn Mỹ Duyên khi về tới nhà.", "Message My Duyen once home.", "到家后给美缘发个消息。"]
+    }
   ],
   legs:[
-   { cls:"uni", p:["md"], h:["Thanh Hoa, 798 và Bảo tàng Điện ảnh","Tsinghua, 798 and the Film Museum","清华、798与电影博物馆"], who:["Mỹ Duyên","My Duyen","美缘"],
-     intro:["Ngày tự đi đầu tiên, và ba điểm nằm gọn trên một đường vòng cung từ tây bắc sang đông bắc: Thanh Hoa ở Hải Điến, 798 ở Toan Gia Kiều, Bảo tàng Điện ảnh cách 798 đúng 3 km. Cả ba đều <strong>miễn phí vào cửa</strong>, chỉ tốn tiền đi lại và bữa trưa.",
-      "The first self-guided day, and the three stops sit on one arc from the north-west to the north-east: Tsinghua in Haidian, 798 in Jiuxianqiao, the Film Museum exactly 3 km beyond 798. All three are <strong>free to enter</strong>; the only spending is transport and lunch.",
-      "第一个自由行的日子，三个点连成从西北到东北的一条弧线：清华在海淀，798在酒仙桥，电影博物馆离798正好3公里。三处<strong>都免费入场</strong>，只花交通和午餐的钱。"],
-     slots:[
-      {t:["07:30–07:55","07:30–07:55","07:30–07:55"], b:["Ăn sáng, trả phòng một mình","Breakfast, check out alone","早餐，独自退房"], dur:["25 phút","25 min","25分钟"],
-       d:["Hai bạn kia đã ra sân bay từ 20:00 tối qua nên sáng nay chỉ còn mình bạn. Phòng Thông Châu hết hạn hôm nay, hành lý theo bạn suốt ngày - gửi ở lễ tân khách sạn mới buổi tối, hoặc mang theo nếu đã đặt được phòng khác.",
-          "The other two left for the airport at 20:00 last night, so this morning is yours alone. The Tongzhou room ends today and the luggage is with you all day - leave it at the new hotel's reception in the evening, or take it along if the next room is already booked.",
-          "另外两人昨晚20:00就去机场了，今早只剩你一个人。通州的房间今天到期，行李要跟你一整天——晚上存在新酒店前台，或者若已订好下一间就直接带过去。"]},
-      {m:1, t:["60 phút","60 min","60分钟"], a:["Didi từ Thông Châu tới cổng Tây Đại học Thanh Hoa · 38 km · 130–170 CNY · <strong>đặt xe cho 07:55</strong>, đi metro sẽ mất 95 phút và phải rời khách sạn từ 07:20",
-        "Didi from Tongzhou to Tsinghua's West Gate · 38 km · CNY 130–170 · <strong>book it for 07:55</strong>; the metro takes 95 minutes and would mean leaving at 07:20",
-        "从通州打滴滴到清华大学西门 · 38公里 · 130–170元 · <strong>约07:55的车</strong>；坐地铁要95分钟，得07:20就出门"]},
-      {t:["09:00–10:30","09:00–10:30","09:00–10:30"], b:["Đại học Thanh Hoa","Tsinghua University","清华大学"], tag:"free", dur:["90 phút","90 min","90分钟"],
-       d:['<span class="han">清华大学西门</span> - cổng đá trắng có biển <span class="han">清华大学</span>, nằm ngay mặt đường nên chụp ảnh từ bên ngoài không cần vé hay đặt chỗ. Chín mươi phút ở đây là <strong>vòng ngoài khuôn viên</strong>: cổng Tây, đường Thanh Hoa Tây rợp cây, rồi vòng xuống khu <span class="han">五道口</span> - phố sinh viên sầm uất nhất Bắc Kinh, quán cà phê và hiệu sách san sát. Vào được trong trường thì <span class="han">二校门</span> Nhị Hiệu Môn và đại lễ đường mái vòm đỏ mới là phần đẹp nhất, nhưng hệ thống đặt chỗ của Thanh Hoa hiện chỉ nhận chứng minh thư đại lục.',
-          '<span class="han">清华大学西门</span> - the white stone gate with the <span class="han">清华大学</span> plaque, right on the street, so photographing it from outside needs no ticket and no reservation. Ninety minutes here means <strong>the outside of the campus</strong>: the West Gate, the tree-lined Qinghua West Road, then down into <span class="han">五道口</span> Wudaokou, the liveliest student quarter in Beijing, thick with cafés and bookshops. Inside, <span class="han">二校门</span> and the red-domed auditorium are the best of it, but Tsinghua\'s booking system currently accepts mainland ID cards only.',
-          '<span class="han">清华大学西门</span> — 带<span class="han">清华大学</span>校名牌匾的白色石门，就在马路边，从校外拍照无需门票或预约。这里的九十分钟是<strong>校园外围</strong>：西门、绿树成荫的清华西路，再往下走到<span class="han">五道口</span>——北京最热闹的学生街区，咖啡馆和书店密集。若能入校，<span class="han">二校门</span>和红穹顶大礼堂才是最好看的部分，但清华的预约系统目前只接受大陆身份证。']},
-      {m:1, t:["45 phút","45 min","45分钟"], a:['Didi từ Thanh Hoa tới 798 · 18 km · 60–80 CNY · hoặc tuyến 13 tới <span class="han">望京西</span> rồi đổi tuyến 14 tới <span class="han">望京南</span>, khoảng 55 phút, 5 CNY',
-        'Didi from Tsinghua to 798 · 18 km · CNY 60–80 · or Line 13 to <span class="han">望京西</span> Wangjing West then Line 14 to <span class="han">望京南</span> Wangjing South, about 55 minutes, CNY 5',
-        '从清华打滴滴到798 · 18公里 · 60–80元 · 或13号线到<span class="han">望京西</span>换14号线到<span class="han">望京南</span>，约55分钟，5元']},
-      {t:["11:15–13:30","11:15–13:30","11:15–13:30"], b:["Khu nghệ thuật 798","798 Art Zone","798艺术区"], tag:"free", dur:["135 phút","135 min","135分钟"],
-       d:['<span class="han">798艺术区</span> - khu nhà máy điện tử quân sự do Đông Đức thiết kế và xây những năm 1950, kiến trúc Bauhaus với mái vòm cong đổ ánh sáng bắc, bỏ hoang rồi được nghệ sĩ chiếm dụng từ đầu những năm 2000. Trên tường vẫn còn nguyên khẩu hiệu thời Cách mạng Văn hoá sơn đỏ, nằm cạnh phòng tranh đương đại - chính sự chồng lớp đó mới là thứ đáng xem, chứ không phải các cửa hàng. Vào khu tự do; các phòng tranh lớn như UCCA có vé riêng khoảng 60–100 CNY. Đa số đóng cửa thứ hai, nhưng hôm nay là thứ tư. Ăn trưa luôn trong khu.',
-          '<span class="han">798艺术区</span> - an East German-designed military electronics plant built in the 1950s, Bauhaus architecture with curved sawtooth roofs throwing north light, abandoned and then taken over by artists in the early 2000s. Cultural Revolution slogans still stand in red paint on the walls next to contemporary galleries - that layering is what is worth seeing, not the shops. The zone is free; big galleries such as UCCA charge CNY 60–100 separately. Most close on Mondays, but today is a Wednesday. Have lunch inside the zone.',
-          '<span class="han">798艺术区</span> — 由东德设计、1950年代建造的军用电子厂，包豪斯风格，锯齿形弧顶引入北向光线，废弃后于2000年代初被艺术家占用。墙上还留着红漆的文革标语，紧挨着当代画廊——值得看的正是这种层叠，而不是店铺。园区免费；UCCA等大画廊单独收费60–100元。多数周一闭馆，但今天是周三。午饭就在园区内解决。']},
-      {m:1, t:["15 phút","15 min","15分钟"], a:["Didi từ 798 tới Bảo tàng Điện ảnh Trung Quốc · 3,2 km · 15–20 CNY","Didi from 798 to the China National Film Museum · 3.2 km · CNY 15–20","从798打滴滴到中国电影博物馆 · 3.2公里 · 15–20元"]},
-      {t:["14:00–16:30","14:00–16:30","14:00–16:30"], b:["Bảo tàng Điện ảnh Trung Quốc","China National Film Museum","中国电影博物馆"], tag:"free", tagx:["Miễn phí, phải đặt chỗ","Free, reservation required","免费，需预约"], dur:["150 phút","150 min","150分钟"],
-       d:['<span class="han">中国电影博物馆</span> - bảo tàng điện ảnh lớn nhất thế giới tính theo diện tích, khối hộp đen 38 nghìn m² do Rem Koolhaas cùng RTKL thiết kế, mở năm 2007. Hai mươi phòng trưng bày kể lại toàn bộ lịch sử điện ảnh Trung Quốc từ 1905, cộng khu kỹ thuật cho xem cách dựng phim, lồng tiếng và làm kỹ xảo. <strong>Vào cửa miễn phí nhưng bắt buộc đặt chỗ trước qua mini-program trên WeChat</strong>, mở suất trước 7 ngày; mang hộ chiếu bản gốc. Đóng cửa thứ hai, hôm nay thứ tư nên mở bình thường 9:00–16:30 - tức là <strong>phải vào trước 15:30</strong>.',
-          '<span class="han">中国电影博物馆</span> - the largest film museum in the world by floor area, a 38,000 m² black box by Rem Koolhaas with RTKL, opened in 2007. Twenty galleries run through the whole history of Chinese cinema from 1905, plus a technical wing showing editing, dubbing and effects. <strong>Free but reservation is mandatory</strong> through a WeChat mini-program, released 7 days ahead; bring the original passport. Closed Mondays; today is a Wednesday, open 09:00–16:30 - so <strong>be inside before 15:30</strong>.',
-          '<span class="han">中国电影博物馆</span> — 按建筑面积计为世界最大的电影博物馆，雷姆·库哈斯与RTKL设计的3.8万平方米黑色方盒，2007年开馆。二十个展厅讲述1905年以来的中国电影史，另有展示剪辑、配音和特效的技术区。<strong>免费但必须提前通过微信小程序预约</strong>，提前7天放号；带护照原件。周一闭馆；今天是周三，开放9:00–16:30——所以<strong>15:30前要入馆</strong>。']},
-      {m:1, t:["60 phút","60 min","60分钟"], a:['Didi hoặc tuyến 14 → đổi tuyến 1 tại <span class="han">大望路</span> → ga <span class="han">梨园</span> Lê Viên · 6 CNY',
-        'Didi, or Line 14 → change to Line 1 at <span class="han">大望路</span> Dawanglu → <span class="han">梨园</span> Liyuan · CNY 6',
-        '滴滴，或14号线 → <span class="han">大望路</span>换1号线 → <span class="han">梨园</span>站 · 6元']},
-      {t:["17:30","17:30","17:30"], b:["Về khách sạn, ăn tối gần đó","Back at the hotel, dinner nearby","回酒店，就近吃晚饭"],
-       d:["Tối nay nghỉ sớm và sắp lại hành lý cho gọn: mai là ngày chuyển thành phố, kéo hai vali qua ga tàu cao tốc nên đồ càng gọn càng đỡ vất vả.",
-          "An early night and a proper repack: tomorrow is a change of city with two suitcases through a high-speed rail station, so the tidier the bags the easier it is.",
-          "今晚早点休息，把行李重新整理好：明天要换城市，还要拖着两个箱子过高铁站，收拾得越整齐越省力。"]}
-     ]}
-  ],
-  callouts:[
-   { p:["md"],
-     h:["Đêm 28/10 chưa có phòng, và Thông Châu bắt đầu thành bất lợi","The night of 28 Oct has no room yet, and Tongzhou starts to hurt","10月28日晚还没有房，而住通州开始变成负担"],
-     b:[["Phòng ở Thông Châu đã đặt là <strong>26 đến 28/10, tức chỉ hai đêm</strong>, và Mỹ Duyên ngủ đêm 27/10 ở đó một mình vì hai bạn kia bay lúc 00:10. Trả phòng sáng 28/10. Em ấy còn ở lại một đêm nữa ở Bắc Kinh nên <strong>đêm 28/10 phải đặt thêm</strong>.",
-       "The Tongzhou booking runs <strong>26 to 28 Oct, two nights only</strong>, and My Duyen has the night of 27 Oct there to herself, since the other two fly at 00:10. Check-out is the morning of 28 Oct. She has one more Beijing night, so <strong>28 Oct has to be booked separately</strong>.",
-       "已订的通州房间是<strong>10月26日至28日，只有两晚</strong>，28日上午与嘉宝、琼梅一同退房。美缘在北京还要多住一晚，所以<strong>10月28日那晚要另订</strong>。"],
-      ["Có hai cách, và chúng khác nhau đáng kể. <strong>Gia hạn thêm một đêm ở chính khách sạn Thông Châu</strong> thì không phải chuyển đồ, nhưng cả hôm nay lẫn mai đều mất thêm khoảng một tiếng đường: hôm nay đi Thanh Hoa mất 60 phút thay vì 35 nếu ở trung tâm, mai ra ga Bắc Kinh Nam mất 55–60 phút thay vì 25.",
-       "There are two ways, and they differ noticeably. <strong>Extending one night at the same Tongzhou hotel</strong> avoids moving the luggage, but costs about an hour of extra travel on both days: Tsinghua today is 60 minutes instead of 35 from the centre, and Beijing South tomorrow is 55–60 minutes instead of 25.",
-       "有两种做法，差别不小。<strong>在通州同一家酒店续住一晚</strong>不用搬行李，但今明两天都要多花约一小时车程：今天去清华要60分钟，住市区只要35分钟；明天去北京南站要55–60分钟，住市区只要25分钟。"],
-      ["<strong>Chuyển vào một khách sạn quanh Vương Phủ Tỉnh hoặc Tiền Môn</strong> cho đêm 28/10 thì phải kéo vali đi buổi sáng, nhưng đổi lại gần ga Bắc Kinh Nam và gần trục trung tâm. Giá hai khu chênh nhau khoảng 60–100 CNY một đêm, tức là gần đúng bằng tiền hai cuốc Didi mà bạn tiết kiệm được.",
-       "<strong>Moving to a hotel around Wangfujing or Qianmen</strong> for 28 Oct means dragging the suitcases in the morning, but puts you close to Beijing South and to the central axis. The price gap between the two areas is about CNY 60–100 a night - roughly what the two Didi rides you save would cost.",
-       "<strong>10月28日搬到王府井或前门一带的酒店</strong>，上午要拖着行李，但离北京南站和中轴线都近。两个区域的价差约每晚60–100元——大致等于省下的那两趟滴滴钱。"]],
-     fix:["<strong>Tôi nghiêng về chuyển vào trung tâm.</strong> Lý do không phải tiền mà là buổi sáng 29/10: hôm đó bạn phải trả phòng lúc 12:00, ra ga Bắc Kinh Nam kịp chuyến 13:00, mà vẫn muốn chơi thêm một điểm từ 8:30 tới 10:30. Ở Thông Châu thì lịch đó rất sát; ở trung tâm thì thoải mái. Nếu quyết định giữ Thông Châu thì nhớ đặt xe trước và rời khách sạn lúc 11:50 chứ không phải 12:00.",
-      "<strong>I lean towards moving into the centre.</strong> Not for the money but for the morning of 29 Oct: that day means checking out at 12:00, reaching Beijing South for the 13:00 train, and still fitting one more sight between 08:30 and 10:30. From Tongzhou that is very tight; from the centre it is comfortable. If you keep Tongzhou, pre-book the car and leave at 11:50, not 12:00.",
-      "<strong>我倾向于搬进市区。</strong>不是为了省钱，而是为了10月29日上午：那天要12:00退房、赶13:00的车到北京南站，还想在8:30到10:30再玩一个点。住通州这个安排很紧；住市区就从容。若决定留在通州，请提前叫车，并在11:50而不是12:00出发。"]
-   }
+    {
+      cls:"uni",
+      p:["md"],
+      h:["Universal Beijing Resort", "Universal Beijing Resort", "北京环球度假区"],
+      who:["Mỹ Duyên", "My Duyen", "美缘"],
+      slots:[
+        {
+          t:["08:20", "08:20", "08:20"],
+          b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
+          d:["Phòng gia hạn thêm đêm nay nên không phải mang hành lý.", "The room is extended for tonight, so no luggage to carry.", "房间续住到今晚，不用带行李。"]
+        },
+        {
+          m:1,
+          t:["25 phút", "25 min", "25分钟"],
+          a:[
+            "Đi bộ 350m ra ga <span class=\"han\">梨园</span> → tuyến 1 đi bốn ga tới ga cuối <span class=\"han\">环球度假区</span> · 3 CNY",
+            "Walk 350m to <span class=\"han\">梨园</span> → Line 1, four stops to the terminus <span class=\"han\">环球度假区</span> · CNY 3",
+            "步行350米到<span class=\"han\">梨园</span>站 → 1号线坐四站到终点<span class=\"han\">环球度假区</span> · 3元"
+          ]
+        },
+        {
+          t:["08:45", "08:45", "08:45"],
+          b:["Có mặt ở cổng Universal Beijing", "At the Universal Beijing gate", "到达北京环球影城入口"],
+          d:["Xếp hàng an ninh trước giờ mở cửa khoảng 30 phút.", "Queue for security about 30 minutes before opening.", "开园前约30分钟排队安检。"]
+        },
+        {
+          t:["09:00–20:00", "09:00–20:00", "09:00–20:00"],
+          b:["Universal Beijing Resort", "Universal Beijing Resort", "北京环球度假区"],
+          tag:"pay",
+          dur:["11 tiếng", "11h", "11小时"],
+          d:[
+            "Kiểm tra giờ mở cửa trên app trước một tuần (9:00 hoặc 10:00). Thứ tư nên vắng hơn cuối tuần. Chơi trò lớn ngay giờ đầu.",
+            "Check opening time in the app a week ahead (09:00 or 10:00). A Wednesday, so quieter than a weekend. Do the big rides first.",
+            "提前一周在App查开园时间（9:00或10:00）。周三人比周末少。先玩热门项目。"
+          ]
+        },
+        {
+          t:["20:00–20:30", "20:00–20:30", "20:00–20:30"],
+          b:["CityWalk 城市大道", "CityWalk 城市大道", "城市大道"],
+          tag:"free",
+          dur:["30 phút", "30 min", "30分钟"],
+          d:["Mua quà, ăn tối.", "Souvenirs and dinner.", "买纪念品，吃晚饭。"]
+        },
+        {
+          m:1,
+          t:["25 phút", "25 min", "25分钟"],
+          a:[
+            "Tuyến 1 về ga <span class=\"han\">梨园</span> Lê Viên, đi bộ 350m · 3 CNY",
+            "Line 1 back to <span class=\"han\">梨园</span> Liyuan, 350m walk · CNY 3",
+            "1号线回<span class=\"han\">梨园</span>，步行350米 · 3元"
+          ]
+        },
+        {
+          t:["≈ 21:00", "≈ 21:00", "约21:00"],
+          b:["Về khách sạn", "Back at the hotel", "回到酒店"],
+          d:["Sắp lại hành lý cho ngày sang Thiên Tân.", "Repack for the move to Tianjin.", "为去天津整理行李。"]
+        }
+      ]
+    }
   ]
 },
 
-/* ================= TIANJIN ================= */
-{ city:"tj", n:"29", dow:"T5", icon:"g-park", p:["md"],
-  head:["Bắc Kinh buổi sáng, Thiên Tân buổi chiều","Beijing in the morning, Tianjin in the afternoon","上午北京，下午天津"],
-  intro:["Tàu liên thành chỉ mất 33 phút, nên đây không phải một ngày di chuyển mà là một ngày có hai thành phố. Buổi sáng vẫn kịp thêm một điểm ở Bắc Kinh, buổi chiều bắt đầu ngay ở Thiên Tân - và Thiên Tân thì gần như toàn bộ những gì đáng xem đều nằm trong bán kính 3 km quanh sông Hải Hà, đi bộ được hết.",
-   "The intercity train takes 33 minutes, so this is not a travel day but a day with two cities in it. The morning still fits one more Beijing stop and the afternoon starts straight away in Tianjin - where almost everything worth seeing sits within 3 km of the Hai River and can be walked.",
-   "城际列车只要33分钟，所以这不是一个赶路的日子，而是一天里有两座城市。上午还能在北京再看一个点，下午直接在天津开始——而天津几乎所有值得看的地方都在海河沿岸3公里之内，走路就够。"],
+{
+  city:"tj",
+  n:"29",
+  dow:"T5",
+  icon:"g-park",
+  p:["md"],
+  head:["Bắc Kinh buổi sáng, Thiên Tân buổi chiều", "Beijing in the morning, Tianjin in the afternoon", "上午北京，下午天津"],
   slots:[
-   {t:["07:30–08:15","07:30–08:15","07:30–08:15"], b:["Dậy, ăn sáng","Up and breakfast","起床、早餐"], dur:["45 phút","45 min","45分钟"]},
-   {t:["08:30–10:30","08:30–10:30","08:30–10:30"], b:["Thêm một điểm ở Bắc Kinh, gần khách sạn","One more Beijing stop, close to the hotel","在北京再看一个点，离酒店近"], dur:["120 phút","120 min","120分钟"],
-    d:["Chọn theo chỗ ngủ đêm qua, và <strong>nguyên tắc duy nhất là không đi quá 25 phút một chiều</strong>. Nếu ở quanh <em>Vương Phủ Tỉnh hoặc Tiền Môn</em>: Bắc Hải (10 CNY, mở 6:30, Bạch Tháp trên đảo Quỳnh Hoa) hoặc Ung Hoà Cung (25 CNY, mở 9:00, tu viện Phật giáo Tây Tạng lớn nhất Bắc Kinh, khói hương dày đặc). Nếu vẫn ở <em>Thông Châu</em>: công viên rừng Đại Vận Hà ngay gần Lê Viên, miễn phí, cuối tháng 10 lá vàng dọc kênh - không nổi tiếng nhưng đúng nghĩa gần.",
-       "Pick by where you slept, and <strong>the only rule is nothing more than 25 minutes each way</strong>. Around <em>Wangfujing or Qianmen</em>: Beihai Park (CNY 10, opens 06:30, the White Dagoba on Qionghua Island) or the Lama Temple (CNY 25, opens 09:00, the largest Tibetan Buddhist monastery in Beijing, thick with incense). Still in <em>Tongzhou</em>: the Grand Canal Forest Park by Liyuan, free, yellow leaves along the water in late October - not famous, but genuinely close.",
-       "按昨晚住哪里来选，<strong>唯一的原则是单程不超过25分钟</strong>。住<em>王府井或前门</em>一带：北海公园（10元，6:30开门，琼华岛白塔）或雍和宫（25元，9:00开门，北京最大的藏传佛教寺院，香火极旺）。仍住<em>通州</em>：梨园旁的大运河森林公园，免费，10月下旬运河边一片金黄——不出名，但确实近。"]},
-   {m:1, t:["25 phút","25 min","25分钟"], a:["Quay lại khách sạn","Back to the hotel","返回酒店"]},
-   {t:["11:00–11:45","11:00–11:45","11:00–11:45"], b:["Nghỉ, lấy đồ, kiểm tra lại hai vali","Rest, collect the bags, check both suitcases","休息、取行李、检查两个箱子"], dur:["45 phút","45 min","45分钟"],
-    d:["Đây là lúc kiểm hai vali lần cuối trước khi rời Bắc Kinh: sạc, cáp, hộ chiếu, giấy tờ BNU, và <strong>toàn bộ đồ mua ở Bắc Kinh đã nằm trong vali ký gửi</strong> chứ không phải túi xách tay. Từ đây đến hết chuyến sẽ không còn ai giúp xách nữa.",
-       "This is the last check of both cases before leaving Beijing: chargers, cables, passport, BNU paperwork, and <strong>everything bought in Beijing already in the checked case</strong> rather than the cabin bag. From here on there is nobody else to help carry.",
-       "这是离开北京前最后一次检查两个箱子：充电器、数据线、护照、北师大材料，以及<strong>在北京买的东西全部放进托运箱</strong>，不要留在随身包里。从这里开始，再没有人帮忙提行李了。"]},
-   {t:["12:00","12:00","12:00"], b:["Trả phòng khách sạn Bắc Kinh","Check out of the Beijing hotel","北京酒店退房"], tag:"pay", tagx:["Trả phòng trước 12:00","Check-out before 12:00","12:00前退房"],
-    d:["Hầu hết khách sạn Trung Quốc trả phòng trước 12:00, nên 12:00 là hạn chứ không phải mốc. Đặt Didi từ 11:45 để xe chờ sẵn.",
-       "Most Chinese hotels want you out before 12:00, so 12:00 is the deadline rather than the plan. Book the Didi from 11:45 so the car is already waiting.",
-       "中国大多数酒店要求12:00前退房，所以12:00是底线而不是计划。11:45就叫好滴滴，让车先等着。"]},
-   {m:1, t:["25–60 phút","25–60 min","25–60分钟"], a:['Didi ra ga <span class="han">北京南站</span> Bắc Kinh Nam · 25 phút nếu ở trung tâm, 55–60 phút nếu ở Thông Châu · 40–120 CNY · tới ga trước giờ tàu 30 phút vì phải qua an ninh và soát hộ chiếu',
-     'Didi to <span class="han">北京南站</span> Beijing South · 25 minutes from the centre, 55–60 from Tongzhou · CNY 40–120 · be at the station 30 minutes before departure for security and the passport check',
-     '打滴滴到<span class="han">北京南站</span> · 住市区25分钟，住通州55–60分钟 · 40–120元 · 提前30分钟到站，要过安检和护照核验']},
-   {t:["13:00 → 13:35","13:00 → 13:35","13:00 → 13:35"], b:["Tàu cao tốc Bắc Kinh Nam đi Thiên Tân","High-speed train Beijing South to Tianjin","北京南站至天津的高铁"], tag:"pay", tagx:["55 CNY","CNY 55","55元"], dur:["33 phút","33 min","33分钟"],
-    d:["Tuyến liên thành Bắc Kinh - Thiên Tân chạy khoảng 15 phút một chuyến, hạng hai 54,5 CNY. Đặt trên app 12306 bằng hộ chiếu; ra ga quét hộ chiếu ngay ở cửa soát, không cần lấy vé giấy. Tàu về ga Thiên Tân <span class=\"han\">天津站</span> ở ngay trung tâm, không phải ga Thiên Tân Nam ở ngoại ô - kiểm tra kỹ khi đặt.",
-       "The Beijing-Tianjin intercity runs about every 15 minutes, CNY 54.5 in second class. Book on the 12306 app with your passport and scan it at the gate; no paper ticket needed. The train arrives at <span class=\"han\">天津站</span> Tianjin Station in the centre, not Tianjin South out in the suburbs - check carefully when booking.",
-       "京津城际约每15分钟一班，二等座54.5元。用12306App凭护照购票，进站直接刷护照，无需取纸质票。列车到达市中心的<span class=\"han\">天津站</span>，不是郊外的天津南站——订票时仔细核对。"]},
-   {m:1, t:["25 phút","25 min","25分钟"], a:["Didi từ ga Thiên Tân về khách sạn khu Hoà Bình / Ngũ Đại Đạo · 5 km · 20–30 CNY · có hai vali nên đừng đi metro",
-     "Didi from Tianjin station to the hotel around Heping / Five Great Avenues · 5 km · CNY 20–30 · two suitcases, so skip the metro",
-     "从天津站打滴滴到和平区／五大道一带的酒店 · 5公里 · 20–30元 · 有两个箱子，别坐地铁"]},
-   {t:["14:15–14:40","14:15–14:40","14:15–14:40"], b:["Nhận phòng khách sạn Thiên Tân","Check in at the Tianjin hotel","入住天津酒店"], tag:"pay", tagx:["Nhận phòng từ 14:00","Check-in from 14:00","14:00起入住"], dur:["25 phút","25 min","25分钟"],
-    d:["Đặt <strong>khu Hoà Bình quanh Ngũ Đại Đạo</strong> là lựa chọn đúng: nằm giữa mọi thứ trong lịch hai ngày tới, đi bộ ra Tiểu Bạch Lâu và Giải Phóng Bắc Lộ, và sáng 31/10 ra sân bay Tân Hải chỉ 30–35 phút. Đặt hai đêm liền 29 và 30/10 để không phải chuyển.",
-       "Booking in <strong>Heping around the Five Great Avenues</strong> is the right call: it sits in the middle of everything on the next two days, walking distance to Xiaobailou and Jiefang North Road, and 30–35 minutes from Binhai airport on the morning of 31 Oct. Book both nights, 29 and 30 Oct, so nothing has to move.",
-       "订在<strong>和平区五大道一带</strong>是对的：接下来两天的行程都围绕这里，步行可到小白楼和解放北路，10月31日早上去滨海机场也只要30–35分钟。29日和30日两晚一起订，就不用再搬。"]},
-   {t:["14:50–16:30","14:50–16:30","14:50–16:30"], b:["Ngũ Đại Đạo","The Five Great Avenues","五大道"], tag:"free", dur:["100 phút","100 min","100分钟"],
-    d:['<span class="han">五大道</span> - năm con đường song song trong tô giới Anh cũ, còn khoảng <strong>hai nghìn toà biệt thự</strong> xây từ 1920 đến 1940 theo đủ kiểu Anh, Ý, Pháp, Đức, Tây Ban Nha. Đây là quần thể kiến trúc phương Tây dày đặc nhất còn lại ở Trung Quốc, và cũng chính là lý do người ta gọi Thiên Tân là "bảo tàng kiến trúc thế giới". Đi bộ dọc <span class="han">睦南道</span> Mục Nam Đạo và <span class="han">重庆道</span> Trùng Khánh Đạo là được phần đẹp nhất. Có xe ngựa chở khách 80 CNY một vòng, nhưng đi bộ mới vào được các ngõ nhỏ.',
-       '<span class="han">五大道</span> - five parallel streets in the former British concession holding about <strong>two thousand villas</strong> built between 1920 and 1940 in British, Italian, French, German and Spanish styles. It is the densest surviving concentration of Western architecture in China, and the reason Tianjin is called a museum of world architecture. Walking <span class="han">睦南道</span> Munan Road and <span class="han">重庆道</span> Chongqing Road covers the best of it. Horse carriages do a loop for CNY 80, but only walking gets you into the side lanes.',
-       '<span class="han">五大道</span> — 原英租界内五条平行的马路，保留着约<strong>两千栋小洋楼</strong>，建于1920至1940年间，英、意、法、德、西班牙风格俱全。这是中国现存最密集的西式建筑群，也正是天津被称为"万国建筑博览会"的原因。步行走完<span class="han">睦南道</span>和<span class="han">重庆道</span>就抓住了精华。有马车绕行一圈80元，但只有走路才进得了小巷。']},
-   {m:1, t:["15 phút","15 min","15分钟"], a:["Đi bộ hoặc xe đạp chung về phía đông bắc tới khu Tiểu Bạch Lâu · 1,5 km",
-     "Walk or take a shared bike north-east to the Xiaobailou quarter · 1.5 km",
-     "步行或骑共享单车向东北到小白楼一带 · 1.5公里"]},
-   {t:["16:45–17:20","16:45–17:20","16:45–17:20"], b:["Tiểu Bạch Lâu","Xiaobailou","小白楼"], tag:"free", dur:["35 phút","35 min","35分钟"],
-    d:['<span class="han">小白楼</span> - khu thương mại cũ nằm giữa tô giới Anh và tô giới Pháp, nay là chỗ giao nhau giữa nhà cũ và cao ốc mới. Đi ngang qua là chính, để nối Ngũ Đại Đạo với Giải Phóng Bắc Lộ mà không phải bắt xe. Cuối tháng 10 khoảng 17:20 trời tối, nên đây là điểm cuối còn ánh sáng ban ngày.',
-       '<span class="han">小白楼</span> - the old commercial district between the British and French concessions, now where the old buildings meet new towers. Mostly a pass-through, linking the Five Great Avenues to Jiefang North Road without a car. It gets dark around 17:20 in late October, so this is the last stop in daylight.',
-       '<span class="han">小白楼</span> — 位于英租界与法租界之间的老商业区，如今是旧楼与新塔楼交汇的地方。主要是路过，把五大道和解放北路串起来，不用打车。10月下旬约17:20天黑，所以这是最后一个有日光的点。']},
-   {m:1, t:["12 phút","12 min","12分钟"], a:["Đi bộ lên phía bắc theo đường Giải Phóng Bắc · 1 km","Walk north along Jiefang North Road · 1 km","沿解放北路向北步行 · 1公里"]},
-   {t:["17:35–18:15","17:35–18:15","17:35–18:15"], b:["Đường Giải Phóng Bắc","Jiefang North Road","解放北路"], tag:"free", dur:["40 phút","40 min","40分钟"],
-    d:['<span class="han">解放北路</span> - từng là "Phố Wall của phương Bắc": một km đường thẳng hai bên toàn nhà ngân hàng đá xám kiểu tân cổ điển, hàng cột và mái vòm, xây cho các ngân hàng Anh, Pháp, Nhật, Nga đầu thế kỷ 20. Buổi tối lên đèn vàng, gần như không có xe, và <strong>đây là đoạn phố dễ chụp nhất Thiên Tân</strong>. Khách sạn Lợi Thuận Đức <span class="han">利顺德</span> mở năm 1863 nằm ở đầu phố phía bắc, còn nguyên và vẫn đang hoạt động.',
-       '<span class="han">解放北路</span> - once "the Wall Street of the North": a straight kilometre lined with grey stone neoclassical bank buildings, colonnades and domes, built for British, French, Japanese and Russian banks in the early twentieth century. Lit warm at night and almost traffic-free, it is <strong>the most photogenic street in Tianjin</strong>. The Astor Hotel <span class="han">利顺德</span> of 1863 stands at the northern end, intact and still open.',
-       '<span class="han">解放北路</span> — 曾是"北方华尔街"：笔直的一公里，两侧全是灰色石砌的新古典银行大楼，列柱与穹顶，20世纪初为英、法、日、俄各国银行所建。夜里暖黄灯光、几乎没有车，是<strong>天津最好拍的一条街</strong>。1863年的<span class="han">利顺德</span>大饭店就在北端，保存完好，仍在营业。']},
-   {m:1, t:["15 phút","15 min","15分钟"], a:["Đi bộ qua cầu Giải Phóng bắc qua sông Hải Hà sang khu phố kiểu Ý · 1,2 km · cầu thép 1927 quay được, buổi tối lên đèn",
-     "Walk over the Liberation Bridge across the Hai River into the Italian quarter · 1.2 km · the 1927 swing bridge, lit at night",
-     "过海河上的解放桥步行到意式风情区 · 1.2公里 · 1927年的开启式钢桥，夜间亮灯"]},
-   {t:["18:30–20:00","18:30–20:00","18:30–20:00"], b:["Khu phố kiểu Ý, ăn tối","The Italian quarter, dinner","意式风情区，晚餐"], tag:"free", dur:["90 phút","90 min","90分钟"],
-    d:['<span class="han">意式风情区</span> - tô giới Ý cũ, <strong>khu nhượng địa Ý duy nhất từng tồn tại ở châu Á</strong>, còn khoảng hai trăm toà nhà kiểu Ý nguyên bản trong vài ô phố. Buổi tối lên đèn, quảng trường Marco Polo ở giữa. Nhiều quán ăn, cả đồ Ý lẫn đồ Thiên Tân - ăn tối ở đây là hợp lý vì đã đi bộ suốt từ chiều.',
-       '<span class="han">意式风情区</span> - the former Italian concession, <strong>the only Italian concession that ever existed in Asia</strong>, with about two hundred original Italian buildings inside a few blocks. Lit at night, with Marco Polo Square at its centre. Plenty of restaurants, Italian and Tianjinese - dinner belongs here after an afternoon entirely on foot.',
-       '<span class="han">意式风情区</span> — 原意大利租界，<strong>亚洲曾经唯一的意租界</strong>，几个街区内保留着约两百栋原始意式建筑。夜间亮灯，中心是马可波罗广场。餐厅很多，意菜和津菜都有——走了一下午，晚饭就在这里吃。']},
-   {m:1, t:["10 phút","10 min","10分钟"], a:["Đi bộ quay lại qua cầu Giải Phóng xuống quảng trường Tân Loan · 900m",
-     "Walk back over the Liberation Bridge down to Jinwan Plaza · 900m",
-     "沿解放桥走回，下到津湾广场 · 900米"]},
-   {t:["20:10–21:00","20:10–21:00","20:10–21:00"], b:["Hải Hà và quảng trường Tân Loan","The Hai River and Jinwan Plaza","海河与津湾广场"], tag:"free", dur:["50 phút","50 min","50分钟"],
-    d:['<span class="han">津湾广场</span> nằm ở khúc sông cong ngay đối diện ga Thiên Tân, dãy nhà kiểu châu Âu hình vòng cung lên đèn soi xuống mặt nước - đây là tấm ảnh mà ai đến Thiên Tân cũng chụp. Từ đây nhìn ngược lên phía tây bắc thấy <span class="han">天津之眼</span> Thiên Tân Chi Nhãn, vòng quay 120m dựng ngay <em>trên</em> cầu Vĩnh Lạc, đổi màu liên tục. Muốn tới tận nơi thì thêm 15 phút đi bộ dọc bờ sông, lên vòng quay 70 CNY một vòng 30 phút - nhưng nhìn từ xa cũng đã đủ đẹp và không mất tiền.',
-       '<span class="han">津湾广场</span> stands on the river bend directly opposite Tianjin station, its curved arc of European façades lit and reflected in the water - the photograph everyone who comes to Tianjin takes. Looking north-west from here you can see <span class="han">天津之眼</span>, the 120m wheel built <em>on top of</em> the Yongle Bridge, cycling through colours. Reaching it is another 15 minutes along the bank; a ride is CNY 70 for one 30-minute revolution - but the view from a distance is already good and costs nothing.',
-       '<span class="han">津湾广场</span>在正对天津站的河湾上，弧形排开的欧式立面亮着灯映在水里——这是每个到天津的人都会拍的一张。从这里向西北望得见<span class="han">天津之眼</span>，那座建在永乐桥<em>上</em>的120米摩天轮，灯光不断变色。想走到跟前还要沿河岸再走15分钟；登舱70元，转一圈30分钟——但远看已经足够好，而且不花钱。']},
-   {m:1, t:["20 phút","20 min","20分钟"], a:["Didi từ quảng trường Tân Loan về khách sạn · 5 km · 20–25 CNY","Didi from Jinwan Plaza back to the hotel · 5 km · CNY 20–25","从津湾广场打滴滴回酒店 · 5公里 · 20–25元"]},
-   {t:["21:30","21:30","21:30"], b:["Về khách sạn","Back at the hotel","回到酒店"],
-    d:["Hôm nay đi bộ nhiều và chuyển thành phố, nên nghỉ sớm. Mai là ngày duy nhất ở Thiên Tân không phải kéo vali.",
-       "A lot of walking and a change of city, so an early night. Tomorrow is the one Tianjin day with no suitcases to move.",
-       "今天走了很多路又换了城市，早点休息。明天是天津唯一不用拖行李的一天。"]}
+    { t:["07:30–08:15", "07:30–08:15", "07:30–08:15"], b:["Dậy, ăn sáng", "Up and breakfast", "起床、早餐"], dur:["45 phút", "45 min", "45分钟"] },
+    {
+      t:["08:30–10:30", "08:30–10:30", "08:30–10:30"],
+      b:["Thêm một điểm ở Bắc Kinh, gần khách sạn", "One more Beijing stop, close to the hotel", "在北京再看一个点，离酒店近"],
+      dur:["120 phút", "120 min", "120分钟"],
+      d:[
+        "Công viên rừng Đại Vận Hà gần Lê Viên, miễn phí, lá vàng dọc kênh.",
+        "The Grand Canal Forest Park near Liyuan, free, autumn leaves along the canal.",
+        "梨园附近的大运河森林公园，免费，运河两岸秋叶金黄。"
+      ]
+    },
+    { m:1, t:["25 phút", "25 min", "25分钟"], a:["Quay lại khách sạn", "Back to the hotel", "返回酒店"] },
+    {
+      t:["11:00–11:45", "11:00–11:45", "11:00–11:45"],
+      b:["Nghỉ, lấy đồ, kiểm tra lại hai vali", "Rest, collect the bags, check both suitcases", "休息、取行李、检查两个箱子"],
+      dur:["45 phút", "45 min", "45分钟"],
+      d:["Kiểm tra hành lý lần cuối trước khi rời Bắc Kinh.", "Final luggage check before leaving Beijing.", "离开北京前最后检查行李。"]
+    },
+    {
+      t:["12:00", "12:00", "12:00"],
+      b:["Trả phòng khách sạn Bắc Kinh", "Check out of the Beijing hotel", "北京酒店退房"],
+      tag:"pay",
+      tagx:["Trả phòng trước 12:00", "Check-out before 12:00", "12:00前退房"],
+      d:[
+        "Đặt Didi từ 11:45 vì đường ra ga Bắc Kinh Nam mất gần một tiếng.",
+        "Book the Didi for 11:45; the ride to Beijing South takes nearly an hour.",
+        "11:45约好滴滴，到北京南站近一小时。"
+      ]
+    },
+    {
+      m:1,
+      t:["55–60 phút", "55–60 min", "55–60分钟"],
+      a:[
+        "Didi từ Thông Châu ra ga <span class=\"han\">北京南站</span> Bắc Kinh Nam · 100–120 CNY · tới ga trước giờ tàu 30 phút",
+        "Didi from Tongzhou to <span class=\"han\">北京南站</span> Beijing South · CNY 100–120 · be there 30 minutes before the train",
+        "滴滴从通州到<span class=\"han\">北京南站</span> · 100–120元 · 开车前30分钟到站"
+      ]
+    },
+    {
+      t:["13:00 → 13:35", "13:00 → 13:35", "13:00 → 13:35"],
+      b:["Tàu cao tốc Bắc Kinh Nam đi Thiên Tân", "High-speed train Beijing South to Tianjin", "北京南站至天津的高铁"],
+      tag:"pay",
+      tagx:["55 CNY", "CNY 55", "55元"],
+      dur:["33 phút", "33 min", "33分钟"],
+      d:[
+        "Hạng hai 54,5 CNY, đặt trên 12306, quét hộ chiếu ở cửa soát. Xuống ga <span class=\"han\">天津站</span> ở trung tâm, không phải Thiên Tân Nam.",
+        "Second class CNY 54.5, book on 12306, scan the passport at the gate. Get off at <span class=\"han\">天津站</span> in the centre, not Tianjin South.",
+        "二等座54.5元，12306订票，刷护照进站。在市中心的<span class=\"han\">天津站</span>下车，不是天津南站。"
+      ]
+    },
+    {
+      m:1,
+      t:["25 phút", "25 min", "25分钟"],
+      a:[
+        "Didi từ ga Thiên Tân về khách sạn khu Hoà Bình · 5 km · 20–30 CNY",
+        "Didi from Tianjin Station to the Heping hotel · 5 km · CNY 20–30",
+        "滴滴从天津站到和平区酒店 · 5公里 · 20–30元"
+      ]
+    },
+    {
+      t:["14:15–14:40", "14:15–14:40", "14:15–14:40"],
+      b:["Nhận phòng khách sạn Thiên Tân", "Check in at the Tianjin hotel", "入住天津酒店"],
+      tag:"pay",
+      tagx:["Nhận phòng từ 14:00", "Check-in from 14:00", "14:00起入住"],
+      dur:["25 phút", "25 min", "25分钟"],
+      d:["Đặt hai đêm 29 và 30/10.", "Two nights, 29 and 30 Oct.", "订10月29、30日两晚。"]
+    },
+    {
+      t:["14:50–16:30", "14:50–16:30", "14:50–16:30"],
+      b:["Ngũ Đại Đạo", "The Five Great Avenues", "五大道"],
+      tag:"free",
+      dur:["100 phút", "100 min", "100分钟"],
+      d:[
+        "<span class=\"han\">五大道</span> - khoảng 2.000 biệt thự kiểu châu Âu thập niên 1920–40. Đi bộ dọc <span class=\"han\">睦南道</span> và <span class=\"han\">重庆道</span>.",
+        "<span class=\"han\">五大道</span> - about 2,000 European-style villas from the 1920s–40s. Walk <span class=\"han\">睦南道</span> and <span class=\"han\">重庆道</span>.",
+        "<span class=\"han\">五大道</span>——约两千栋1920–40年代的欧式小洋楼。沿<span class=\"han\">睦南道</span>和<span class=\"han\">重庆道</span>步行。"
+      ]
+    },
+    {
+      m:1,
+      t:["15 phút", "15 min", "15分钟"],
+      a:[
+        "Đi bộ hoặc xe đạp chung về phía đông bắc tới khu Tiểu Bạch Lâu · 1,5 km",
+        "Walk or take a shared bike north-east to the Xiaobailou quarter · 1.5 km",
+        "步行或骑共享单车向东北到小白楼一带 · 1.5公里"
+      ]
+    },
+    {
+      t:["16:45–17:20", "16:45–17:20", "16:45–17:20"],
+      b:["Tiểu Bạch Lâu", "Xiaobailou", "小白楼"],
+      tag:"free",
+      dur:["35 phút", "35 min", "35分钟"],
+      d:[
+        "<span class=\"han\">小白楼</span> - đi ngang qua để nối sang Giải Phóng Bắc Lộ. Trời tối khoảng 17:20.",
+        "<span class=\"han\">小白楼</span> - walk through on the way to Jiefang North Road. Dark around 17:20.",
+        "<span class=\"han\">小白楼</span>——路过，连接解放北路。约17:20天黑。"
+      ]
+    },
+    {
+      m:1,
+      t:["12 phút", "12 min", "12分钟"],
+      a:["Đi bộ lên phía bắc theo đường Giải Phóng Bắc · 1 km", "Walk north along Jiefang North Road · 1 km", "沿解放北路向北步行 · 1公里"]
+    },
+    {
+      t:["17:35–18:15", "17:35–18:15", "17:35–18:15"],
+      b:["Đường Giải Phóng Bắc", "Jiefang North Road", "解放北路"],
+      tag:"free",
+      dur:["40 phút", "40 min", "40分钟"],
+      d:[
+        "<span class=\"han\">解放北路</span> - phố ngân hàng tân cổ điển, tối lên đèn. Khách sạn <span class=\"han\">利顺德</span> (1863) ở đầu phố.",
+        "<span class=\"han\">解放北路</span> - a street of neoclassical banks, lit up at night. The <span class=\"han\">利顺德</span> hotel (1863) stands at the north end.",
+        "<span class=\"han\">解放北路</span>——新古典银行街，夜间亮灯。<span class=\"han\">利顺德</span>（1863年）在北端。"
+      ]
+    },
+    {
+      m:1,
+      t:["15 phút", "15 min", "15分钟"],
+      a:["Đi bộ qua cầu Giải Phóng sang khu phố kiểu Ý · 1,2 km", "Walk over Jiefang Bridge to the Italian quarter · 1.2 km", "步行过解放桥到意式风情区 · 1.2公里"]
+    },
+    {
+      t:["18:30–20:00", "18:30–20:00", "18:30–20:00"],
+      b:["Khu phố kiểu Ý, ăn tối", "The Italian quarter, dinner", "意式风情区，晚餐"],
+      tag:"free",
+      dur:["90 phút", "90 min", "90分钟"],
+      d:[
+        "<span class=\"han\">意式风情区</span> - khu phố kiểu Ý quanh quảng trường Marco Polo. Ăn tối ở đây.",
+        "<span class=\"han\">意式风情区</span> - the Italian quarter around Marco Polo Square. Dinner here.",
+        "<span class=\"han\">意式风情区</span>——马可·波罗广场一带。在这里吃晚饭。"
+      ]
+    },
+    {
+      m:1,
+      t:["10 phút", "10 min", "10分钟"],
+      a:[
+        "Đi bộ quay lại qua cầu Giải Phóng xuống quảng trường Tân Loan · 900m",
+        "Walk back over the Liberation Bridge down to Jinwan Plaza · 900m",
+        "沿解放桥走回，下到津湾广场 · 900米"
+      ]
+    },
+    {
+      t:["20:10–21:00", "20:10–21:00", "20:10–21:00"],
+      b:["Hải Hà và quảng trường Tân Loan", "The Hai River and Jinwan Plaza", "海河与津湾广场"],
+      tag:"free",
+      dur:["50 phút", "50 min", "50分钟"],
+      d:[
+        "<span class=\"han\">津湾广场</span> lên đèn bên sông, nhìn sang vòng quay <span class=\"han\">天津之眼</span> (lên vòng quay 70 CNY).",
+        "<span class=\"han\">津湾广场</span> lit up on the river, with the <span class=\"han\">天津之眼</span> wheel in view (a ride is CNY 70).",
+        "<span class=\"han\">津湾广场</span>河边夜景，远望<span class=\"han\">天津之眼</span>（摩天轮70元）。"
+      ]
+    },
+    {
+      m:1,
+      t:["20 phút", "20 min", "20分钟"],
+      a:[
+        "Didi từ quảng trường Tân Loan về khách sạn · 5 km · 20–25 CNY",
+        "Didi from Jinwan Plaza back to the hotel · 5 km · CNY 20–25",
+        "从津湾广场打滴滴回酒店 · 5公里 · 20–25元"
+      ]
+    },
+    { t:["21:30", "21:30", "21:30"], b:["Về khách sạn", "Back at the hotel", "回到酒店"], d:["Nghỉ sớm.", "Early night.", "早点休息。"] }
   ]
 },
 
-{ city:"tj", n:"30", dow:"T6", icon:"g-park", p:["md"],
-  head:["Thư viện Tân Hải, rồi kiến trúc Thiên Tân","The Binhai Library, then Tianjin's architecture","滨海图书馆，然后是天津的建筑"],
-  intro:["Ngày duy nhất trong cả chuyến không phải kéo vali và không phải bắt chuyến gì. Buổi sáng ra Tân Hải cách trung tâm 45 km để xem <strong>thư viện được gọi là đẹp nhất thế giới</strong>, buổi chiều quay về trung tâm cho Nhà Sứ và khu kiến trúc châu Âu. Tối về sớm vì mai dậy lúc 4:40.",
-   "The one day of the whole trip with no suitcase to move and no connection to catch. The morning goes out to Binhai, 45 km from the centre, for <strong>the library people call the most beautiful in the world</strong>; the afternoon comes back for the Porcelain House and the European quarter. An early night, because tomorrow starts at 04:40.",
-   "全程唯一不用拖行李、也不用赶车的一天。上午去距市中心45公里的滨海，看<strong>被称为世界最美的图书馆</strong>；下午回市区看瓷房子和欧式建筑区。晚上早回，因为明天4:40就要起床。"],
+{
+  city:"tj",
+  n:"30",
+  dow:"T6",
+  icon:"g-park",
+  p:["md"],
+  head:["Thư viện Tân Hải, rồi kiến trúc Thiên Tân", "The Binhai Library, then Tianjin's architecture", "滨海图书馆，然后是天津的建筑"],
   slots:[
-   {t:["07:30–08:20","07:30–08:20","07:30–08:20"], b:["Dậy, ăn sáng, rời khách sạn","Up, breakfast, leave the hotel","起床、早餐、出门"], dur:["50 phút","50 min","50分钟"]},
-   {m:1, t:["60 phút","60 min","60分钟"], a:['Tuyến 1 tới <span class="han">天津站</span> → đổi tuyến 9 (tàu nhẹ Tân Tân) → ga <span class="han">市民广场</span> Thị Dân Quảng Trường · 8 CNY · hoặc Didi 45 phút, 130–160 CNY',
-     'Line 1 to <span class="han">天津站</span> Tianjin Station → change to Line 9, the Jinbin light rail → <span class="han">市民广场</span> Shimin Guangchang · CNY 8 · or a 45-minute Didi, CNY 130–160',
-     '1号线到<span class="han">天津站</span> → 换9号线（津滨轻轨）→ <span class="han">市民广场</span>站 · 8元 · 或打滴滴45分钟，130–160元']},
-   {t:["09:30–11:30","09:30–11:30","09:30–11:30"], b:["Thư viện Tân Hải Thiên Tân","Tianjin Binhai Library","天津滨海图书馆"], tag:"free", tagx:["Miễn phí, nên đặt chỗ","Free, reservation advised","免费，建议预约"], dur:["120 phút","120 min","120分钟"],
-    d:['<span class="han">天津滨海图书馆</span> - do MVRDV cùng viện thiết kế đô thị Thiên Tân dựng, mở cuối năm 2017. Sảnh chính là một hẻm núi trắng cao 34m, các bậc kệ sách uốn lượn như đường đồng mức phủ kín từ sàn lên trần, ôm lấy một quả cầu tròn ở giữa chính là phòng chiếu - người ta gọi nó là <em>con mắt</em>. Thành thật một điều: các kệ ở tầng cao nhất là <strong>hình sách in trên nhôm</strong> chứ không phải sách thật, vì lý do phòng cháy; sách thật nằm ở các tầng dưới và trong các phòng hai bên. Biết trước thì không hụt hẫng, và nó vẫn là một trong những không gian đẹp nhất mà bạn sẽ thấy trong chuyến này. Mở 9:00–17:00, nghỉ thứ hai. Vào tự do, nhưng cuối tuần đông nên nếu đặt chỗ trước qua mini-program WeChat thì yên tâm hơn.',
-       '<span class="han">天津滨海图书馆</span> - by MVRDV with the Tianjin Urban Planning and Design Institute, opened in late 2017. The main hall is a 34m white canyon whose shelving ripples floor to ceiling like contour lines, wrapped around a sphere at the centre that is the auditorium - people call it <em>the eye</em>. One honest point: the upper tiers are <strong>images of books printed on aluminium</strong>, not real books, for fire safety; the real collection is on the lower floors and in the rooms either side. Knowing that beforehand takes the sting out, and it is still one of the finest spaces you will see on this trip. Open 09:00–17:00, closed Mondays. Free entry, though it gets busy, so a WeChat mini-program reservation is safer.',
-       '<span class="han">天津滨海图书馆</span> — MVRDV与天津市城市规划设计研究院合作，2017年底开馆。主厅是一道34米高的白色峡谷，书架如等高线般从地面起伏到天花板，环抱中央一个球体，那正是报告厅——人们称它为<em>滨海之眼</em>。有一点要如实说明：高处的书架是出于消防考虑<strong>印在铝板上的书籍图案</strong>，不是真书；真正的藏书在低层和两侧房间。事先知道就不会失望，而它依然是这趟旅程里最漂亮的空间之一。开放9:00–17:00，周一闭馆。免费入内，但人多，通过微信小程序预约更稳妥。']},
-   {t:["11:30–12:15","11:30–12:15","11:30–12:15"], b:["Ăn trưa ở Trung tâm Văn hoá Tân Hải","Lunch at the Binhai Cultural Centre","在滨海文化中心吃午饭"], dur:["45 phút","45 min","45分钟"],
-    d:["Thư viện nằm trong quần thể năm bảo tàng nối nhau bằng một mái vòm kính dài. Nếu còn thời gian thì Bảo tàng Thám hiểm Tân Hải ngay bên cạnh cũng miễn phí, nhưng đừng ở lại quá 12:15.",
-       "The library sits in a complex of five museums linked by a long glazed canopy. If time allows, the Binhai Exploratorium next door is also free, but do not stay past 12:15.",
-       "图书馆位于由一条长玻璃顶棚串联的五馆建筑群中。若时间允许，隔壁的滨海探索馆同样免费，但不要超过12:15。"]},
-   {m:1, t:["65 phút","65 min","65分钟"], a:["Quay lại trung tâm Thiên Tân bằng đúng đường cũ · 8 CNY","Back into central Tianjin the same way · CNY 8","原路返回天津市区 · 8元"]},
-   {t:["13:30–15:00","13:30–15:00","13:30–15:00"], b:["Nhà Sứ","The Porcelain House","瓷房子"], tag:"pay", tagx:["50 CNY","CNY 50","50元"], dur:["90 phút","90 min","90分钟"],
-    d:['<span class="han">瓷房子</span> ở số 72 đường Xích Phong - một biệt thự Pháp xây năm 1922, được một nhà sưu tầm mua lại năm 2000 và dán kín từ tường ngoài tới hàng rào bằng <strong>hơn bốn triệu mảnh sứ cổ, hơn hai mươi nghìn cái bát đĩa và bốn trăm pho tượng đá</strong>, phần lớn là đồ đời Đường tới đời Thanh. Kết quả nằm đâu đó giữa bảo tàng và tác phẩm ngoài lề, và không giống bất cứ thứ gì khác ở Trung Quốc. Vé 50 CNY; nếu thấy đắt thì đứng ngoài chụp cũng đã được phần lớn cái hay, vì mặt ngoài mới là toàn bộ ý tưởng. Cách Ngũ Đại Đạo 15 phút đi bộ.',
-       '<span class="han">瓷房子</span> at 72 Chifeng Road - a French villa of 1922 bought by a collector in 2000 and covered, from outer wall to railings, in <strong>over four million pieces of antique porcelain, more than twenty thousand bowls and plates and four hundred stone figures</strong>, mostly Tang through Qing. The result lands somewhere between a museum and an outsider artwork, and resembles nothing else in China. Entry is CNY 50; if that feels steep, the outside carries most of the point, since the façade is the whole idea. Fifteen minutes on foot from the Five Great Avenues.',
-       '<span class="han">瓷房子</span>位于赤峰道72号——1922年的法式别墅，2000年被一位收藏家买下，从外墙到围栏贴满<strong>四百多万片古瓷、两万多件碗碟和四百尊石造像</strong>，多为唐至清的器物。成品介于博物馆与素人艺术之间，在中国找不到第二个。门票50元；若嫌贵，在外面拍照也已得其大半，因为外立面本身就是全部构想。距五大道步行15分钟。']},
-   {m:1, t:["10 phút","10 min","10分钟"], a:["Đi bộ quanh khu Hoà Bình theo đường Tân Hoa và Sơn Đông","Walk the Heping quarter along Xinhua Road and Shandong Road","沿新华路和山东路步行游和平区"]},
-   {t:["15:10–16:30","15:10–16:30","15:10–16:30"], b:["Khu kiến trúc châu Âu quận Hoà Bình","The European quarter in Heping","和平区欧式建筑群"], tag:"free", dur:["80 phút","80 min","80分钟"],
-    d:["Đây là phần bù cho hôm qua: tô giới cũ ở Thiên Tân rộng hơn nhiều so với những gì đi được trong một buổi chiều. Đường Tân Hoa, đường Sơn Đông và các ngõ cắt ngang quanh Nhà Sứ còn rất nhiều nhà gạch đỏ, cửa vòm và ban công sắt uốn, mà gần như không có khách du lịch. Nếu thấy đã đủ thì bỏ qua phần này và quay lại Ngũ Đại Đạo chụp thêm lúc nắng xế.",
-       "This is the make-up for yesterday: the old concessions in Tianjin are far larger than one afternoon can cover. Xinhua Road, Shandong Road and the cross-lanes around the Porcelain House still hold plenty of red brick, arched doorways and wrought-iron balconies, with almost no visitors. If it feels like enough, skip this and go back to the Five Great Avenues for more photographs in the late light.",
-       "这是对昨天的补足：天津的旧租界远比一个下午能走完的大得多。新华路、山东路以及瓷房子周边的横巷里还有大量红砖、拱门和铁艺阳台，游客几乎没有。若觉得够了，也可以跳过这段，回五大道趁斜阳再拍一轮。"]},
-   {t:["16:40–17:30","16:40–17:30","16:40–17:30"], b:["Quay lại Ngũ Đại Đạo nếu còn muốn chụp","Back to the Five Great Avenues if you still want photographs","若还想拍照，再回五大道"], tag:"free", dur:["50 phút","50 min","50分钟"],
-    d:["Trời tối khoảng 17:20 nên đây là khung ánh sáng cuối cùng của cả chuyến ở Thiên Tân. Không bắt buộc - nếu mỏi chân thì về khách sạn nghỉ sớm hơn cũng hoàn toàn hợp lý.",
-       "It gets dark around 17:20, so this is the last daylight in Tianjin. Not compulsory - if your legs have had enough, going back early is entirely reasonable.",
-       "约17:20天黑，所以这是在天津的最后一段日光。不是必须的——腿累了就早点回酒店，完全合理。"]},
-   {t:["17:45–18:45","17:45–18:45","17:45–18:45"], b:["Ăn tối gần khách sạn","Dinner near the hotel","在酒店附近吃晚饭"], dur:["60 phút","60 min","60分钟"],
-    d:["Món riêng của Thiên Tân đáng thử: bánh bao Cẩu Bất Lý <span class=\"han\">狗不理</span>, quẩy giòn Thập Bát Nhai <span class=\"han\">十八街麻花</span> mua về làm quà, và bánh rán Nhĩ Đoá Nhãn.",
-       "Tianjin's own things are worth trying: Goubuli <span class=\"han\">狗不理</span> steamed buns, Shibajie <span class=\"han\">十八街麻花</span> fried dough twists to take home as a gift, and Erduoyan fried cakes.",
-       "天津本地的东西值得一试：<span class=\"han\">狗不理</span>包子、可带回去当伴手礼的<span class=\"han\">十八街麻花</span>，还有耳朵眼炸糕。"]},
-   {t:["19:00","19:00","19:00"], b:["Về khách sạn, đóng vali, đặt chuông 04:40","Back at the hotel, pack, alarm at 04:40","回酒店收拾行李，闹钟定04:40"],
-    d:["Đóng xong hai vali tối nay, không để sáng mai. <strong>Đặt trước xe ra sân bay trên app Didi cho khung 04:50</strong> - giờ đó gọi mới rất dễ phải chờ, và không có chuyến metro nào chạy sớm như vậy.",
-       "Both cases packed tonight, nothing left for the morning. <strong>Pre-book the airport car in the Didi app for 04:50</strong> - hailing at that hour can mean a long wait, and no metro runs that early.",
-       "今晚就把两个箱子收拾好，别留到早上。<strong>在滴滴App里预约04:50去机场的车</strong>——那个时间现叫很可能要等，地铁也没有这么早的班次。"]}
+    {
+      t:["07:30–08:20", "07:30–08:20", "07:30–08:20"],
+      b:["Dậy, ăn sáng, rời khách sạn", "Up, breakfast, leave the hotel", "起床、早餐、出门"],
+      dur:["50 phút", "50 min", "50分钟"]
+    },
+    {
+      m:1,
+      t:["60 phút", "60 min", "60分钟"],
+      a:[
+        "Tuyến 1 tới <span class=\"han\">天津站</span> → đổi tuyến 9 → ga <span class=\"han\">市民广场</span> · 8 CNY · hoặc Didi 45 phút, 130–160 CNY",
+        "Line 1 to <span class=\"han\">天津站</span> → Line 9 → <span class=\"han\">市民广场</span> · CNY 8 · or Didi 45 min, CNY 130–160",
+        "1号线到<span class=\"han\">天津站</span> → 换9号线 → <span class=\"han\">市民广场</span> · 8元 · 或滴滴45分钟，130–160元"
+      ]
+    },
+    {
+      t:["09:30–11:30", "09:30–11:30", "09:30–11:30"],
+      b:["Thư viện Tân Hải Thiên Tân", "Tianjin Binhai Library", "天津滨海图书馆"],
+      tag:"free",
+      tagx:["Miễn phí, nên đặt chỗ", "Free, reservation advised", "免费，建议预约"],
+      dur:["120 phút", "120 min", "120分钟"],
+      d:[
+        "<span class=\"han\">天津滨海图书馆</span> - sảnh kệ sách uốn lượn quanh quả cầu ở giữa. Kệ trên cao là hình in, sách thật ở tầng dưới. Mở 9:00–17:00, nghỉ thứ hai.",
+        "<span class=\"han\">天津滨海图书馆</span> - terraced shelves curving around a central sphere. The top shelves are printed images; real books are lower down. Open 09:00–17:00, closed Mondays.",
+        "<span class=\"han\">天津滨海图书馆</span>——层层书架环绕中央球体。高处书架是印刷图案，真书在下层。9:00–17:00开放，周一闭馆。"
+      ]
+    },
+    {
+      t:["11:30–12:15", "11:30–12:15", "11:30–12:15"],
+      b:["Ăn trưa ở Trung tâm Văn hoá Tân Hải", "Lunch at the Binhai Cultural Centre", "在滨海文化中心吃午饭"],
+      dur:["45 phút", "45 min", "45分钟"],
+      d:["Rời trước 12:15.", "Leave by 12:15.", "12:15前离开。"]
+    },
+    {
+      m:1,
+      t:["65 phút", "65 min", "65分钟"],
+      a:["Quay lại trung tâm Thiên Tân bằng đúng đường cũ · 8 CNY", "Back into central Tianjin the same way · CNY 8", "原路返回天津市区 · 8元"]
+    },
+    {
+      t:["13:30–15:00", "13:30–15:00", "13:30–15:00"],
+      b:["Nhà Sứ", "The Porcelain House", "瓷房子"],
+      tag:"pay",
+      tagx:["50 CNY", "CNY 50", "50元"],
+      dur:["90 phút", "90 min", "90分钟"],
+      d:[
+        "<span class=\"han\">瓷房子</span>, 72 đường Xích Phong - biệt thự phủ kín mảnh sứ cổ. Vé 50 CNY, đứng ngoài chụp cũng được.",
+        "<span class=\"han\">瓷房子</span>, 72 Chifeng Road - a villa covered in antique porcelain shards. CNY 50, or just photograph the outside.",
+        "<span class=\"han\">瓷房子</span>，赤峰道72号——贴满古瓷片的洋楼。门票50元，门外拍照也可以。"
+      ]
+    },
+    {
+      m:1,
+      t:["10 phút", "10 min", "10分钟"],
+      a:["Đi bộ quanh khu Hoà Bình theo đường Tân Hoa và Sơn Đông", "Walk the Heping quarter along Xinhua Road and Shandong Road", "沿新华路和山东路步行游和平区"]
+    },
+    {
+      t:["15:10–16:30", "15:10–16:30", "15:10–16:30"],
+      b:["Khu kiến trúc châu Âu quận Hoà Bình", "The European quarter in Heping", "和平区欧式建筑群"],
+      tag:"free",
+      dur:["80 phút", "80 min", "80分钟"],
+      d:[
+        "Đường Tân Hoa, đường Sơn Đông: nhà gạch đỏ, ban công sắt, ít khách.",
+        "Xinhua and Shandong Roads: red-brick houses, iron balconies, few tourists.",
+        "新华路、山东路：红砖楼、铁艺阳台，游客少。"
+      ]
+    },
+    {
+      t:["17:45–18:45", "17:45–18:45", "17:45–18:45"],
+      b:["Ăn tối gần khách sạn", "Dinner near the hotel", "在酒店附近吃晚饭"],
+      dur:["60 phút", "60 min", "60分钟"],
+      d:[
+        "Thử bánh bao <span class=\"han\">狗不理</span>, quẩy <span class=\"han\">十八街麻花</span> mua làm quà.",
+        "Try <span class=\"han\">狗不理</span> buns; <span class=\"han\">十八街麻花</span> twists make good gifts.",
+        "尝尝<span class=\"han\">狗不理</span>包子，买<span class=\"han\">十八街麻花</span>当礼物。"
+      ]
+    },
+    {
+      t:["19:00", "19:00", "19:00"],
+      b:["Về khách sạn, đóng vali, đặt chuông 04:40", "Back at the hotel, pack, alarm at 04:40", "回酒店收拾行李，闹钟定04:40"],
+      d:["Đóng vali tối nay. Đặt Didi trước cho khung 04:50.", "Pack tonight. Pre-book a Didi for 04:50.", "今晚收拾好行李。提前约好04:50的滴滴。"]
+    }
   ]
 },
 
-/* ================= SHENZHEN ================= */
-{ city:"sz", n:"31", dow:"T7", icon:"g-park", p:["md"],
-  head:["Thiên Tân đi Thâm Quyến, và một buổi tối Halloween","Tianjin to Shenzhen, and a Halloween evening","天津飞深圳，还有一个万圣夜"],
-  intro:["Bay xuyên từ đầu bắc xuống đầu nam Trung Quốc, 3 giờ 40 phút và chênh nhau hơn mười lăm độ. Đây cũng là ngày duy nhất trong cả chuyến phải lấy hành lý ký gửi ra khỏi sân bay, vì hai chặng là hai vé rời nhau cách nhau qua đêm. Và tình cờ, 31/10 là Halloween - Cửa sổ Thế giới có sự kiện tối.",
-   "A flight from the far north to the far south of China, 3h40 and more than fifteen degrees warmer. It is also the only day of the trip when the checked bag has to leave the airport, because the two legs are separate tickets an overnight apart. And as it happens, 31 Oct is Halloween - Window of the World runs an evening event.",
-   "从中国最北飞到最南，3小时40分，温差十五度以上。这也是全程唯一一次要把托运行李带出机场的日子，因为两段航班是相隔一夜的独立机票。而且恰好，10月31日是万圣夜——世界之窗有夜间活动。"],
+{
+  city:"sz",
+  n:"31",
+  dow:"T7",
+  icon:"g-park",
+  p:["md"],
+  head:["Thiên Tân đi Thâm Quyến, và một buổi tối Halloween", "Tianjin to Shenzhen, and a Halloween evening", "天津飞深圳，还有一个万圣夜"],
   slots:[
-   {t:["04:40–04:50","04:40–04:50","04:40–04:50"], b:["Dậy, trả phòng khách sạn Thiên Tân","Up, check out of the Tianjin hotel","起床，天津酒店退房"], dur:["10 phút","10 min","10分钟"],
-    d:["Báo lễ tân từ tối hôm trước là sẽ trả phòng lúc 4:50, để họ chuẩn bị sẵn và không phải chờ.",
-       "Tell reception the night before that you are checking out at 04:50, so it is ready and there is no waiting.",
-       "前一晚就告诉前台04:50退房，让他们准备好，不必等。"]},
-   {m:1, t:["35 phút","35 min","35分钟"], a:["Didi đã đặt trước từ khách sạn ra Thiên Tân Tân Hải nhà ga T2 · 22 km · 60–80 CNY · giờ này đường trống",
-     "The pre-booked Didi from the hotel to Tianjin Binhai Terminal 2 · 22 km · CNY 60–80 · empty roads at this hour",
-     "预约好的滴滴从酒店到天津滨海T2 · 22公里 · 60–80元 · 这个时间路上很空"]},
-   {t:["05:30","05:30","05:30"], b:["Có mặt ở Thiên Tân Tân Hải T2, ký gửi vali","At Tianjin Binhai T2, check the bags in","抵达天津滨海T2，办理托运"], dur:["sớm 2,4 giờ","2h25 early","提前2小时25分"],
-    d:["Chuyến nội địa nên 2 giờ 25 là dư, nhưng quầy Air China mở trước giờ bay khoảng 2 tiếng nên có thể phải chờ một lát. Ký gửi <strong>cả hai vali</strong> để tay không suốt cả ngày ở Thâm Quyến.",
-       "A domestic flight, so 2h25 is more than enough, though the Air China counter opens about two hours before departure, so there may be a short wait. Check <strong>both suitcases</strong> so your hands are free all day in Shenzhen.",
-       "国内航班，2小时25分绰绰有余，不过国航柜台约在起飞前两小时开放，可能要等一会儿。<strong>两个箱子都托运</strong>，这样在深圳一整天都能空手。"]},
-   {t:["07:55 → 11:35","07:55 → 11:35","07:55 → 11:35"], b:["Thiên Tân Tân Hải T2 → Bảo An Thâm Quyến · CA2813","Tianjin Binhai T2 → Shenzhen Bao'an · CA2813","天津滨海T2 → 深圳宝安 · CA2813"], dur:["3 giờ 40","3h40","3小时40分"],
-    d:["Air China. Hạ cánh Thâm Quyến 11:35, nhiệt độ khoảng 22–29°C - chênh với Thiên Tân sáng nay hơn mười lăm độ. Để sẵn một bộ đồ mỏng ở trên cùng túi xách tay và thay ngay khi xuống máy bay.",
-       "Air China. Landing in Shenzhen at 11:35 at around 22–29°C, more than fifteen degrees warmer than Tianjin this morning. Keep a light change at the top of the cabin bag and change as soon as you land.",
-       "国航。11:35降落深圳，约22–29°C，比今天早上的天津高十五度以上。把一套薄衣服放在随身包最上面，一下飞机就换。"]},
-   {t:["11:35–12:20","11:35–12:20","11:35–12:20"], b:["Xuống máy bay và nhận hai vali","Off the plane and both suitcases back","下机并取回两个箱子"], tag:"pay", tagx:["Bắt buộc lấy hành lý","Baggage must be collected","必须提取行李"], dur:["45 phút","45 min","45分钟"],
-    d:["<strong>Đây là điểm khác hẳn chặng quá cảnh Thượng Hải hôm 21/10.</strong> Hai chặng là hai vé rời nhau, cách nhau qua đêm, nên hành lý không đi thẳng được: phải lấy ra hôm nay và ký gửi lại sáng mai. Bảo An chỉ có một nhà ga T3, băng chuyền hành lý ngay sau cửa ra.",
-       "<strong>This is where it differs from the Shanghai layover on 21 Oct.</strong> The two legs are separate tickets an overnight apart, so nothing runs through: collect the bags today and recheck them tomorrow morning. Bao'an has a single terminal, T3, with the belts just past the exit.",
-       "<strong>这一点与10月21日的上海中转完全不同。</strong>两段是相隔一夜的独立机票，行李无法直挂：今天要取出，明早重新托运。宝安只有T3一座航站楼，行李转盘就在出口内侧。"]},
-   {m:1, t:["25 phút","25 min","25分钟"], a:["Didi từ Bảo An về khách sạn gần sân bay · 5–8 km · 25–35 CNY",
-     "Didi from Bao'an to the hotel near the airport · 5–8 km · CNY 25–35",
-     "从宝安打滴滴到机场附近的酒店 · 5–8公里 · 25–35元"]},
-   {t:["12:45","12:45","12:45"], b:["Gửi hai vali ở lễ tân, chưa nhận phòng","Leave both cases at reception without checking in","把两个箱子存在前台，先不入住"],
-    d:["Nhận phòng chính thức từ 14:00, nhưng lễ tân nhận giữ hành lý bất cứ lúc nào. <strong>Đây là mẹo quan trọng nhất của ngày hôm nay</strong>: đợi tới 14:00 để nhận phòng là mất trắng buổi chiều đẹp nhất. Nhắn trước cho khách sạn một câu để họ biết bạn tới sớm.",
-       "Formal check-in is from 14:00, but reception will hold luggage at any hour. <strong>This is the most important trick of the day</strong>: waiting until 14:00 to check in throws away the best part of the afternoon. Message the hotel beforehand so they expect you early.",
-       "正式入住从14:00开始，但前台任何时候都可以寄存行李。<strong>这是今天最重要的一点</strong>：等到14:00再入住就白白浪费了下午最好的时段。提前给酒店发条消息，告诉他们你会早到。"]},
-   {m:1, t:["45 phút","45 min","45分钟"], a:['Didi tới Cửa sổ Thế giới · 30 km · 90–110 CNY · hoặc tuyến 11 tới <span class="han">前海湾</span> rồi đổi tuyến 1 tới ga <span class="han">世界之窗</span>, khoảng 50 phút, 8 CNY',
-     'Didi to Window of the World · 30 km · CNY 90–110 · or Line 11 to <span class="han">前海湾</span> Qianhaiwan then Line 1 to <span class="han">世界之窗</span>, about 50 minutes, CNY 8',
-     '打滴滴到世界之窗 · 30公里 · 90–110元 · 或11号线到<span class="han">前海湾</span>换1号线到<span class="han">世界之窗</span>站，约50分钟，8元']},
-   {t:["13:40–17:40","13:40–17:40","13:40–17:40"], b:["Cửa sổ Thế giới","Window of the World","世界之窗"], tag:"pay", tagx:["220 CNY","CNY 220","220元"], dur:["240 phút","240 min","240分钟"],
-    d:['<span class="han">世界之窗</span> - công viên 48 ha mở năm 1994, hơn 130 mô hình công trình nổi tiếng thế giới thu nhỏ theo các tỷ lệ khác nhau, chia thành tám khu theo châu lục. Tháp Eiffel cao 108m ở giữa là mốc để định hướng cả công viên. Bốn tiếng ban ngày là <strong>ưu tiên đúng</strong>: các mô hình chỉ đẹp khi còn ánh sáng, còn buổi tối thì đèn và sự kiện mới là phần chính. Vé ban ngày khoảng 220 CNY, đặt trước trên Trip.com hoặc mini-program WeChat.',
-       '<span class="han">世界之窗</span> - a 48-hectare park opened in 1994 holding more than 130 scaled replicas of world landmarks at varying ratios, arranged in eight continental zones. The 108m Eiffel Tower at the centre is the landmark to navigate by. Four daylight hours is <strong>the right priority</strong>: the replicas only photograph well in light, while the evening belongs to the lighting and the events. A day ticket is about CNY 220, bookable on Trip.com or a WeChat mini-program.',
-       '<span class="han">世界之窗</span> — 1994年开放的48公顷园区，130多处按不同比例缩建的世界地标，分为八个洲际区。中央108米高的埃菲尔铁塔是全园的方向标。四个白天小时是<strong>正确的优先级</strong>：模型只有在有光时才好看，晚上则以灯光和活动为主。日间票约220元，可在携程或微信小程序预订。']},
-   {t:["Trong lịch của bạn","In your own plan","你自己的安排"], b:["Melania Town","Melania Town","Melania Town"], dur:["đi liền sau","straight after","紧接其后"],
-    d:["Điểm này lấy đúng theo kế hoạch bạn tự lập, đi liền sau Cửa sổ Thế giới trong cùng khung 13:40–17:40. <strong>Nên lưu sẵn tên tiếng Trung của nó vào Amap trước khi bay</strong>, vì tên tiếng Anh này không tra được trên bản đồ Trung Quốc và tài xế Didi cũng sẽ không nhận ra. Nếu nó nằm cách Cửa sổ Thế giới hơn 15 phút thì nên cắt bớt thời gian trong công viên chứ đừng cắt phần ánh sáng ban ngày.",
-       "This one comes straight from your own plan, right after Window of the World inside the same 13:40–17:40 block. <strong>Save its Chinese name into Amap before flying</strong>, because the English name will not resolve on Chinese maps and a Didi driver will not recognise it either. If it turns out to be more than 15 minutes from Window of the World, trim time inside the park rather than losing the daylight.",
-       "这一项来自你自己的计划，安排在世界之窗之后、同在13:40–17:40这一段。<strong>出发前先把它的中文名存进高德</strong>，因为这个英文名在中国地图上搜不到，滴滴司机也认不出。若它距世界之窗超过15分钟，就压缩园内时间，而不要牺牲白天的光线。"]},
-   {t:["17:45–20:45","17:45–20:45","17:45–20:45"], b:["Buổi tối Halloween và giờ lên đèn","Halloween evening and lights-on","万圣夜与亮灯时分"], tag:"free", dur:["180 phút","180 min","180分钟"],
-    d:["Thâm Quyến tối khoảng 18:05, muộn hơn Bắc Kinh gần một tiếng vì ở xa về phía nam - thêm được gần một tiếng ánh sáng so với các ngày trước. Cửa sổ Thế giới mở tới khoảng 22:30 và <strong>31/10 đúng dịp Halloween</strong> nên thường có diễu hành, hoá trang và biểu diễn buổi tối; kiểm tra lịch sự kiện trên mini-program trước khi đi để biết giờ và địa điểm. Ăn tối luôn trong công viên.",
-       "Shenzhen gets dark around 18:05, nearly an hour later than Beijing because it lies so much further south - almost an extra hour of light compared with earlier days. Window of the World stays open until about 22:30 and <strong>31 Oct is Halloween</strong>, so expect a parade, costumes and evening shows; check the event schedule on the mini-program beforehand for times and places. Have dinner inside the park.",
-       "深圳约18:05天黑，比北京晚近一小时，因为纬度低得多——比前几天多出近一小时的光线。世界之窗开到约22:30，而<strong>10月31日正是万圣夜</strong>，通常有巡游、变装和夜间演出；出发前先在小程序上查活动时间和地点。晚饭就在园内吃。"]},
-   {m:1, t:["40 phút","40 min","40分钟"], a:["Didi từ Cửa sổ Thế giới về khách sạn gần Bảo An · 30 km · 90–110 CNY · giờ này metro vẫn chạy nhưng có hai chặng đổi tàu",
-     "Didi from Window of the World back to the hotel near Bao'an · 30 km · CNY 90–110 · the metro still runs at this hour but needs two changes",
-     "从世界之窗打滴滴回宝安附近的酒店 · 30公里 · 90–110元 · 这个时间地铁还有车，但要换两次"]},
-   {t:["21:45","21:45","21:45"], b:["Về khách sạn, nhận phòng, lấy lại hai vali","Back at the hotel, check in, collect both cases","回酒店办入住，取回两个箱子"],
-    d:["Soạn sẵn giấy tờ cho sáng mai và để một bộ đồ ra ngoài. Ngủ được khoảng bảy tiếng trước khi dậy lúc 5:20.",
-       "Lay out the documents for the morning and leave one change of clothes out. That gives about seven hours before the 05:20 alarm.",
-       "把明早要用的证件准备好，留一套衣服在外面。这样在5:20起床前还能睡约七小时。"]}
-  ],
-  callouts:[
-   { h:["Hai chỗ trong lịch tối nay cần nới ra","Two places in tonight's plan need loosening","今晚的安排有两处需要放宽"],
-     b:[["<strong>Công viên Trung Sơn không kịp.</strong> Kế hoạch của bạn để 21:00–21:30 cho công viên Trung Sơn và tượng Tôn Trung Sơn, rồi 22:00 về tới khách sạn. Nhưng từ công viên Trung Sơn về khu khách sạn cạnh Bảo An mất khoảng 35–40 phút, nên 22:00 là không thể - thực tế sẽ là 22:15 sớm nhất, và đó là chưa tính chuyện gọi xe. Sau một ngày dậy từ 4:40 và bay 3 giờ 40 phút thì nửa tiếng cuối này không đáng.",
-       "<strong>Zhongshan Park does not fit.</strong> Your plan gives 21:00–21:30 to Zhongshan Park and the Sun Yat-sen statue, then 22:00 back at the hotel. But Zhongshan Park to the hotel area beside Bao'an is 35–40 minutes, so 22:00 is impossible - 22:15 at the earliest, and that ignores waiting for a car. After a day that started at 04:40 with a 3h40 flight in it, that last half hour is not worth it.",
-       "<strong>中山公园来不及。</strong>你的计划把21:00–21:30给了中山公园和孙中山像，然后22:00回到酒店。但从中山公园回宝安旁的酒店区要35–40分钟，所以22:00不可能——最早也要22:15，而且还没算叫车等待。在一个4:40起床、飞了3小时40分的日子之后，最后这半小时不值得。"],
-      ["<strong>Chặng sân bay về khách sạn nên tính 25 phút, không phải 25 phút cho cả nhận vali.</strong> Kế hoạch để 11:35–12:20 cho việc xuống máy bay và nhận vali, rồi 12:20–12:45 cho cuốc xe. Với chuyến nội địa thì 45 phút lấy hành lý là hợp lý, nhưng nếu băng chuyền chậm thì toàn bộ buổi chiều lùi lại theo. Cứ coi 13:40 vào Cửa sổ Thế giới là mốc mềm.",
-       "<strong>Allow the airport-to-hotel leg its own 25 minutes on top of baggage.</strong> The plan gives 11:35–12:20 for deplaning and bags, then 12:20–12:45 for the ride. Forty-five minutes for a domestic bag claim is fair, but a slow belt pushes the whole afternoon back. Treat 13:40 at Window of the World as a soft target.",
-       "<strong>机场到酒店那一段要单独算25分钟，不要和取行李挤在一起。</strong>计划给了11:35–12:20下机取行李，12:20–12:45坐车。国内航班45分钟取行李是合理的，但转盘一慢，整个下午都往后推。把13:40进世界之窗当成一个弹性目标。"]],
-     fix:["<strong>Đề xuất:</strong> bỏ hẳn công viên Trung Sơn, rời Cửa sổ Thế giới lúc 20:45 như kế hoạch, và về tới khách sạn khoảng 21:45. Nếu tối đó vẫn còn sức và muốn đi thêm thì đổi sang <span class=\"han\">欢乐海岸</span> Hoan Lạc Hải Ngạn ngay cạnh Cửa sổ Thế giới - đi bộ 10 phút, mở tới khuya, không phải bắt xe thêm lần nào.",
-      "<strong>Suggestion:</strong> drop Zhongshan Park entirely, leave Window of the World at 20:45 as planned, and be back at the hotel around 21:45. If you still have energy and want more, swap in <span class=\"han\">欢乐海岸</span> OCT Harbour right next to Window of the World - a ten-minute walk, open late, and no extra car ride.",
-      "<strong>建议：</strong>直接去掉中山公园，按计划20:45离开世界之窗，约21:45回到酒店。若当晚还有精力想再逛，可换成世界之窗旁边的<span class=\"han\">欢乐海岸</span>——步行10分钟，营业到很晚，也不用再叫一次车。"]
-   }
+    {
+      t:["04:40–04:50", "04:40–04:50", "04:40–04:50"],
+      b:["Dậy, trả phòng khách sạn Thiên Tân", "Up, check out of the Tianjin hotel", "起床，天津酒店退房"],
+      dur:["10 phút", "10 min", "10分钟"],
+      d:["Báo lễ tân trả phòng sớm từ tối hôm trước.", "Tell reception about the early check-out the night before.", "前一晚告诉前台会早退房。"]
+    },
+    {
+      m:1,
+      t:["35 phút", "35 min", "35分钟"],
+      a:["Didi ra Thiên Tân Tân Hải T2 · 22 km · 60–80 CNY", "Didi to Tianjin Binhai T2 · 22 km · CNY 60–80", "滴滴到天津滨海T2 · 22公里 · 60–80元"]
+    },
+    {
+      t:["05:30", "05:30", "05:30"],
+      b:["Có mặt ở Thiên Tân Tân Hải T2, ký gửi vali", "At Tianjin Binhai T2, check the bags in", "抵达天津滨海T2，办理托运"],
+      dur:["sớm 2,4 giờ", "2h25 early", "提前2小时25分"],
+      d:["Ký gửi cả hai vali.", "Check both cases.", "两件行李都托运。"]
+    },
+    {
+      t:["07:55 → 11:35", "07:55 → 11:35", "07:55 → 11:35"],
+      b:["Thiên Tân Tân Hải T2 → Bảo An Thâm Quyến · CA2813", "Tianjin Binhai T2 → Shenzhen Bao'an · CA2813", "天津滨海T2 → 深圳宝安 · CA2813"],
+      dur:["3 giờ 40", "3h40", "3小时40分"],
+      d:[
+        "Air China. Thâm Quyến 22–29°C, để sẵn bộ đồ mỏng trong túi xách tay.",
+        "Air China. Shenzhen is 22–29°C; keep light clothes in the cabin bag.",
+        "国航。深圳22–29°C，随身包里备好薄衣服。"
+      ]
+    },
+    {
+      t:["11:35–12:20", "11:35–12:20", "11:35–12:20"],
+      b:["Xuống máy bay và nhận hai vali", "Off the plane and both suitcases back", "下机并取回两个箱子"],
+      tag:"pay",
+      tagx:["Bắt buộc lấy hành lý", "Baggage must be collected", "必须提取行李"],
+      dur:["45 phút", "45 min", "45分钟"],
+      d:[
+        "Hai vé rời nhau nên phải lấy vali ra, sáng mai ký gửi lại.",
+        "Two separate tickets, so reclaim the cases and re-check them tomorrow.",
+        "两张独立机票，需取出行李，明早重新托运。"
+      ]
+    },
+    {
+      m:1,
+      t:["25 phút", "25 min", "25分钟"],
+      a:[
+        "Didi từ Bảo An về khách sạn gần sân bay · 5–8 km · 25–35 CNY",
+        "Didi from Bao'an to the hotel near the airport · 5–8 km · CNY 25–35",
+        "从宝安打滴滴到机场附近的酒店 · 5–8公里 · 25–35元"
+      ]
+    },
+    {
+      t:["12:45", "12:45", "12:45"],
+      b:["Gửi hai vali ở lễ tân, chưa nhận phòng", "Leave both cases at reception without checking in", "把两个箱子存在前台，先不入住"],
+      d:["Nhận phòng từ 14:00, gửi vali ở lễ tân trước.", "Check-in is from 14:00; leave the cases at reception first.", "14:00后入住，先把行李寄存在前台。"]
+    },
+    {
+      m:1,
+      t:["45 phút", "45 min", "45分钟"],
+      a:["Didi tới Cửa sổ Thế giới · 30 km · 90–110 CNY", "Didi to Window of the World · 30 km · CNY 90–110", "滴滴到世界之窗 · 30公里 · 90–110元"]
+    },
+    {
+      t:["13:40–17:40", "13:40–17:40", "13:40–17:40"],
+      b:["Cửa sổ Thế giới", "Window of the World", "世界之窗"],
+      tag:"pay",
+      tagx:["220 CNY", "CNY 220", "220元"],
+      dur:["240 phút", "240 min", "240分钟"],
+      d:[
+        "<span class=\"han\">世界之窗</span> - hơn 130 mô hình công trình thế giới thu nhỏ. Vé ban ngày khoảng 220 CNY.",
+        "<span class=\"han\">世界之窗</span> - over 130 scale models of world landmarks. Day ticket about CNY 220.",
+        "<span class=\"han\">世界之窗</span>——130多个世界名胜微缩景观。日场票约220元。"
+      ]
+    },
+    {
+      t:["Trong lịch của bạn", "In your own plan", "你自己的安排"],
+      b:["Melania Town", "Melania Town", "Melania Town"],
+      dur:["đi liền sau", "straight after", "紧接其后"],
+      d:[
+        "Lưu sẵn tên tiếng Trung vào Amap, tên tiếng Anh không tra được.",
+        "Save the Chinese name in Amap; the English name will not search.",
+        "提前在高德存好中文名，英文名搜不到。"
+      ]
+    },
+    {
+      t:["17:45–20:45", "17:45–20:45", "17:45–20:45"],
+      b:["Buổi tối Halloween và giờ lên đèn", "Halloween evening and lights-on", "万圣夜与亮灯时分"],
+      tag:"free",
+      dur:["180 phút", "180 min", "180分钟"],
+      d:[
+        "Công viên mở tới khoảng 22:30, 31/10 có sự kiện Halloween - xem lịch trên mini-program. Ăn tối trong công viên.",
+        "The park stays open until about 22:30, with Halloween events on 31 Oct - check the mini-program. Dinner in the park.",
+        "园区开到约22:30，10月31日有万圣节活动——在小程序查时间。园内吃晚饭。"
+      ]
+    },
+    {
+      m:1,
+      t:["40 phút", "40 min", "40分钟"],
+      a:["Didi về khách sạn gần Bảo An · 30 km · 90–110 CNY", "Didi back to the hotel near Bao'an · 30 km · CNY 90–110", "滴滴回宝安附近酒店 · 30公里 · 90–110元"]
+    },
+    {
+      t:["21:45", "21:45", "21:45"],
+      b:["Về khách sạn, nhận phòng, lấy lại hai vali", "Back at the hotel, check in, collect both cases", "回酒店办入住，取回两个箱子"],
+      d:["Soạn sẵn giấy tờ cho sáng mai, dậy 5:20.", "Lay out documents for the morning; up at 05:20.", "准备好明早的证件，5:20起床。"]
+    }
   ]
 },
 
-{ city:"sz", n:"01", dow:"CN", mon2:1, p:["md"],
-  head:["Thâm Quyến về Hà Nội","Shenzhen home to Hanoi","从深圳回河内"],
-  intro:["Chặng cuối, và là lần duy nhất trong chuyến phải ký gửi lại hành lý từ đầu. Hạ cánh Nội Bài lúc 9:40 sáng - kết thúc mười ba ngày.",
-   "The last leg, and the one time on the trip that the bags are checked in from scratch. Landing at Noi Bai at 09:40 - the end of thirteen days.",
-   "最后一段，也是全程唯一一次从头办理行李托运。09:40抵达内排——十三天结束。"],
+{
+  city:"sz",
+  n:"01",
+  dow:"CN",
+  mon2:1,
+  p:["md"],
+  head:["Thâm Quyến về Hà Nội", "Shenzhen home to Hanoi", "从深圳回河内"],
   slots:[
-   {t:["05:20–05:45","05:20–05:45","05:20–05:45"], b:["Dậy, trả phòng","Up and checked out","起床退房"], dur:["25 phút","25 min","25分钟"]},
-   {m:1, t:["20 phút","20 min","20分钟"], a:["Xe đưa đón của khách sạn hoặc Didi ra Bảo An nhà ga T3 · 5–8 km · 25–35 CNY · hỏi giờ xe đưa đón từ tối hôm trước",
-     "The hotel shuttle or a Didi to Bao'an Terminal 3 · 5–8 km · CNY 25–35 · ask about the shuttle times the evening before",
-     "酒店接驳车或滴滴到宝安T3 · 5–8公里 · 25–35元 · 前一晚就问清接驳车时刻"]},
-   {t:["06:10","06:10","06:10"], b:["Có mặt ở Bảo An T3, ký gửi vali và làm thủ tục xuất cảnh","At Bao'an T3, check the bags and clear exit formalities","抵达宝安T3，托运行李并办理出境"], dur:["sớm 2,3 giờ","2h20 early","提前2小时20分"],
-    d:["Chuyến quốc tế nên quầy Shenzhen Airlines mở trước giờ bay khoảng 2 tiếng 30 phút. Đây là lần cuối cần hộ chiếu và dấu nhập cảnh hôm 21/10 - giữ kỹ tới lúc qua cửa xuất cảnh xong.",
-       "An international departure, so the Shenzhen Airlines counter opens about 2h30 before the flight. This is the last time the passport and the 21 Oct entry stamp are needed - keep them safe until you are through exit control.",
-       "国际航班，深圳航空柜台约在起飞前2小时30分开放。这是最后一次需要护照和10月21日的入境章——过完出境口再放松。"]},
-   {t:["08:30 → 09:40","08:30 → 09:40","08:30 → 09:40"], b:["Bảo An Thâm Quyến → Nội Bài · ZH101","Shenzhen Bao'an → Noi Bai · ZH101","深圳宝安 → 内排 · ZH101"], dur:["2 giờ 10","2h10","2小时10分"],
-    d:["Shenzhen Airlines. Bay khoảng 3 giờ 10 phút, trừ 1 tiếng chênh múi giờ. Hạ cánh Hà Nội 09:40 sáng chủ nhật 1/11 - vẫn còn nguyên một ngày để nghỉ trước tuần mới.",
-       "Shenzhen Airlines. About 3h10 in the air, less the one-hour time difference. Landing in Hanoi at 09:40 on Sunday 1 Nov - a whole day left to recover before the week starts.",
-       "深圳航空。飞行约3小时10分，减去1小时时差。11月1日周日09:40抵达河内——新的一周开始前还有一整天可以休息。"]}
-  ],
-  callouts:[
-   { h:["Ba việc phải chốt trước cho bốn ngày đi một mình","Three things to settle in advance for the four days alone","独自出行四天需提前落实的三件事"],
-     b:[["<strong>Visa.</strong> Visa X2 của Mỹ Duyên đã có từ ngày 30/9. Vì Mỹ Duyên rời Trung Quốc sáng 1/11, kiểm tra lại thời gian lưu trú ghi trên tem visa có phủ tới ít nhất ngày đó - nếu thiếu thì báo trung tâm visa ngay, đừng để tới cửa xuất cảnh mới phát hiện.",
-       "<strong>Visa.</strong> My Duyen's X2 visa has been in hand since 30 Sept. Since she leaves China on the morning of 1 Nov, double-check that the stay on the visa sticker covers at least that date - if it falls short, contact the visa centre now rather than finding out at the exit gate.",
-       "<strong>签证。</strong>美缘的X2签证已于9月30日领取。她11月1日上午离境，请再核对签证页上的停留期是否至少覆盖到那天——若不够，现在就联系签证中心，别到出境口才发现。"],
-      ["<strong>Bốn đêm chưa đặt.</strong> Đêm 28/10 ở Bắc Kinh, hai đêm 29 và 30/10 ở Thiên Tân khu Hoà Bình, và đêm 31/10 ở Thâm Quyến gần sân bay Bảo An. Đặt cả bốn trong cùng một buổi và chọn loại huỷ miễn phí, vì lịch bay ngày 28/10 của hai bạn kia vẫn có thể xê dịch.",
-       "<strong>Four nights are unbooked.</strong> 28 Oct in Beijing, 29 and 30 Oct in Tianjin's Heping district, and 31 Oct in Shenzhen near Bao'an airport. Book all four in one sitting and take free cancellation, since the other two's 28 Oct flight can still shift.",
-       "<strong>还有四晚没订。</strong>10月28日在北京，10月29、30日在天津和平区，10月31日在深圳宝安机场附近。一次性把四晚都订了，并选可免费取消，因为另外两人10月28日的航班还可能变动。"],
-      ["<strong>Đi một mình.</strong> Từ trưa 28/10 tới lúc hạ cánh Nội Bài là bốn ngày qua ba thành phố. Gửi trước cho cả nhóm lịch trình và ảnh xác nhận từng khách sạn, bật chia sẻ vị trí, và giữ thói quen nhắn về một câu mỗi tối. Đặt Didi trước cho hai chặng sớm - 04:50 ngày 31/10 và 05:45 ngày 1/11 - vì giờ đó gọi xe rất dễ phải chờ.",
-       "<strong>Travelling alone.</strong> From midday on 28 Oct until landing at Noi Bai is four days across three cities. Send the group the itinerary and every hotel confirmation in advance, turn on location sharing, and make a habit of one message home each evening. Pre-book the Didi for both early runs - 04:50 on 31 Oct and 05:45 on 1 Nov - because hailing at that hour often means waiting.",
-       "<strong>独自出行。</strong>从10月28日中午到落地内排，是横跨三座城市的四天。提前把行程和每一家酒店的确认单发给大家，打开位置共享，养成每晚报个平安的习惯。两段早班车都提前预约滴滴——10月31日04:50和11月1日05:45——因为那个时间现叫常常要等。"]]
-   }
+    { t:["05:20–05:45", "05:20–05:45", "05:20–05:45"], b:["Dậy, trả phòng", "Up and checked out", "起床退房"], dur:["25 phút", "25 min", "25分钟"] },
+    {
+      m:1,
+      t:["20 phút", "20 min", "20分钟"],
+      a:[
+        "Xe đưa đón của khách sạn hoặc Didi ra Bảo An nhà ga T3 · 5–8 km · 25–35 CNY · hỏi giờ xe đưa đón từ tối hôm trước",
+        "The hotel shuttle or a Didi to Bao'an Terminal 3 · 5–8 km · CNY 25–35 · ask about the shuttle times the evening before",
+        "酒店接驳车或滴滴到宝安T3 · 5–8公里 · 25–35元 · 前一晚就问清接驳车时刻"
+      ]
+    },
+    {
+      t:["06:10", "06:10", "06:10"],
+      b:["Có mặt ở Bảo An T3, ký gửi vali và làm thủ tục xuất cảnh", "At Bao'an T3, check the bags and clear exit formalities", "抵达宝安T3，托运行李并办理出境"],
+      dur:["sớm 2,3 giờ", "2h20 early", "提前2小时20分"],
+      d:["Giữ hộ chiếu tới khi qua cửa xuất cảnh.", "Keep the passport handy until you clear exit immigration.", "过出境前护照随身放好。"]
+    },
+    {
+      t:["08:30 → 09:40", "08:30 → 09:40", "08:30 → 09:40"],
+      b:["Bảo An Thâm Quyến → Nội Bài · ZH101", "Shenzhen Bao'an → Noi Bai · ZH101", "深圳宝安 → 内排 · ZH101"],
+      dur:["2 giờ 10", "2h10", "2小时10分"],
+      d:[
+        "Shenzhen Airlines. Hạ cánh Hà Nội 09:40 chủ nhật 1/11.",
+        "Shenzhen Airlines. Lands in Hanoi at 09:40 on Sunday 1 Nov.",
+        "深圳航空。11月1日周日09:40抵达河内。"
+      ]
+    }
   ]
 }
 );

@@ -61,7 +61,9 @@ var UI = {
   min: ["phút","min","分钟"],
   hr:  ["giờ","h","小时"],
   toc:   ["Mục lục","Contents","目录"],
-  theme: ["Sáng / Tối","Light / Dark","浅色 / 深色"]
+  theme: ["Sáng / Tối","Light / Dark","浅色 / 深色"],
+  days:  ["Các ngày","Days","日期"],
+  totop: ["Lên đầu trang","Back to top","回到顶部"]
 };
 
 /* ---------- nhãn ngắn cho sidebar và bottom bar ---------- */
