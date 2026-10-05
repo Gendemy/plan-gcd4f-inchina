@@ -795,7 +795,6 @@ var UI = {
               "四人同机出发，在上海中转15小时，深夜抵达北京。比赛结束后分开：俊英10月26日回国，嘉宝和琼梅10月28日，美缘留到10月31日经深圳返回。"],
   m1:        ["20/10 – 1/11/2026 · 13 ngày","20 Oct – 1 Nov 2026 · 13 days","2026年10月20日–11月1日 · 13天"],
   m2:        ["4 người bay chung lượt đi · 3 lịch về khác nhau","4 fly out together · 3 different returns","去程4人同行 · 3种不同回程"],
-  m3:        ["Ngân sách 15 triệu ₫ · Gia Bảo, Quỳnh Mai","Budget 15m VND · Gia Bao, Quynh Mai","预算1500万越南盾 · 嘉宝、琼梅"],
   tz:        ["Mọi mốc giờ trong trang này là giờ Trung Quốc (nhanh hơn Việt Nam 1 tiếng).",
               "All times on this page are China time (1 hour ahead of Vietnam).",
               "本页所有时间均为中国时间（比越南快1小时）。"],
@@ -882,12 +881,12 @@ var TRACKS = [
     cls:"b",
     p:["ta"],
     h:["Tuấn Anh - về ngày 26/10", "Tuan Anh - home on 26 Oct", "俊英——10月26日回国"],
-    n:["21–26/10 · 6 ngày", "21–26 Oct · 6 days", "10月21–26日 · 6天"],
+    n:["21–26/10 · 6 ngày · vé đã đặt", "21–26 Oct · 6 days · ticket booked", "10月21–26日 · 6天 · 机票已订"],
     b:[
       [
-        "Ở BNU suốt kỳ thi, bay thẳng từ sân bay Thủ Đô (PEK) về Hà Nội ngày 26/10. Vé chưa đặt: VN513 hoặc CA741, cất cánh khoảng trưa.",
-        "At BNU for the competition, then direct from Capital Airport (PEK) to Hanoi on 26 Oct. Not booked yet: VN513 or CA741, leaving around midday.",
-        "比赛期间住北师大，10月26日从首都机场（PEK）直飞河内。尚未订票：VN513或CA741，约中午起飞。"
+        "Ở BNU suốt kỳ thi. Vé về <strong>Air China</strong>: 00:10 ngày 26/10 (tức đêm 25/10), Thủ Đô T3 → Nội Bài T2, hạ cánh 03:15. <strong>3.104.000 ₫</strong>.",
+        "At BNU for the competition. Return on <strong>Air China</strong>: 00:10 on 26 Oct (the night of 25 Oct), Capital T3 → Noi Bai T2, lands 03:15. <strong>3,104,000 VND</strong>.",
+        "比赛期间住北师大。回程<strong>国航</strong>：10月26日00:10（即25日深夜），首都T3 → 内排T2，03:15落地。<strong>310.4万越南盾</strong>。"
       ]
     ]
   },
@@ -932,16 +931,6 @@ var TRACKS = [
 var URGENT = [
   {
     n:"01",
-    ic:"ticket",
-    h:["Đặt vé về ngày 26/10 cho Tuấn Anh", "Book Tuan Anh's 26 Oct return", "订俊英10月26日的回程"],
-    b:[
-      "Vé duy nhất còn chưa đặt. VN513 hoặc CA741 bay thẳng Thủ Đô → Nội Bài, cất cánh khoảng trưa.",
-      "The only ticket still unbooked. VN513 or CA741 fly direct Capital → Noi Bai around midday.",
-      "唯一还没订的机票。VN513或CA741从首都直飞内排，约中午起飞。"
-    ]
-  },
-  {
-    n:"02",
     ic:"clip",
     h:["Visa: còn Quỳnh Mai nhận ngày 6/10", "Visas: Quynh Mai collects on 6 Oct", "签证：琼梅10月6日领取"],
     b:[
@@ -951,13 +940,23 @@ var URGENT = [
     ]
   },
   {
+    n:"02",
+    ic:"bed",
+    h:["Huỷ phòng Thông Châu, đặt phòng trung tâm", "Cancel Tongzhou, book a central room", "取消通州酒店，改订市中心"],
+    b:[
+      "Huỷ phòng gia đình ở Thông Châu (26–28/10). Đặt một phòng 3 người ở khu Vương Phủ Tỉnh hoặc Tiền Môn cho đêm 26 và 27/10, Mỹ Duyên ở thêm đêm 28/10.",
+      "Cancel the Tongzhou family room (26–28 Oct). Book a room for three around Wangfujing or Qianmen for 26 and 27 Oct, with My Duyen staying on for 28 Oct.",
+      "取消通州的家庭房（10月26–28日）。在王府井或前门一带订一间三人房住26、27日，美缘续住28日。"
+    ]
+  },
+  {
     n:"03",
     ic:"bed",
     h:["Chỗ ở cho Mỹ Duyên bốn đêm cuối", "Four more nights for My Duyen", "美缘最后四晚的住宿"],
     b:[
-      "Đêm 28/10: gia hạn phòng Thông Châu (gần Universal). 29–30/10 ở Thiên Tân (khu Hoà Bình), 31/10 ở Thâm Quyến gần sân bay Bảo An. Chọn loại huỷ miễn phí.",
-      "28 Oct: extend the Tongzhou room (near Universal). 29–30 Oct in Tianjin (Heping), 31 Oct in Shenzhen near Bao'an airport. Take free cancellation.",
-      "10月28日：通州房间续住一晚（靠近环球影城）。10月29–30日天津（和平区），10月31日深圳宝安机场附近。选可免费取消。"
+      "Đêm 28/10: ở thêm phòng trung tâm. 29–30/10 ở Thiên Tân (khu Hoà Bình), 31/10 ở Thâm Quyến gần sân bay Bảo An. Chọn loại huỷ miễn phí.",
+      "28 Oct: stay on in the central room. 29–30 Oct in Tianjin (Heping), 31 Oct in Shenzhen near Bao'an airport. Take free cancellation.",
+      "10月28日：市中心房间续住。10月29–30日天津（和平区），10月31日深圳宝安机场附近。选可免费取消。"
     ]
   }
 ];
@@ -977,22 +976,12 @@ var BOOKING = [
   {
     p:["ta"],
     a:[
-      "<strong>Vé về 26/10</strong>, Bắc Kinh Thủ Đô đi Hà Nội, 1 vé",
-      "<strong>26 Oct return</strong>, Beijing Capital to Hanoi, 1 ticket",
-      "<strong>10月26日回程</strong>，北京首都飞河内，1张"
+      "Đặt xe đón ở Nội Bài lúc <strong>03:15 sáng 26/10</strong>",
+      "Arrange a ride from Noi Bai at <strong>03:15 on 26 Oct</strong>",
+      "安排<strong>10月26日凌晨03:15</strong>在内排的接车"
     ],
-    b:["Trip.com / hãng bay", "Trip.com / airline", "携程 / 航司"],
-    c:["Ngay", "Now", "立即"]
-  },
-  {
-    p:null,
-    a:["Báo BNU danh sách đội đã đổi và ba lịch về khác nhau", "Send BNU the updated roster and the three return dates", "向北师大提交更新名单和三个回程日期"],
-    b:[
-      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
-      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
-      "邮件 <span class=\"mono\">d4fe@bnu.edu.cn</span>"
-    ],
-    c:["Ngay", "Now", "立即"]
+    b:["Người nhà hoặc app gọi xe", "Family or a ride app", "家人或打车App"],
+    c:["Trước 25/10", "Before 25 Oct", "10月25日前"]
   },
   {
     p:null,
@@ -1001,14 +990,14 @@ var BOOKING = [
     c:["6/10", "6 Oct", "10月6日"]
   },
   {
-    p:["md"],
+    p:["gb", "md"],
     a:[
-      "Gia hạn phòng Thông Châu <strong>đêm 28/10</strong> cho Mỹ Duyên",
-      "Extend the Tongzhou room for <strong>28 Oct</strong> for My Duyen",
-      "通州房间为美缘<strong>续住10月28日</strong>"
+      "Khách sạn trung tâm (Vương Phủ Tỉnh / Tiền Môn), phòng 3 người <strong>đêm 26–27/10</strong>, Mỹ Duyên thêm <strong>đêm 28/10</strong>",
+      "Central hotel (Wangfujing / Qianmen), room for three <strong>26–27 Oct</strong>, My Duyen also <strong>28 Oct</strong>",
+      "市中心酒店（王府井/前门），三人间<strong>10月26–27日</strong>，美缘加住<strong>28日</strong>"
     ],
-    b:["Khách sạn / Trip.com", "Hotel / Trip.com", "酒店 / 携程"],
-    c:["Đầu tháng 10", "Early Oct", "10月初"]
+    b:["Trip.com", "Trip.com", "携程"],
+    c:["Ngay", "Now", "立即"]
   },
   {
     p:["md"],
@@ -1033,9 +1022,9 @@ var BOOKING = [
   {
     p:["gb", "md"],
     a:[
-      "Thuê <strong>xe 7 chỗ cả ngày 26/10</strong>: BNU → Cổ Bắc Thuỷ Trấn → Thông Châu",
-      "<strong>7-seater for the day on 26 Oct</strong>: BNU → Gubei → Tongzhou",
-      "<strong>10月26日7座包车</strong>：北师大 → 古北水镇 → 通州"
+      "Thuê <strong>xe 7 chỗ cả ngày 26/10</strong>: BNU → Cổ Bắc Thuỷ Trấn → khách sạn trung tâm",
+      "<strong>7-seater for the day on 26 Oct</strong>: BNU → Gubei → central hotel",
+      "<strong>10月26日7座包车</strong>：北师大 → 古北水镇 → 市中心酒店"
     ],
     b:["Trip.com (包车)", "Trip.com (包车)", "携程包车"],
     c:["Trước 19/10", "By 19 Oct", "10月19日前"]
@@ -1660,13 +1649,34 @@ DAYS.push(
     },
     {
       p:["ta"],
-      t:["Tối", "Evening", "晚上"],
-      b:["Ăn tối cùng nhóm hoặc thu dọn hành lý", "Dinner with the group, or packing", "与大家晚餐或收拾行李"],
-      d:[
-        "Đi ăn tối cùng nhóm ở Tiền Môn, hoặc ở lại campus thu dọn hành lý.",
-        "Join the group for dinner at Qianmen, or stay on campus and pack.",
-        "和大家去前门吃晚饭，或留在学校收拾行李。"
+      t:["18:30–20:00", "18:30–20:00", "18:30–20:00"],
+      b:["Ăn tối, lấy hành lý, trả phòng BNU", "Dinner, collect luggage, check out of BNU", "晚饭、取行李、退北师大房间"],
+      dur:["90 phút", "90 min", "90分钟"],
+      d:["Tuấn Anh bay đêm nay nên không đi Tiền Môn cùng nhóm.", "Tuan Anh flies tonight, so he skips Qianmen.", "俊英今晚起飞，不和大家去前门。"]
+    },
+    {
+      p:["ta"],
+      m:1,
+      t:["45 phút", "45 min", "45分钟"],
+      a:[
+        "Taxi từ campus Xương Bình ra sân bay Thủ Đô T3 · khoảng 150 CNY · đặt xe trước",
+        "Taxi from Changping campus to Capital Airport T3 · about CNY 150 · book ahead",
+        "出租车从昌平校区到首都机场T3 · 约150元 · 提前预约"
       ]
+    },
+    {
+      p:["ta"],
+      t:["21:00", "21:00", "21:00"],
+      b:["Có mặt ở sân bay Thủ Đô nhà ga T3", "At Capital Airport Terminal 3", "到达首都机场T3"],
+      dur:["sớm 3,2 giờ", "3.2h early", "提前3.2小时"],
+      d:["Nhà ga T3, chuyến quốc tế.", "Terminal 3, international departure.", "T3航站楼，国际航班。"]
+    },
+    {
+      p:["ta"],
+      t:["00:10 → 03:15", "00:10 → 03:15", "00:10 → 03:15"],
+      b:["Thủ Đô T3 → Nội Bài T2 · Air China", "Capital T3 → Noi Bai T2 · Air China", "首都T3 → 内排T2 · 国航"],
+      dur:["4 giờ 5", "4h05", "4小时5分"],
+      d:["Cất cánh 00:10 ngày 26/10, hạ cánh Nội Bài 03:15.", "Departs 00:10 on 26 Oct, lands at Noi Bai at 03:15.", "10月26日00:10起飞，03:15抵达内排。"]
     },
     {
       p:["gb", "md"],
@@ -1685,9 +1695,9 @@ DAYS.push(
       tag:"free",
       dur:["95 phút", "95 min", "95分钟"],
       d:[
-        "Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức (75–100 CNY/người) rồi dạo phố Tiền Môn. Bữa cuối của cả bốn người.",
-        "Roast duck at Bianyifang or Quanjude (CNY 75–100 a head), then a stroll down Qianmen Street. The last meal with all four.",
-        "在便宜坊或全聚德吃烤鸭（人均75–100元），再逛前门大街。四人的最后一餐。"
+        "Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức (75–100 CNY/người) rồi dạo phố Tiền Môn.",
+        "Roast duck at Bianyifang or Quanjude (CNY 75–100 a head), then a stroll down Qianmen Street.",
+        "在便宜坊或全聚德吃烤鸭（人均75–100元），再逛前门大街。"
       ]
     },
     {
@@ -1752,46 +1762,26 @@ DAYS.push(
           ]
         }
       ]
-    },
-    {
-      cls:"home",
-      p:["ta"],
-      h:["Bay về Hà Nội", "Fly home to Hanoi", "飞回河内"],
-      who:["Tuấn Anh", "Tuan Anh", "俊英"],
-      slots:[
-        {
-          t:["07:30", "07:30", "07:30"],
-          b:["Trả phòng BNU cùng cả nhóm", "Check out of BNU with the others", "与大家一同退宿舍"],
-          d:["Tách nhóm tại đây.", "Split from the group here.", "在这里和大家分开。"]
-        },
-        {
-          m:1,
-          t:["45–120 phút", "45–120 min", "45–120分钟"],
-          a:[
-            "Xương Bình → sân bay Thủ Đô · taxi khoảng 45 phút, 150 CNY · hoặc tuyến Xương Bình → tuyến 13 → tàu nhanh sân bay, khoảng 2 tiếng, 32 CNY",
-            "Changping → Capital Airport · taxi about 45 min, CNY 150 · or Changping Line → Line 13 → Airport Express, about 2h, CNY 32",
-            "昌平 → 首都机场 · 打车约45分钟150元 · 或昌平线→13号线→机场快轨，约2小时32元"
-          ]
-        },
-        {
-          t:["Trước 3 tiếng", "3 hours ahead", "提前3小时"],
-          b:["Có mặt ở sân bay Thủ Đô", "At Capital Airport", "抵达首都机场"],
-          d:["Chuyến quốc tế, có mặt trước 3 tiếng.", "International flight, be there 3 hours ahead.", "国际航班，提前3小时到。"]
-        }
-      ]
     }
   ],
   slots:[
     {
+      p:["ta"],
+      t:["03:15", "03:15", "03:15"],
+      b:["Tuấn Anh hạ cánh Nội Bài T2", "Tuan Anh lands at Noi Bai T2", "俊英抵达内排T2"],
+      d:["Nhắn cả nhóm khi về tới nhà.", "Message the group once home.", "到家后在群里报个平安。"]
+    },
+    {
       p:["gb", "md"],
-      t:["07:30–08:00", "07:30–08:00", "07:30–08:00"],
-      b:["Trả phòng BNU, lên xe thuê cả ngày", "Check out of BNU, into the day-hire car", "退北师大房间，上包车"],
-      dur:["30 phút", "30 min", "30分钟"],
+      t:["07:00–08:00", "07:00–08:00", "07:00–08:00"],
+      b:["Ăn sáng, trả phòng BNU, lên xe thuê cả ngày", "Breakfast, check out of BNU, into the day-hire car", "早餐、退北师大房间、上包车"],
+      dur:["60 phút", "60 min", "60分钟"],
       d:[
-        "Xe 7 chỗ chở ba người và vali, chờ cả ngày rồi đưa về Thông Châu.",
-        "A 7-seater takes the three of you and the luggage, waits all day, then drives to Tongzhou.",
-        "7座车载三人和行李，全天等候，晚上送到通州。"
-      ]
+        "BNU chi trả bữa sáng. Xe 7 chỗ chở ba người và vali, chờ cả ngày rồi đưa về khách sạn trung tâm.",
+        "BNU covers breakfast. A 7-seater takes the three of you and the luggage, waits all day, then drives to the central hotel.",
+        "北师大提供早餐。7座车载三人和行李，全天等候，晚上送到市中心酒店。"
+      ],
+      tag:"host"
     },
     {
       p:["gb", "md"],
@@ -1838,19 +1828,23 @@ DAYS.push(
     {
       p:["gb", "md"],
       m:1,
-      t:["≈ 1 giờ 45", "≈ 1h45", "约1小时45分"],
+      t:["≈ 2 giờ", "≈ 2h", "约2小时"],
       a:[
-        "Xe về khách sạn Thông Châu, khu <span class=\"han\">梨园</span> Lê Viên · khoảng 120 km",
-        "Car to the Tongzhou hotel in <span class=\"han\">梨园</span> Liyuan · about 120 km",
-        "包车回通州<span class=\"han\">梨园</span>的酒店 · 约120公里"
+        "Xe về khách sạn trung tâm, khu Vương Phủ Tỉnh / Tiền Môn · khoảng 130 km",
+        "Car to the central hotel, Wangfujing / Qianmen area · about 130 km",
+        "包车回王府井/前门一带的市中心酒店 · 约130公里"
       ]
     },
     {
       p:["gb", "md"],
-      t:["20:15–21:15", "20:15–21:15", "20:15–21:15"],
-      b:["Nhận phòng khách sạn Thông Châu, ăn tối", "Check in at the Tongzhou hotel, dinner", "入住通州酒店，晚餐"],
+      t:["20:30–21:30", "20:30–21:30", "20:30–21:30"],
+      b:["Nhận phòng khách sạn trung tâm, ăn tối", "Check in at the central hotel, dinner", "入住市中心酒店，晚餐"],
       dur:["60 phút", "60 min", "60分钟"],
-      d:["Cách ga Lê Viên khoảng 350m.", "About 350m from Liyuan station.", "距梨园站约350米。"]
+      d:[
+        "Phòng 3 người ở khu Vương Phủ Tỉnh hoặc Tiền Môn, tiện cho Cố Cung sáng mai.",
+        "A room for three around Wangfujing or Qianmen, handy for the Forbidden City tomorrow.",
+        "王府井或前门一带的三人间，方便明天去故宫。"
+      ]
     }
   ]
 }
@@ -1867,17 +1861,17 @@ DAYS.push(
   head:["Ngày duy nhất cho trục trung tâm", "The only full day for the central axis", "中轴线唯一的完整一天"],
   slots:[
     {
-      t:["06:15", "06:15", "06:15"],
-      b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
+      t:["07:00", "07:00", "07:00"],
+      b:["Rời khách sạn", "Leave the hotel", "离开酒店"],
       d:["Mua đồ ăn sáng mang theo.", "Grab breakfast to go.", "买早餐路上吃。"]
     },
     {
       m:1,
-      t:["65 phút", "65 min", "65分钟"],
+      t:["25 phút", "25 min", "25分钟"],
       a:[
-        "Tuyến 1 từ ga <span class=\"han\">梨园</span> Lê Viên → đổi tuyến 10 tại <span class=\"han\">国贸</span> → đổi tuyến 5 tại <span class=\"han\">宋家庄</span> → ga <span class=\"han\">天坛东门</span> · 6 CNY",
-        "Line 1 from <span class=\"han\">梨园</span> Liyuan → change to Line 10 at <span class=\"han\">国贸</span> Guomao → change to Line 5 at <span class=\"han\">宋家庄</span> Songjiazhuang → <span class=\"han\">天坛东门</span> Tiantandongmen · CNY 6",
-        "1号线从<span class=\"han\">梨园</span>站 → <span class=\"han\">国贸</span>换10号线 → <span class=\"han\">宋家庄</span>换5号线 → <span class=\"han\">天坛东门</span>站 · 6元"
+        "Tuyến 1 → đổi tuyến 5 tại <span class=\"han\">东单</span> → ga <span class=\"han\">天坛东门</span> · 3 CNY",
+        "Line 1 → Line 5 at <span class=\"han\">东单</span> → <span class=\"han\">天坛东门</span> · CNY 3",
+        "1号线 → <span class=\"han\">东单</span>换5号线 → <span class=\"han\">天坛东门</span>站 · 3元"
       ]
     },
     {
@@ -1976,29 +1970,21 @@ DAYS.push(
         "晚饭、买礼物。CA883随身行李只限5公斤，礼物要放托运箱。"
       ]
     },
+    { m:1, t:["15 phút", "15 min", "15分钟"], a:["Đi bộ hoặc metro về khách sạn", "Walk or metro back to the hotel", "步行或坐地铁回酒店"] },
     {
-      m:1,
-      t:["55 phút", "55 min", "55分钟"],
-      a:[
-        "Tuyến 1 đi thẳng từ Vương Phủ Tỉnh về ga <span class=\"han\">梨园</span> Lê Viên · 6 CNY",
-        "Line 1 straight from Wangfujing back to <span class=\"han\">梨园</span> Liyuan · CNY 6",
-        "1号线从王府井直达<span class=\"han\">梨园</span>站 · 6元"
-      ]
-    },
-    {
-      t:["19:15–20:00", "19:15–20:00", "19:15–20:00"],
-      b:["Về khách sạn, tắm rửa, đóng vali, trả phòng", "Back at the hotel: shower, pack, check out", "回酒店：洗澡、收拾行李、退房"],
-      dur:["45 phút", "45 min", "45分钟"],
+      t:["18:30–20:00", "18:30–20:00", "18:30–20:00"],
+      b:["Về khách sạn, tắm rửa, đóng vali", "Back to the hotel, shower, pack", "回酒店、洗澡、收拾行李"],
+      dur:["90 phút", "90 min", "90分钟"],
       d:["Tắm rửa trước chuyến bay đêm. Mỹ Duyên ở lại phòng.", "Shower before the night flight. My Duyen keeps the room.", "夜航前洗个澡。美缘留在房间。"]
     },
     {
       p:["gb"],
       m:1,
-      t:["55 phút", "55 min", "55分钟"],
+      t:["45 phút", "45 min", "45分钟"],
       a:[
-        "Didi từ Lê Viên ra sân bay Thủ Đô T3 · 40 km · 130–170 CNY cả xe",
-        "Didi from Liyuan to Capital Airport T3 · 40 km · CNY 130–170 per car",
-        "滴滴从梨园到首都机场T3 · 40公里 · 整车130–170元"
+        "Didi từ khách sạn ra sân bay Thủ Đô T3 · khoảng 30 km · 100–130 CNY cả xe",
+        "Didi from the hotel to Capital Airport T3 · about 30 km · CNY 100–130 per car",
+        "滴滴从酒店到首都机场T3 · 约30公里 · 整车100–130元"
       ]
     },
     {
@@ -2023,7 +2009,7 @@ DAYS.push(
       p:["md"],
       t:["20:00", "20:00", "20:00"],
       b:["Mỹ Duyên ở lại phòng một mình", "My Duyen alone in the room", "美缘独自留在房间"],
-      d:["Sáng mai đi Universal, rời khách sạn lúc 8:20.", "Universal tomorrow; out of the hotel at 08:20.", "明天去环球影城，8:20离开酒店。"]
+      d:["Sáng mai đi Universal, rời khách sạn lúc 8:00.", "Universal tomorrow; out of the hotel at 08:00.", "明天去环球影城，8:00离开酒店。"]
     }
   ],
   intro:[
@@ -2054,23 +2040,23 @@ DAYS.push(
       who:["Mỹ Duyên", "My Duyen", "美缘"],
       slots:[
         {
-          t:["08:20", "08:20", "08:20"],
-          b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
-          d:["Phòng gia hạn thêm đêm nay nên không phải mang hành lý.", "The room is extended for tonight, so no luggage to carry.", "房间续住到今晚，不用带行李。"]
+          t:["08:00", "08:00", "08:00"],
+          b:["Rời khách sạn trung tâm", "Leave the central hotel", "离开市中心酒店"],
+          d:["Ở thêm đêm nay nên không phải mang hành lý.", "Staying another night, so no luggage to carry.", "今晚继续住，不用带行李。"]
         },
         {
           m:1,
-          t:["25 phút", "25 min", "25分钟"],
+          t:["50 phút", "50 min", "50分钟"],
           a:[
-            "Đi bộ 350m ra ga <span class=\"han\">梨园</span> → tuyến 1 đi bốn ga tới ga cuối <span class=\"han\">环球度假区</span> · 3 CNY",
-            "Walk 350m to <span class=\"han\">梨园</span> → Line 1, four stops to the terminus <span class=\"han\">环球度假区</span> · CNY 3",
-            "步行350米到<span class=\"han\">梨园</span>站 → 1号线坐四站到终点<span class=\"han\">环球度假区</span> · 3元"
+            "Tuyến 1 từ ga <span class=\"han\">王府井</span> đi thẳng tới ga cuối <span class=\"han\">环球度假区</span> · 6 CNY",
+            "Line 1 from <span class=\"han\">王府井</span> straight to the terminus <span class=\"han\">环球度假区</span> · CNY 6",
+            "1号线从<span class=\"han\">王府井</span>直达终点<span class=\"han\">环球度假区</span> · 6元"
           ]
         },
         {
-          t:["08:45", "08:45", "08:45"],
+          t:["08:50", "08:50", "08:50"],
           b:["Có mặt ở cổng Universal Beijing", "At the Universal Beijing gate", "到达北京环球影城入口"],
-          d:["Xếp hàng an ninh trước giờ mở cửa khoảng 30 phút.", "Queue for security about 30 minutes before opening.", "开园前约30分钟排队安检。"]
+          d:["Xếp hàng an ninh ngay khi tới.", "Join the security queue on arrival.", "到达后马上排队安检。"]
         },
         {
           t:["09:00–20:00", "09:00–20:00", "09:00–20:00"],
@@ -2092,15 +2078,15 @@ DAYS.push(
         },
         {
           m:1,
-          t:["25 phút", "25 min", "25分钟"],
+          t:["50 phút", "50 min", "50分钟"],
           a:[
-            "Tuyến 1 về ga <span class=\"han\">梨园</span> Lê Viên, đi bộ 350m · 3 CNY",
-            "Line 1 back to <span class=\"han\">梨园</span> Liyuan, 350m walk · CNY 3",
-            "1号线回<span class=\"han\">梨园</span>，步行350米 · 3元"
+            "Tuyến 1 về ga <span class=\"han\">王府井</span> · 6 CNY",
+            "Line 1 back to <span class=\"han\">王府井</span> · CNY 6",
+            "1号线回<span class=\"han\">王府井</span> · 6元"
           ]
         },
         {
-          t:["≈ 21:00", "≈ 21:00", "约21:00"],
+          t:["≈ 21:30", "≈ 21:30", "约21:30"],
           b:["Về khách sạn", "Back at the hotel", "回到酒店"],
           d:["Sắp lại hành lý cho ngày sang Thiên Tân.", "Repack for the move to Tianjin.", "为去天津整理行李。"]
         }
@@ -2123,9 +2109,9 @@ DAYS.push(
       b:["Thêm một điểm ở Bắc Kinh, gần khách sạn", "One more Beijing stop, close to the hotel", "在北京再看一个点，离酒店近"],
       dur:["120 phút", "120 min", "120分钟"],
       d:[
-        "Công viên rừng Đại Vận Hà gần Lê Viên, miễn phí, lá vàng dọc kênh.",
-        "The Grand Canal Forest Park near Liyuan, free, autumn leaves along the canal.",
-        "梨园附近的大运河森林公园，免费，运河两岸秋叶金黄。"
+        "Bắc Hải hoặc Ung Hoà Cung, không quá 25 phút từ khách sạn.",
+        "Beihai or the Lama Temple, within 25 minutes of the hotel.",
+        "北海或雍和宫，距酒店25分钟以内。"
       ]
     },
     { m:1, t:["25 phút", "25 min", "25分钟"], a:["Quay lại khách sạn", "Back to the hotel", "返回酒店"] },
@@ -2140,19 +2126,15 @@ DAYS.push(
       b:["Trả phòng khách sạn Bắc Kinh", "Check out of the Beijing hotel", "北京酒店退房"],
       tag:"pay",
       tagx:["Trả phòng trước 12:00", "Check-out before 12:00", "12:00前退房"],
-      d:[
-        "Đặt Didi từ 11:45 vì đường ra ga Bắc Kinh Nam mất gần một tiếng.",
-        "Book the Didi for 11:45; the ride to Beijing South takes nearly an hour.",
-        "11:45约好滴滴，到北京南站近一小时。"
-      ]
+      d:["Đặt Didi từ 11:45.", "Book the Didi for 11:45.", "11:45约好滴滴。"]
     },
     {
       m:1,
-      t:["55–60 phút", "55–60 min", "55–60分钟"],
+      t:["25 phút", "25 min", "25分钟"],
       a:[
-        "Didi từ Thông Châu ra ga <span class=\"han\">北京南站</span> Bắc Kinh Nam · 100–120 CNY · tới ga trước giờ tàu 30 phút",
-        "Didi from Tongzhou to <span class=\"han\">北京南站</span> Beijing South · CNY 100–120 · be there 30 minutes before the train",
-        "滴滴从通州到<span class=\"han\">北京南站</span> · 100–120元 · 开车前30分钟到站"
+        "Didi ra ga <span class=\"han\">北京南站</span> Bắc Kinh Nam · 40–60 CNY · tới ga trước giờ tàu 30 phút",
+        "Didi to <span class=\"han\">北京南站</span> Beijing South · CNY 40–60 · be there 30 minutes before the train",
+        "滴滴到<span class=\"han\">北京南站</span> · 40–60元 · 开车前30分钟到站"
       ]
     },
     {
@@ -2524,9 +2506,9 @@ DAYS.push(
 /* Ngân sách */
 var BUD = {
   note:[
-    "Vé và phòng của Bảo và Mai đều là giá thật trên phiếu. Mốc 15 triệu áp cho Gia Bảo và Quỳnh Mai.",
-    "Bao and Mai's flights and rooms are actual booked prices. The 15m ceiling applies to Gia Bao and Quynh Mai.",
-    "嘉宝和琼梅的机票和住宿均为实际订单价格。1500万上限适用于嘉宝和琼梅。"
+    "Vé máy bay là giá thật trên phiếu; phòng Bắc Kinh 26–27/10 là ước tính vì chưa đặt. Mốc 15 triệu áp cho Gia Bảo và Quỳnh Mai.",
+    "Flights are actual booked prices; the Beijing room for 26–27 Oct is an estimate as it is not booked yet. The 15m ceiling applies to Gia Bao and Quynh Mai.",
+    "机票为实际订单价格；北京10月26–27日的住宿尚未预订，为估算。1500万上限适用于嘉宝和琼梅。"
   ],
   t1head:[["Vé máy bay và khách sạn", "Flights and hotels", "机票与酒店"], ["Chi tiết", "Detail", "明细"], ["VND", "VND", "越南盾"]],
   t1:[
@@ -2537,9 +2519,9 @@ var BUD = {
     ],
     [["Khách sạn Thượng Hải, Dihang Boutique", "Shanghai, Dihang Boutique", "上海，迪航酒店"], ["487.164 ÷ 4", "487,164 ÷ 4", "487,164 ÷ 4"], "122.000"],
     [
-      ["Khách sạn Bắc Kinh Thông Châu, 26–28/10", "Beijing Tongzhou, 26–28 Oct", "北京通州，10月26–28日"],
-      ["2.009.098 ÷ 3", "2,009,098 ÷ 3", "200.9万 ÷ 3"],
-      "670.000"
+      ["Khách sạn trung tâm Bắc Kinh 26–27/10 (ước tính)", "Central Beijing hotel 26–27 Oct (estimate)", "北京市中心酒店10月26–27日（估算）"],
+      ["≈ 900 CNY ÷ 3", "≈ CNY 900 ÷ 3", "约900元 ÷ 3"],
+      "1.185.000"
     ],
     [
       ["Vé về 28/10, CA883 Thủ Đô T3 đi Nội Bài", "Return 28 Oct, CA883 Capital T3 to Noi Bai", "10月28日回程，CA883 首都T3 飞内排"],
@@ -2547,7 +2529,7 @@ var BUD = {
       "3.087.000"
     ]
   ],
-  t1total:[["Cộng", "Subtotal", "小计"], "-", "7.069.000"],
+  t1total:[["Cộng", "Subtotal", "小计"], "-", "7.584.000"],
   t2head:[["Ngoài vé và phòng", "Outside flights and rooms", "机票与住宿之外"], ["CNY", "CNY", "元"], ["VND", "VND", "越南盾"]],
   t2:[
     [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
@@ -2579,11 +2561,7 @@ var BUD = {
       "1.604.000"
     ],
     [
-      [
-        "Ăn uống 3 ngày tự túc (21, 26, 27/10) - không còn bữa sáng 28/10",
-        "Food, 3 self-funded days (21, 26, 27 Oct) - no 28 Oct breakfast any more",
-        "自费餐饮3天（10月21、26、27日）——不再有28日早餐"
-      ],
+      ["Ăn uống tự túc 21, 26 (trừ bữa sáng) và 27/10", "Self-paid food on 21, 26 (not breakfast) and 27 Oct", "自费餐饮：10月21日、26日（不含早餐）、27日"],
       "270",
       "1.067.000"
     ],
@@ -2591,9 +2569,9 @@ var BUD = {
   ],
   t2total:[["Tổng ngoài vé và phòng", "Total outside flights and rooms", "机票与住宿之外合计"], "1321", "6.398.000"],
   concl:[
-    "Tổng hai bảng: <strong>13.467.000 ₫</strong> mỗi người (Gia Bảo, Quỳnh Mai), dưới mốc 15 triệu khoảng 1,53 triệu.",
-    "Both tables together: <strong>13,467,000 VND</strong> each (Gia Bao, Quynh Mai), about 1.53m under the 15m ceiling.",
-    "两表合计：每人<strong>1346.7万越南盾</strong>（嘉宝、琼梅），比1500万上限低约153万。"
+    "Tổng hai bảng: <strong>13.982.000 ₫</strong> mỗi người (Gia Bảo, Quỳnh Mai), dưới mốc 15 triệu khoảng 1,02 triệu.",
+    "Both tables together: <strong>13,982,000 VND</strong> each (Gia Bao, Quynh Mai), about 1.02m under the 15m ceiling.",
+    "两表合计：每人<strong>1398.2万越南盾</strong>（嘉宝、琼梅），比1500万上限低约102万。"
   ],
   mdHead:["Mỹ Duyên - để tham khảo", "My Duyen - for reference", "美缘——供参考"],
   mdEyebrow:["Không ràng buộc ngân sách · 13 ngày", "No budget ceiling · 13 days", "无预算上限 · 13天"],
@@ -2612,15 +2590,11 @@ var BUD = {
     ],
     [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
     [
-      ["Khách sạn Thượng Hải 21/10 và Bắc Kinh 26–28/10", "Shanghai 21 Oct and Beijing 26–28 Oct", "上海10月21日、北京10月26–28日"],
-      ["122.000 + 670.000", "122,000 + 670,000", "12.2万 + 67万"],
-      "792.000"
+      ["Khách sạn Thượng Hải 21/10 và trung tâm Bắc Kinh 26–27/10", "Shanghai 21 Oct and central Beijing 26–27 Oct", "上海10月21日与北京市中心10月26–27日"],
+      "122.000 + 1.185.000",
+      "1.307.000"
     ],
-    [
-      ["Gia hạn phòng Thông Châu đêm 28/10, một mình", "Tongzhou room extended for 28 Oct, alone", "通州房间续住10月28日，单人"],
-      "250–400",
-      "988.000<br>– 1.580.000"
-    ],
+    [["Khách sạn trung tâm đêm 28/10, một mình", "Central hotel, night of 28 Oct, alone", "市中心酒店10月28日，单人"], "250–400", "988.000<br>– 1.580.000"],
     [
       ["Khách sạn Thiên Tân 2 đêm 29 và 30/10, khu Ngũ Đại Đạo", "Tianjin, 2 nights 29 and 30 Oct, Five Great Avenues", "天津10月29、30日两晚，五大道一带"],
       "500–800",
@@ -2666,37 +2640,17 @@ var BUD = {
     ],
     [["eSIM 13 ngày, gửi hành lý, dự phòng", "13-day eSIM, lockers, contingency", "13天eSIM、寄存、备用"], "200", "790.000"]
   ],
-  t3total:[["Tổng", "Total", "合计"], "-", "23,2 – 26,0 tr"],
-  taNote:[
-    "BNU bao ăn ở 22–25/10. Vé về chưa đặt nên để khoảng.",
-    "BNU covers board and lodging 22–25 Oct. The return is not booked, so it stays a range.",
-    "北师大承担10月22–25日食宿。回程未订，按区间估算。"
-  ],
+  t3total:[["Tổng", "Total", "合计"], "-", "23,7 – 26,5 tr"],
+  taNote:["BNU bao ăn ở 22–25/10.", "BNU covers board and lodging 22–25 Oct.", "北师大承担10月22–25日食宿。"],
   t4:[
     [["Vé lượt đi, chia 4 người", "Outbound fare, split four ways", "去程票款，四人均摊"], ["12.760.000 ÷ 4", "12,760,000 ÷ 4", "1276万 ÷ 4"], "3.190.000"],
     [["Khách sạn Thượng Hải, Dihang Boutique", "Shanghai, Dihang Boutique", "上海，迪航酒店"], ["487.164 ÷ 4", "487,164 ÷ 4", "487,164 ÷ 4"], "122.000"],
-    [
-      [
-        "<strong>Vé về 26/10, Bắc Kinh đi Hà Nội</strong> <span class=\"muted\">(chưa đặt)</span>",
-        "<strong>Return 26 Oct, Beijing to Hanoi</strong> <span class=\"muted\">(not booked)</span>",
-        "<strong>10月26日回程，北京飞河内</strong> <span class=\"muted\">（未订）</span>"
-      ],
-      ["bay thẳng", "direct", "直飞"],
-      "3.000.000<br>– 4.500.000"
-    ],
+    [["Vé về 26/10, Air China Thủ Đô T3 → Nội Bài", "Return 26 Oct, Air China Capital T3 → Noi Bai", "10月26日回程，国航 首都T3 → 内排"], "00:10", "3.104.000"],
     [["Visa X2 (đã trừ tiền thưởng)", "X2 visa (after prize money)", "X2签证（已扣奖金）"], "-", "1.179.000"],
-    [
-      [
-        "Xương Bình ra sân bay Thủ Đô: metro 32 CNY hoặc taxi 150 CNY",
-        "Changping to Capital Airport: metro CNY 32 or taxi CNY 150",
-        "昌平至首都机场：地铁32元或打车150元"
-      ],
-      "32–150",
-      "126.000<br>– 593.000"
-    ],
-    [["Ăn uống ngày 21/10 và sáng 26/10, dự phòng", "Food on 21 Oct and the morning of 26 Oct, contingency", "10月21日及26日早的餐饮、备用"], "200", "790.000"]
+    [["Taxi Xương Bình ra sân bay Thủ Đô T3", "Taxi Changping to Capital Airport T3", "出租车 昌平 → 首都机场T3"], "150", "593.000"],
+    [["Ăn uống ngày 21/10, dự phòng", "Food on 21 Oct, contingency", "10月21日餐饮及备用"], "200", "790.000"]
   ],
-  t4total:[["Tổng", "Total", "合计"], "-", "8,4 – 10,4 tr"],
+  t4total:[["Tổng", "Total", "合计"], "-", "8.978.000"],
   visa:[
     "<b>Visa X2 mỗi người:</b> phí dịch vụ 760.000 ₫ + phí Đại sứ quán 45 USD. Tiền thưởng <b>Gold Award</b> vòng Chung kết khu vực Đông Nam Á là 500 RM, đổi được 116 USD, chia đều 4 người (29 USD/người) để bù phí visa. Còn lại khoảng <b>1.179.000 ₫</b> mỗi người.",
     "<b>X2 visa per person:</b> 760,000 VND service fee + USD 45 embassy fee. The <b>Gold Award</b> prize from the Southeast Asia regional final, RM 500, changed into USD 116 and split four ways (USD 29 each) to offset the visa. That leaves about <b>1,179,000 VND</b> each.",
@@ -2802,19 +2756,9 @@ var PREP = [
     h:["Câu hỏi gửi BTC", "Questions for the organisers", "给主办方的问题"],
     li:[
       [
-        "Danh sách đội đã đổi (Phan Chí Công không tham dự) và ba lịch về: Tuấn Anh 26/10, Bảo và Mai 28/10, Mỹ Duyên 31/10.",
-        "Updated roster (Phan Chi Cong not attending) and three return dates: Tuan Anh 26 Oct, Bao and Mai 28 Oct, My Duyen 31 Oct.",
-        "名单变更（潘志功不参加）和三个回程日期：俊英10月26日，嘉宝和琼梅10月28日，美缘10月31日。"
-      ],
-      [
         "Điểm hẹn ở sảnh đến T2 lúc 23:50 ngày 21/10 và số điện thoại người đón.",
         "Meeting point in the T2 arrivals hall at 23:50 on 21 Oct and the driver's phone number.",
         "10月21日23:50在T2到达大厅的会合点和接机人电话。"
-      ],
-      [
-        "Ăn ở do BNU chi trả kết thúc tối 25/10 hay sáng 26/10?",
-        "Does BNU's board and lodging end on the evening of 25 Oct or the morning of 26 Oct?",
-        "北师大的食宿到10月25日晚还是26日早结束？"
       ]
     ]
   }
@@ -3019,6 +2963,16 @@ var SHOTS = {
   "7/7a",
   "West school gate of Tsinghua University, 2011042203.jpg",
   "Cổng Tây Thanh Hoa - chỗ xếp hàng chụp ảnh mỗi ngày","Tsinghua's West Gate - where people queue for the photo daily","清华西门——每天都有人排队拍照的地方"),
+
+ "Trường Thành Tư Mã Đài": S(
+  "6/6b",
+  "20090529 Great Wall Simatai 8327.jpg",
+  "Trường Thành Tư Mã Đài - đoạn tường thành nguyên bản chạy dọc sống núi","Simatai Great Wall - original wall running along the ridge","司马台长城——沿山脊延伸的原始城墙"),
+
+ "Dạo Cổ Bắc Thuỷ Trấn": S(
+  "f/f8",
+  "Gubei water village from Simatai Great Wall in Beijing - panoramio.jpg",
+  "Cổ Bắc Thuỷ Trấn nhìn từ Trường Thành Tư Mã Đài","Gubei Water Town seen from the Simatai Great Wall","从司马台长城俯瞰古北水镇"),
 
  "Universal Beijing Resort": S(
   "4/47",
@@ -3230,7 +3184,7 @@ function render(){
   out += '<header class="hero-card" id="overview" data-spy="overview"><div class="hero-txt">'+
     '<div class="kicker">'+ic("plane")+T(UI.kicker)+'</div><h1>'+T(UI.title)+'</h1>'+
     '<p class="lede">'+T(UI.lede)+'</p>'+
-    '<div class="chips"><span class="chip">'+ic("calendar")+T(UI.m1)+'</span><span class="chip">'+ic("users")+T(UI.m2)+'</span><span class="chip">'+ic("wallet")+T(UI.m3)+'</span></div>'+
+    '<div class="chips"><span class="chip">'+ic("calendar")+T(UI.m1)+'</span><span class="chip">'+ic("users")+T(UI.m2)+'</span></div>'+
     '</div><img class="hero-mascot" src="data:image/webp;base64,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lGp1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALlqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaKSIsWVKBSGYHsQoG/SkmVcAAABtY2JvcqNpZGM6Zm9ybWF0amltYWdlL3dlYnBqaW5zdGFuY2VJRHgseG1wOmlpZDoxMjljOTkzMS1mMDgwLTQ3MjktODQ4ZC05ZWI0ZmRjZWZmN2FscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNo6Jq5IFVNkf+EhCKP4mg3gQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggjcs28FDbCxl9nwcLAMwA0DwArimvYylkxwy4h+UuYrakZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaAG4eIHAjXcckPhst3iufjoAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRMAAAAAAAAAAAAAAAAZGhhc2hYID+ICjOrxjP9j5htXTu8W07mef9aie3IVejbvMsOFmMVZG5hbWVuanVtYmYgbWFuaWZlc3RqZXhjbHVzaW9uc4GiZXN0YXJ0GXOEZmxlbmd0aBkWhwAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOjc3MjUyZDY4LWFkZjktNDk3NS04MTU3LWY2NTE4NTYwYTViNS9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOjM4OGRlMTkzLWRkZmUtNGVjNy04YWU0LTY2MDMzOTk5OGE1YXJjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCCNyzbwUNsLGX2fBwsAzADQPACuKa9jKWTHDLiH5S5itqJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggKUCDffDqi/f3IGfSlbxzFy1A+PdqAnkHc4+zE8m8ULaiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggp1kqHP8sC/1TXf1y3TMMn1bw4Oco2VqEILTbU+bN+7V0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQFXRYc72AKtTi8r74dDdZ1I21RjrkMyB51ikUzpbdWh/mkSDhY6T/51ZoxXgxgQ2bKMenjZoVDkRUqZ1wsqrht8A" alt="" aria-hidden="true"></header>'+
     noteHTML(UI.tz, ' style="margin-top:14px"');
 

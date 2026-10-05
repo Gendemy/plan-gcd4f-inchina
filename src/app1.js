@@ -28,7 +28,6 @@ var UI = {
               "四人同机出发，在上海中转15小时，深夜抵达北京。比赛结束后分开：俊英10月26日回国，嘉宝和琼梅10月28日，美缘留到10月31日经深圳返回。"],
   m1:        ["20/10 – 1/11/2026 · 13 ngày","20 Oct – 1 Nov 2026 · 13 days","2026年10月20日–11月1日 · 13天"],
   m2:        ["4 người bay chung lượt đi · 3 lịch về khác nhau","4 fly out together · 3 different returns","去程4人同行 · 3种不同回程"],
-  m3:        ["Ngân sách 15 triệu ₫ · Gia Bảo, Quỳnh Mai","Budget 15m VND · Gia Bao, Quynh Mai","预算1500万越南盾 · 嘉宝、琼梅"],
   tz:        ["Mọi mốc giờ trong trang này là giờ Trung Quốc (nhanh hơn Việt Nam 1 tiếng).",
               "All times on this page are China time (1 hour ahead of Vietnam).",
               "本页所有时间均为中国时间（比越南快1小时）。"],

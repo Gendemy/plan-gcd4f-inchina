@@ -137,7 +137,7 @@ function render(){
   out += '<header class="hero-card" id="overview" data-spy="overview"><div class="hero-txt">'+
     '<div class="kicker">'+ic("plane")+T(UI.kicker)+'</div><h1>'+T(UI.title)+'</h1>'+
     '<p class="lede">'+T(UI.lede)+'</p>'+
-    '<div class="chips"><span class="chip">'+ic("calendar")+T(UI.m1)+'</span><span class="chip">'+ic("users")+T(UI.m2)+'</span><span class="chip">'+ic("wallet")+T(UI.m3)+'</span></div>'+
+    '<div class="chips"><span class="chip">'+ic("calendar")+T(UI.m1)+'</span><span class="chip">'+ic("users")+T(UI.m2)+'</span></div>'+
     '</div><img class="hero-mascot" src="{{asset:mascot-planning.webp}}" alt="" aria-hidden="true"></header>'+
     noteHTML(UI.tz, ' style="margin-top:14px"');
 

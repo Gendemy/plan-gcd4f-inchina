@@ -9,17 +9,17 @@ DAYS.push(
   head:["Ngày duy nhất cho trục trung tâm", "The only full day for the central axis", "中轴线唯一的完整一天"],
   slots:[
     {
-      t:["06:15", "06:15", "06:15"],
-      b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
+      t:["07:00", "07:00", "07:00"],
+      b:["Rời khách sạn", "Leave the hotel", "离开酒店"],
       d:["Mua đồ ăn sáng mang theo.", "Grab breakfast to go.", "买早餐路上吃。"]
     },
     {
       m:1,
-      t:["65 phút", "65 min", "65分钟"],
+      t:["25 phút", "25 min", "25分钟"],
       a:[
-        "Tuyến 1 từ ga <span class=\"han\">梨园</span> Lê Viên → đổi tuyến 10 tại <span class=\"han\">国贸</span> → đổi tuyến 5 tại <span class=\"han\">宋家庄</span> → ga <span class=\"han\">天坛东门</span> · 6 CNY",
-        "Line 1 from <span class=\"han\">梨园</span> Liyuan → change to Line 10 at <span class=\"han\">国贸</span> Guomao → change to Line 5 at <span class=\"han\">宋家庄</span> Songjiazhuang → <span class=\"han\">天坛东门</span> Tiantandongmen · CNY 6",
-        "1号线从<span class=\"han\">梨园</span>站 → <span class=\"han\">国贸</span>换10号线 → <span class=\"han\">宋家庄</span>换5号线 → <span class=\"han\">天坛东门</span>站 · 6元"
+        "Tuyến 1 → đổi tuyến 5 tại <span class=\"han\">东单</span> → ga <span class=\"han\">天坛东门</span> · 3 CNY",
+        "Line 1 → Line 5 at <span class=\"han\">东单</span> → <span class=\"han\">天坛东门</span> · CNY 3",
+        "1号线 → <span class=\"han\">东单</span>换5号线 → <span class=\"han\">天坛东门</span>站 · 3元"
       ]
     },
     {
@@ -118,29 +118,21 @@ DAYS.push(
         "晚饭、买礼物。CA883随身行李只限5公斤，礼物要放托运箱。"
       ]
     },
+    { m:1, t:["15 phút", "15 min", "15分钟"], a:["Đi bộ hoặc metro về khách sạn", "Walk or metro back to the hotel", "步行或坐地铁回酒店"] },
     {
-      m:1,
-      t:["55 phút", "55 min", "55分钟"],
-      a:[
-        "Tuyến 1 đi thẳng từ Vương Phủ Tỉnh về ga <span class=\"han\">梨园</span> Lê Viên · 6 CNY",
-        "Line 1 straight from Wangfujing back to <span class=\"han\">梨园</span> Liyuan · CNY 6",
-        "1号线从王府井直达<span class=\"han\">梨园</span>站 · 6元"
-      ]
-    },
-    {
-      t:["19:15–20:00", "19:15–20:00", "19:15–20:00"],
-      b:["Về khách sạn, tắm rửa, đóng vali, trả phòng", "Back at the hotel: shower, pack, check out", "回酒店：洗澡、收拾行李、退房"],
-      dur:["45 phút", "45 min", "45分钟"],
+      t:["18:30–20:00", "18:30–20:00", "18:30–20:00"],
+      b:["Về khách sạn, tắm rửa, đóng vali", "Back to the hotel, shower, pack", "回酒店、洗澡、收拾行李"],
+      dur:["90 phút", "90 min", "90分钟"],
       d:["Tắm rửa trước chuyến bay đêm. Mỹ Duyên ở lại phòng.", "Shower before the night flight. My Duyen keeps the room.", "夜航前洗个澡。美缘留在房间。"]
     },
     {
       p:["gb"],
       m:1,
-      t:["55 phút", "55 min", "55分钟"],
+      t:["45 phút", "45 min", "45分钟"],
       a:[
-        "Didi từ Lê Viên ra sân bay Thủ Đô T3 · 40 km · 130–170 CNY cả xe",
-        "Didi from Liyuan to Capital Airport T3 · 40 km · CNY 130–170 per car",
-        "滴滴从梨园到首都机场T3 · 40公里 · 整车130–170元"
+        "Didi từ khách sạn ra sân bay Thủ Đô T3 · khoảng 30 km · 100–130 CNY cả xe",
+        "Didi from the hotel to Capital Airport T3 · about 30 km · CNY 100–130 per car",
+        "滴滴从酒店到首都机场T3 · 约30公里 · 整车100–130元"
       ]
     },
     {
@@ -165,7 +157,7 @@ DAYS.push(
       p:["md"],
       t:["20:00", "20:00", "20:00"],
       b:["Mỹ Duyên ở lại phòng một mình", "My Duyen alone in the room", "美缘独自留在房间"],
-      d:["Sáng mai đi Universal, rời khách sạn lúc 8:20.", "Universal tomorrow; out of the hotel at 08:20.", "明天去环球影城，8:20离开酒店。"]
+      d:["Sáng mai đi Universal, rời khách sạn lúc 8:00.", "Universal tomorrow; out of the hotel at 08:00.", "明天去环球影城，8:00离开酒店。"]
     }
   ],
   intro:[
@@ -196,23 +188,23 @@ DAYS.push(
       who:["Mỹ Duyên", "My Duyen", "美缘"],
       slots:[
         {
-          t:["08:20", "08:20", "08:20"],
-          b:["Rời khách sạn Thông Châu", "Leave the Tongzhou hotel", "离开通州酒店"],
-          d:["Phòng gia hạn thêm đêm nay nên không phải mang hành lý.", "The room is extended for tonight, so no luggage to carry.", "房间续住到今晚，不用带行李。"]
+          t:["08:00", "08:00", "08:00"],
+          b:["Rời khách sạn trung tâm", "Leave the central hotel", "离开市中心酒店"],
+          d:["Ở thêm đêm nay nên không phải mang hành lý.", "Staying another night, so no luggage to carry.", "今晚继续住，不用带行李。"]
         },
         {
           m:1,
-          t:["25 phút", "25 min", "25分钟"],
+          t:["50 phút", "50 min", "50分钟"],
           a:[
-            "Đi bộ 350m ra ga <span class=\"han\">梨园</span> → tuyến 1 đi bốn ga tới ga cuối <span class=\"han\">环球度假区</span> · 3 CNY",
-            "Walk 350m to <span class=\"han\">梨园</span> → Line 1, four stops to the terminus <span class=\"han\">环球度假区</span> · CNY 3",
-            "步行350米到<span class=\"han\">梨园</span>站 → 1号线坐四站到终点<span class=\"han\">环球度假区</span> · 3元"
+            "Tuyến 1 từ ga <span class=\"han\">王府井</span> đi thẳng tới ga cuối <span class=\"han\">环球度假区</span> · 6 CNY",
+            "Line 1 from <span class=\"han\">王府井</span> straight to the terminus <span class=\"han\">环球度假区</span> · CNY 6",
+            "1号线从<span class=\"han\">王府井</span>直达终点<span class=\"han\">环球度假区</span> · 6元"
           ]
         },
         {
-          t:["08:45", "08:45", "08:45"],
+          t:["08:50", "08:50", "08:50"],
           b:["Có mặt ở cổng Universal Beijing", "At the Universal Beijing gate", "到达北京环球影城入口"],
-          d:["Xếp hàng an ninh trước giờ mở cửa khoảng 30 phút.", "Queue for security about 30 minutes before opening.", "开园前约30分钟排队安检。"]
+          d:["Xếp hàng an ninh ngay khi tới.", "Join the security queue on arrival.", "到达后马上排队安检。"]
         },
         {
           t:["09:00–20:00", "09:00–20:00", "09:00–20:00"],
@@ -234,15 +226,15 @@ DAYS.push(
         },
         {
           m:1,
-          t:["25 phút", "25 min", "25分钟"],
+          t:["50 phút", "50 min", "50分钟"],
           a:[
-            "Tuyến 1 về ga <span class=\"han\">梨园</span> Lê Viên, đi bộ 350m · 3 CNY",
-            "Line 1 back to <span class=\"han\">梨园</span> Liyuan, 350m walk · CNY 3",
-            "1号线回<span class=\"han\">梨园</span>，步行350米 · 3元"
+            "Tuyến 1 về ga <span class=\"han\">王府井</span> · 6 CNY",
+            "Line 1 back to <span class=\"han\">王府井</span> · CNY 6",
+            "1号线回<span class=\"han\">王府井</span> · 6元"
           ]
         },
         {
-          t:["≈ 21:00", "≈ 21:00", "约21:00"],
+          t:["≈ 21:30", "≈ 21:30", "约21:30"],
           b:["Về khách sạn", "Back at the hotel", "回到酒店"],
           d:["Sắp lại hành lý cho ngày sang Thiên Tân.", "Repack for the move to Tianjin.", "为去天津整理行李。"]
         }
@@ -265,9 +257,9 @@ DAYS.push(
       b:["Thêm một điểm ở Bắc Kinh, gần khách sạn", "One more Beijing stop, close to the hotel", "在北京再看一个点，离酒店近"],
       dur:["120 phút", "120 min", "120分钟"],
       d:[
-        "Công viên rừng Đại Vận Hà gần Lê Viên, miễn phí, lá vàng dọc kênh.",
-        "The Grand Canal Forest Park near Liyuan, free, autumn leaves along the canal.",
-        "梨园附近的大运河森林公园，免费，运河两岸秋叶金黄。"
+        "Bắc Hải hoặc Ung Hoà Cung, không quá 25 phút từ khách sạn.",
+        "Beihai or the Lama Temple, within 25 minutes of the hotel.",
+        "北海或雍和宫，距酒店25分钟以内。"
       ]
     },
     { m:1, t:["25 phút", "25 min", "25分钟"], a:["Quay lại khách sạn", "Back to the hotel", "返回酒店"] },
@@ -282,19 +274,15 @@ DAYS.push(
       b:["Trả phòng khách sạn Bắc Kinh", "Check out of the Beijing hotel", "北京酒店退房"],
       tag:"pay",
       tagx:["Trả phòng trước 12:00", "Check-out before 12:00", "12:00前退房"],
-      d:[
-        "Đặt Didi từ 11:45 vì đường ra ga Bắc Kinh Nam mất gần một tiếng.",
-        "Book the Didi for 11:45; the ride to Beijing South takes nearly an hour.",
-        "11:45约好滴滴，到北京南站近一小时。"
-      ]
+      d:["Đặt Didi từ 11:45.", "Book the Didi for 11:45.", "11:45约好滴滴。"]
     },
     {
       m:1,
-      t:["55–60 phút", "55–60 min", "55–60分钟"],
+      t:["25 phút", "25 min", "25分钟"],
       a:[
-        "Didi từ Thông Châu ra ga <span class=\"han\">北京南站</span> Bắc Kinh Nam · 100–120 CNY · tới ga trước giờ tàu 30 phút",
-        "Didi from Tongzhou to <span class=\"han\">北京南站</span> Beijing South · CNY 100–120 · be there 30 minutes before the train",
-        "滴滴从通州到<span class=\"han\">北京南站</span> · 100–120元 · 开车前30分钟到站"
+        "Didi ra ga <span class=\"han\">北京南站</span> Bắc Kinh Nam · 40–60 CNY · tới ga trước giờ tàu 30 phút",
+        "Didi to <span class=\"han\">北京南站</span> Beijing South · CNY 40–60 · be there 30 minutes before the train",
+        "滴滴到<span class=\"han\">北京南站</span> · 40–60元 · 开车前30分钟到站"
       ]
     },
     {

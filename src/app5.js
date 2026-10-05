@@ -46,46 +46,26 @@ DAYS.push(
           ]
         }
       ]
-    },
-    {
-      cls:"home",
-      p:["ta"],
-      h:["Bay về Hà Nội", "Fly home to Hanoi", "飞回河内"],
-      who:["Tuấn Anh", "Tuan Anh", "俊英"],
-      slots:[
-        {
-          t:["07:30", "07:30", "07:30"],
-          b:["Trả phòng BNU cùng cả nhóm", "Check out of BNU with the others", "与大家一同退宿舍"],
-          d:["Tách nhóm tại đây.", "Split from the group here.", "在这里和大家分开。"]
-        },
-        {
-          m:1,
-          t:["45–120 phút", "45–120 min", "45–120分钟"],
-          a:[
-            "Xương Bình → sân bay Thủ Đô · taxi khoảng 45 phút, 150 CNY · hoặc tuyến Xương Bình → tuyến 13 → tàu nhanh sân bay, khoảng 2 tiếng, 32 CNY",
-            "Changping → Capital Airport · taxi about 45 min, CNY 150 · or Changping Line → Line 13 → Airport Express, about 2h, CNY 32",
-            "昌平 → 首都机场 · 打车约45分钟150元 · 或昌平线→13号线→机场快轨，约2小时32元"
-          ]
-        },
-        {
-          t:["Trước 3 tiếng", "3 hours ahead", "提前3小时"],
-          b:["Có mặt ở sân bay Thủ Đô", "At Capital Airport", "抵达首都机场"],
-          d:["Chuyến quốc tế, có mặt trước 3 tiếng.", "International flight, be there 3 hours ahead.", "国际航班，提前3小时到。"]
-        }
-      ]
     }
   ],
   slots:[
     {
+      p:["ta"],
+      t:["03:15", "03:15", "03:15"],
+      b:["Tuấn Anh hạ cánh Nội Bài T2", "Tuan Anh lands at Noi Bai T2", "俊英抵达内排T2"],
+      d:["Nhắn cả nhóm khi về tới nhà.", "Message the group once home.", "到家后在群里报个平安。"]
+    },
+    {
       p:["gb", "md"],
-      t:["07:30–08:00", "07:30–08:00", "07:30–08:00"],
-      b:["Trả phòng BNU, lên xe thuê cả ngày", "Check out of BNU, into the day-hire car", "退北师大房间，上包车"],
-      dur:["30 phút", "30 min", "30分钟"],
+      t:["07:00–08:00", "07:00–08:00", "07:00–08:00"],
+      b:["Ăn sáng, trả phòng BNU, lên xe thuê cả ngày", "Breakfast, check out of BNU, into the day-hire car", "早餐、退北师大房间、上包车"],
+      dur:["60 phút", "60 min", "60分钟"],
       d:[
-        "Xe 7 chỗ chở ba người và vali, chờ cả ngày rồi đưa về Thông Châu.",
-        "A 7-seater takes the three of you and the luggage, waits all day, then drives to Tongzhou.",
-        "7座车载三人和行李，全天等候，晚上送到通州。"
-      ]
+        "BNU chi trả bữa sáng. Xe 7 chỗ chở ba người và vali, chờ cả ngày rồi đưa về khách sạn trung tâm.",
+        "BNU covers breakfast. A 7-seater takes the three of you and the luggage, waits all day, then drives to the central hotel.",
+        "北师大提供早餐。7座车载三人和行李，全天等候，晚上送到市中心酒店。"
+      ],
+      tag:"host"
     },
     {
       p:["gb", "md"],
@@ -132,19 +112,23 @@ DAYS.push(
     {
       p:["gb", "md"],
       m:1,
-      t:["≈ 1 giờ 45", "≈ 1h45", "约1小时45分"],
+      t:["≈ 2 giờ", "≈ 2h", "约2小时"],
       a:[
-        "Xe về khách sạn Thông Châu, khu <span class=\"han\">梨园</span> Lê Viên · khoảng 120 km",
-        "Car to the Tongzhou hotel in <span class=\"han\">梨园</span> Liyuan · about 120 km",
-        "包车回通州<span class=\"han\">梨园</span>的酒店 · 约120公里"
+        "Xe về khách sạn trung tâm, khu Vương Phủ Tỉnh / Tiền Môn · khoảng 130 km",
+        "Car to the central hotel, Wangfujing / Qianmen area · about 130 km",
+        "包车回王府井/前门一带的市中心酒店 · 约130公里"
       ]
     },
     {
       p:["gb", "md"],
-      t:["20:15–21:15", "20:15–21:15", "20:15–21:15"],
-      b:["Nhận phòng khách sạn Thông Châu, ăn tối", "Check in at the Tongzhou hotel, dinner", "入住通州酒店，晚餐"],
+      t:["20:30–21:30", "20:30–21:30", "20:30–21:30"],
+      b:["Nhận phòng khách sạn trung tâm, ăn tối", "Check in at the central hotel, dinner", "入住市中心酒店，晚餐"],
       dur:["60 phút", "60 min", "60分钟"],
-      d:["Cách ga Lê Viên khoảng 350m.", "About 350m from Liyuan station.", "距梨园站约350米。"]
+      d:[
+        "Phòng 3 người ở khu Vương Phủ Tỉnh hoặc Tiền Môn, tiện cho Cố Cung sáng mai.",
+        "A room for three around Wangfujing or Qianmen, handy for the Forbidden City tomorrow.",
+        "王府井或前门一带的三人间，方便明天去故宫。"
+      ]
     }
   ]
 }

@@ -114,6 +114,16 @@ var SHOTS = {
   "West school gate of Tsinghua University, 2011042203.jpg",
   "Cổng Tây Thanh Hoa - chỗ xếp hàng chụp ảnh mỗi ngày","Tsinghua's West Gate - where people queue for the photo daily","清华西门——每天都有人排队拍照的地方"),
 
+ "Trường Thành Tư Mã Đài": S(
+  "6/6b",
+  "20090529 Great Wall Simatai 8327.jpg",
+  "Trường Thành Tư Mã Đài - đoạn tường thành nguyên bản chạy dọc sống núi","Simatai Great Wall - original wall running along the ridge","司马台长城——沿山脊延伸的原始城墙"),
+
+ "Dạo Cổ Bắc Thuỷ Trấn": S(
+  "f/f8",
+  "Gubei water village from Simatai Great Wall in Beijing - panoramio.jpg",
+  "Cổ Bắc Thuỷ Trấn nhìn từ Trường Thành Tư Mã Đài","Gubei Water Town seen from the Simatai Great Wall","从司马台长城俯瞰古北水镇"),
+
  "Universal Beijing Resort": S(
   "4/47",
   "Universal Beijing Resort 2.jpg",

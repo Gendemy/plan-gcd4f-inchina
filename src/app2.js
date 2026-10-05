@@ -27,12 +27,12 @@ var TRACKS = [
     cls:"b",
     p:["ta"],
     h:["Tuấn Anh - về ngày 26/10", "Tuan Anh - home on 26 Oct", "俊英——10月26日回国"],
-    n:["21–26/10 · 6 ngày", "21–26 Oct · 6 days", "10月21–26日 · 6天"],
+    n:["21–26/10 · 6 ngày · vé đã đặt", "21–26 Oct · 6 days · ticket booked", "10月21–26日 · 6天 · 机票已订"],
     b:[
       [
-        "Ở BNU suốt kỳ thi, bay thẳng từ sân bay Thủ Đô (PEK) về Hà Nội ngày 26/10. Vé chưa đặt: VN513 hoặc CA741, cất cánh khoảng trưa.",
-        "At BNU for the competition, then direct from Capital Airport (PEK) to Hanoi on 26 Oct. Not booked yet: VN513 or CA741, leaving around midday.",
-        "比赛期间住北师大，10月26日从首都机场（PEK）直飞河内。尚未订票：VN513或CA741，约中午起飞。"
+        "Ở BNU suốt kỳ thi. Vé về <strong>Air China</strong>: 00:10 ngày 26/10 (tức đêm 25/10), Thủ Đô T3 → Nội Bài T2, hạ cánh 03:15. <strong>3.104.000 ₫</strong>.",
+        "At BNU for the competition. Return on <strong>Air China</strong>: 00:10 on 26 Oct (the night of 25 Oct), Capital T3 → Noi Bai T2, lands 03:15. <strong>3,104,000 VND</strong>.",
+        "比赛期间住北师大。回程<strong>国航</strong>：10月26日00:10（即25日深夜），首都T3 → 内排T2，03:15落地。<strong>310.4万越南盾</strong>。"
       ]
     ]
   },
@@ -77,16 +77,6 @@ var TRACKS = [
 var URGENT = [
   {
     n:"01",
-    ic:"ticket",
-    h:["Đặt vé về ngày 26/10 cho Tuấn Anh", "Book Tuan Anh's 26 Oct return", "订俊英10月26日的回程"],
-    b:[
-      "Vé duy nhất còn chưa đặt. VN513 hoặc CA741 bay thẳng Thủ Đô → Nội Bài, cất cánh khoảng trưa.",
-      "The only ticket still unbooked. VN513 or CA741 fly direct Capital → Noi Bai around midday.",
-      "唯一还没订的机票。VN513或CA741从首都直飞内排，约中午起飞。"
-    ]
-  },
-  {
-    n:"02",
     ic:"clip",
     h:["Visa: còn Quỳnh Mai nhận ngày 6/10", "Visas: Quynh Mai collects on 6 Oct", "签证：琼梅10月6日领取"],
     b:[
@@ -96,13 +86,23 @@ var URGENT = [
     ]
   },
   {
+    n:"02",
+    ic:"bed",
+    h:["Huỷ phòng Thông Châu, đặt phòng trung tâm", "Cancel Tongzhou, book a central room", "取消通州酒店，改订市中心"],
+    b:[
+      "Huỷ phòng gia đình ở Thông Châu (26–28/10). Đặt một phòng 3 người ở khu Vương Phủ Tỉnh hoặc Tiền Môn cho đêm 26 và 27/10, Mỹ Duyên ở thêm đêm 28/10.",
+      "Cancel the Tongzhou family room (26–28 Oct). Book a room for three around Wangfujing or Qianmen for 26 and 27 Oct, with My Duyen staying on for 28 Oct.",
+      "取消通州的家庭房（10月26–28日）。在王府井或前门一带订一间三人房住26、27日，美缘续住28日。"
+    ]
+  },
+  {
     n:"03",
     ic:"bed",
     h:["Chỗ ở cho Mỹ Duyên bốn đêm cuối", "Four more nights for My Duyen", "美缘最后四晚的住宿"],
     b:[
-      "Đêm 28/10: gia hạn phòng Thông Châu (gần Universal). 29–30/10 ở Thiên Tân (khu Hoà Bình), 31/10 ở Thâm Quyến gần sân bay Bảo An. Chọn loại huỷ miễn phí.",
-      "28 Oct: extend the Tongzhou room (near Universal). 29–30 Oct in Tianjin (Heping), 31 Oct in Shenzhen near Bao'an airport. Take free cancellation.",
-      "10月28日：通州房间续住一晚（靠近环球影城）。10月29–30日天津（和平区），10月31日深圳宝安机场附近。选可免费取消。"
+      "Đêm 28/10: ở thêm phòng trung tâm. 29–30/10 ở Thiên Tân (khu Hoà Bình), 31/10 ở Thâm Quyến gần sân bay Bảo An. Chọn loại huỷ miễn phí.",
+      "28 Oct: stay on in the central room. 29–30 Oct in Tianjin (Heping), 31 Oct in Shenzhen near Bao'an airport. Take free cancellation.",
+      "10月28日：市中心房间续住。10月29–30日天津（和平区），10月31日深圳宝安机场附近。选可免费取消。"
     ]
   }
 ];
@@ -122,22 +122,12 @@ var BOOKING = [
   {
     p:["ta"],
     a:[
-      "<strong>Vé về 26/10</strong>, Bắc Kinh Thủ Đô đi Hà Nội, 1 vé",
-      "<strong>26 Oct return</strong>, Beijing Capital to Hanoi, 1 ticket",
-      "<strong>10月26日回程</strong>，北京首都飞河内，1张"
+      "Đặt xe đón ở Nội Bài lúc <strong>03:15 sáng 26/10</strong>",
+      "Arrange a ride from Noi Bai at <strong>03:15 on 26 Oct</strong>",
+      "安排<strong>10月26日凌晨03:15</strong>在内排的接车"
     ],
-    b:["Trip.com / hãng bay", "Trip.com / airline", "携程 / 航司"],
-    c:["Ngay", "Now", "立即"]
-  },
-  {
-    p:null,
-    a:["Báo BNU danh sách đội đã đổi và ba lịch về khác nhau", "Send BNU the updated roster and the three return dates", "向北师大提交更新名单和三个回程日期"],
-    b:[
-      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
-      "Email <span class=\"mono\">d4fe@bnu.edu.cn</span>",
-      "邮件 <span class=\"mono\">d4fe@bnu.edu.cn</span>"
-    ],
-    c:["Ngay", "Now", "立即"]
+    b:["Người nhà hoặc app gọi xe", "Family or a ride app", "家人或打车App"],
+    c:["Trước 25/10", "Before 25 Oct", "10月25日前"]
   },
   {
     p:null,
@@ -146,14 +136,14 @@ var BOOKING = [
     c:["6/10", "6 Oct", "10月6日"]
   },
   {
-    p:["md"],
+    p:["gb", "md"],
     a:[
-      "Gia hạn phòng Thông Châu <strong>đêm 28/10</strong> cho Mỹ Duyên",
-      "Extend the Tongzhou room for <strong>28 Oct</strong> for My Duyen",
-      "通州房间为美缘<strong>续住10月28日</strong>"
+      "Khách sạn trung tâm (Vương Phủ Tỉnh / Tiền Môn), phòng 3 người <strong>đêm 26–27/10</strong>, Mỹ Duyên thêm <strong>đêm 28/10</strong>",
+      "Central hotel (Wangfujing / Qianmen), room for three <strong>26–27 Oct</strong>, My Duyen also <strong>28 Oct</strong>",
+      "市中心酒店（王府井/前门），三人间<strong>10月26–27日</strong>，美缘加住<strong>28日</strong>"
     ],
-    b:["Khách sạn / Trip.com", "Hotel / Trip.com", "酒店 / 携程"],
-    c:["Đầu tháng 10", "Early Oct", "10月初"]
+    b:["Trip.com", "Trip.com", "携程"],
+    c:["Ngay", "Now", "立即"]
   },
   {
     p:["md"],
@@ -178,9 +168,9 @@ var BOOKING = [
   {
     p:["gb", "md"],
     a:[
-      "Thuê <strong>xe 7 chỗ cả ngày 26/10</strong>: BNU → Cổ Bắc Thuỷ Trấn → Thông Châu",
-      "<strong>7-seater for the day on 26 Oct</strong>: BNU → Gubei → Tongzhou",
-      "<strong>10月26日7座包车</strong>：北师大 → 古北水镇 → 通州"
+      "Thuê <strong>xe 7 chỗ cả ngày 26/10</strong>: BNU → Cổ Bắc Thuỷ Trấn → khách sạn trung tâm",
+      "<strong>7-seater for the day on 26 Oct</strong>: BNU → Gubei → central hotel",
+      "<strong>10月26日7座包车</strong>：北师大 → 古北水镇 → 市中心酒店"
     ],
     b:["Trip.com (包车)", "Trip.com (包车)", "携程包车"],
     c:["Trước 19/10", "By 19 Oct", "10月19日前"]

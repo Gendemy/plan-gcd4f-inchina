@@ -263,13 +263,34 @@ DAYS.push(
     },
     {
       p:["ta"],
-      t:["Tối", "Evening", "晚上"],
-      b:["Ăn tối cùng nhóm hoặc thu dọn hành lý", "Dinner with the group, or packing", "与大家晚餐或收拾行李"],
-      d:[
-        "Đi ăn tối cùng nhóm ở Tiền Môn, hoặc ở lại campus thu dọn hành lý.",
-        "Join the group for dinner at Qianmen, or stay on campus and pack.",
-        "和大家去前门吃晚饭，或留在学校收拾行李。"
+      t:["18:30–20:00", "18:30–20:00", "18:30–20:00"],
+      b:["Ăn tối, lấy hành lý, trả phòng BNU", "Dinner, collect luggage, check out of BNU", "晚饭、取行李、退北师大房间"],
+      dur:["90 phút", "90 min", "90分钟"],
+      d:["Tuấn Anh bay đêm nay nên không đi Tiền Môn cùng nhóm.", "Tuan Anh flies tonight, so he skips Qianmen.", "俊英今晚起飞，不和大家去前门。"]
+    },
+    {
+      p:["ta"],
+      m:1,
+      t:["45 phút", "45 min", "45分钟"],
+      a:[
+        "Taxi từ campus Xương Bình ra sân bay Thủ Đô T3 · khoảng 150 CNY · đặt xe trước",
+        "Taxi from Changping campus to Capital Airport T3 · about CNY 150 · book ahead",
+        "出租车从昌平校区到首都机场T3 · 约150元 · 提前预约"
       ]
+    },
+    {
+      p:["ta"],
+      t:["21:00", "21:00", "21:00"],
+      b:["Có mặt ở sân bay Thủ Đô nhà ga T3", "At Capital Airport Terminal 3", "到达首都机场T3"],
+      dur:["sớm 3,2 giờ", "3.2h early", "提前3.2小时"],
+      d:["Nhà ga T3, chuyến quốc tế.", "Terminal 3, international departure.", "T3航站楼，国际航班。"]
+    },
+    {
+      p:["ta"],
+      t:["00:10 → 03:15", "00:10 → 03:15", "00:10 → 03:15"],
+      b:["Thủ Đô T3 → Nội Bài T2 · Air China", "Capital T3 → Noi Bai T2 · Air China", "首都T3 → 内排T2 · 国航"],
+      dur:["4 giờ 5", "4h05", "4小时5分"],
+      d:["Cất cánh 00:10 ngày 26/10, hạ cánh Nội Bài 03:15.", "Departs 00:10 on 26 Oct, lands at Noi Bai at 03:15.", "10月26日00:10起飞，03:15抵达内排。"]
     },
     {
       p:["gb", "md"],
@@ -288,9 +309,9 @@ DAYS.push(
       tag:"free",
       dur:["95 phút", "95 min", "95分钟"],
       d:[
-        "Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức (75–100 CNY/người) rồi dạo phố Tiền Môn. Bữa cuối của cả bốn người.",
-        "Roast duck at Bianyifang or Quanjude (CNY 75–100 a head), then a stroll down Qianmen Street. The last meal with all four.",
-        "在便宜坊或全聚德吃烤鸭（人均75–100元），再逛前门大街。四人的最后一餐。"
+        "Vịt quay Tiện Nghi Phường hoặc Toàn Tụ Đức (75–100 CNY/người) rồi dạo phố Tiền Môn.",
+        "Roast duck at Bianyifang or Quanjude (CNY 75–100 a head), then a stroll down Qianmen Street.",
+        "在便宜坊或全聚德吃烤鸭（人均75–100元），再逛前门大街。"
       ]
     },
     {

@@ -96,19 +96,9 @@ var PREP = [
     h:["Câu hỏi gửi BTC", "Questions for the organisers", "给主办方的问题"],
     li:[
       [
-        "Danh sách đội đã đổi (Phan Chí Công không tham dự) và ba lịch về: Tuấn Anh 26/10, Bảo và Mai 28/10, Mỹ Duyên 31/10.",
-        "Updated roster (Phan Chi Cong not attending) and three return dates: Tuan Anh 26 Oct, Bao and Mai 28 Oct, My Duyen 31 Oct.",
-        "名单变更（潘志功不参加）和三个回程日期：俊英10月26日，嘉宝和琼梅10月28日，美缘10月31日。"
-      ],
-      [
         "Điểm hẹn ở sảnh đến T2 lúc 23:50 ngày 21/10 và số điện thoại người đón.",
         "Meeting point in the T2 arrivals hall at 23:50 on 21 Oct and the driver's phone number.",
         "10月21日23:50在T2到达大厅的会合点和接机人电话。"
-      ],
-      [
-        "Ăn ở do BNU chi trả kết thúc tối 25/10 hay sáng 26/10?",
-        "Does BNU's board and lodging end on the evening of 25 Oct or the morning of 26 Oct?",
-        "北师大的食宿到10月25日晚还是26日早结束？"
       ]
     ]
   }
